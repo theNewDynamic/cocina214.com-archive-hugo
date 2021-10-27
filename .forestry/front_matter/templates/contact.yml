@@ -1,0 +1,20 @@
+---
+label: contact
+hide_body: true
+fields:
+- type: text
+  name: forestry_title
+  label: Title
+- type: file
+  name: hero_photo
+  label: hero_photo
+  description: File names should not have spaces. e.g. "street tacos.jpg" should be
+    changed to "street_tacos.jpg"
+- type: text
+  name: form_title
+  label: Form Title
+- type: textarea
+  name: form_text
+  label: Form Text
+pages:
+- content/contact.md

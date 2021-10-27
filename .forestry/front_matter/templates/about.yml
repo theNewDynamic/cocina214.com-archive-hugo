@@ -1,0 +1,84 @@
+---
+label: about
+hide_body: false
+fields:
+- type: text
+  label: Title
+  name: forestry_title
+- type: file
+  name: hero_photo
+  label: Hero Photo
+  default: ''
+  description: File names should not have spaces. e.g. "street tacos.jpg" should be
+    changed to "street_tacos.jpg"
+- name: featured_staff
+  label: Featured Staff
+  type: field_group_list
+  fields:
+  - type: file
+    name: photo
+    label: Photo
+    description: File names should not have spaces. e.g. "street tacos.jpg" should
+      be changed to "street_tacos.jpg"
+  - type: text
+    name: first_name
+    label: First Name
+  - type: text
+    name: last_name
+    label: Last Name
+  - name: title
+    label: Title
+    type: text
+    hidden: false
+    default: ''
+  hidden: false
+  default: ''
+- name: winter_park_staff
+  label: Winter Park Staff
+  type: field_group_list
+  fields:
+  - type: file
+    name: photo
+    label: Photo
+    description: File names should not have spaces. e.g. "street tacos.jpg" should
+      be changed to "street_tacos.jpg"
+  - type: text
+    name: first_name
+    label: First Name
+  - type: text
+    name: last_name
+    label: Last Name
+  - name: title
+    label: Title
+    type: text
+    hidden: false
+    default: ''
+  hidden: false
+  default: ''
+- type: field_group
+  name: daytona_beach_staff
+  label: Daytona Beach Staff
+  fields:
+  - type: boolean
+    name: show_staff
+    label: Show Staff
+  - type: field_group_list
+    name: staff
+    label: Staff
+    fields:
+    - type: file
+      name: photo
+      label: Photo
+      description: File names should not have spaces. e.g. "street tacos.jpg" should
+        be changed to "street_tacos.jpg"
+    - type: text
+      name: first_name
+      label: First Name
+    - type: text
+      name: last_name
+      label: Last Name
+    - type: text
+      name: title
+      label: Title
+pages:
+- content/about.md

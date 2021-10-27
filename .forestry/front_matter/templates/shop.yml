@@ -1,0 +1,65 @@
+---
+label: shop
+hide_body: false
+fields:
+- type: text
+  name: title
+  label: Title
+  config:
+    required: true
+- type: text
+  name: id
+  label: ID
+  config:
+    required: true
+- type: text
+  name: category
+  label: Category
+  description: e.g. "T-Shirts", "Gift Cards"
+  config:
+    required: true
+- type: number
+  name: price
+  label: Price
+  config:
+    required: true
+- type: text
+  name: shipping_weight
+  label: Shipping Weight
+  config:
+    required: true
+  description: Necessary for calculating shipping. Weight must be in grams.
+- type: boolean
+  name: no_tax
+  label: No Tax
+- type: list
+  name: details
+  label: Details
+- type: list
+  name: sizes
+  label: Sizes
+- type: text
+  name: size_guide
+  label: Size Guide
+- type: file
+  name: featured_image
+  label: Featured Image
+  description: File names should not have spaces. e.g. "street tacos.jpg" should be
+    changed to "street_tacos.jpg"
+- type: image_gallery
+  name: images
+  label: Images
+  description: File names should not have spaces. e.g. "street tacos.jpg" should be
+    changed to "street_tacos.jpg"
+pages:
+- content/shop/black-tumbler.md
+- content/shop/gift-card-25.md
+- content/shop/gift-card-50-1.md
+- content/shop/gift-card-50.md
+- content/shop/i-hate-running-but-i-love-tacos-t-shirt-black.md
+- content/shop/i-hate-running-but-i-love-tacos-t-shirt-grey-with-blues-1.md
+- content/shop/i-hate-running-but-i-love-tacos-t-shirt-grey-with-blues.md
+- content/shop/i-hate-running-but-i-love-tacos-t-shirt-white-.md
+- content/shop/shirt-black.md
+- content/shop/shirt-gold.md
+- content/shop/shirt-red.md

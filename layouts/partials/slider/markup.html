@@ -1,0 +1,23 @@
+
+{{ with .Params.hero_photos }}
+    
+
+<div class="bg-black-01 h-26 mt-3 relative   mt5-ns   mt0@50   css-slider">
+    {{ if gt (len .) 3 }}
+        {{ range  first 1 (after 3 .) }}
+            <div class="absolute h-100 left-0 top-0 w-100  bg-4" style="background: url({{.}}) no-repeat center;background-size: cover;"></div>
+        {{ end }}
+    {{ end }}
+    {{ if gt (len .) 2 }}
+        {{ range  first 1 (after 2 .) }}
+            <div class="absolute h-100 left-0 top-0 w-100  bg-3" style="background: url({{.}}) no-repeat center;background-size: cover;"></div>
+        {{ end }}
+    {{ end }}
+    {{ range  first 1 (after 1 .) }}
+        <div class="absolute h-100 left-0 top-0 w-100  bg-2" style="background: url({{.}}) no-repeat center;background-size: cover;"></div>
+    {{end}}
+    {{ range first 1 . }}
+        <div class="absolute h-100 left-0 top-0 w-100  bg-1" style="background: url({{.}}) no-repeat center;background-size: cover;"></div>
+    {{end}}
+</div>
+{{ end }}

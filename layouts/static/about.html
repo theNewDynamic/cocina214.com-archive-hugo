@@ -1,0 +1,73 @@
+{{ define "main" }}
+
+<div class="lazyload t-del-2    h-26 mt-3   mt5-ns   mt0@50" data-bg="{{ .Params.hero_photo }}" style="background-size:cover;background-position:center center;"></div>
+
+<main class="ph3   ph4-ns">
+    <div class="center mw-64">
+        <div class="section-animate pb-3_1875 pt-3_6875   pb-3-ns   flex@42 justify-between@42">
+            <div class="fade-in lh-2 measure-wide nested-p   mr4@42   mr5-l   mr0@64   css-ie-flex-shrink">
+                <h1 class="element-invisible">About Cocina 214</h1>
+                {{ .Content | markdownify }}
+            </div>
+            <div class="fade-in-left  t-del-1  flex flex-wrap justify-between mt-1_8125   mt-_3125-ns   css-featured-grid css-no-flex-shrink">
+                {{ range first 1 .Params.featured_staff }}
+                    <div class="mb4 w-48   w-100@42   w-48@50   css-featured-grid-item">
+                        <img alt="" class="db mb-1_1875" src="{{ .photo }}" />
+                        <p class="fw6 lh-solid mb2 mt0 tracked-narrow ttu wrksns">{{ .first_name }}<br> {{ .last_name }}</p>
+                        <p class="c-gold lh-solid mv0 tracked-narrow">{{ .title }}</p>
+                    </div>
+                {{ end }}
+                {{ range after 1 .Params.featured_staff }}
+                    <div class="w-48   w-100@42   w-48@50   css-featured-grid-item">
+                        <img alt="" class="db mb-1_1875" src="{{ .photo }}" />
+                        <p class="fw6 lh-solid mb2 mt0 tracked-narrow ttu wrksns">{{ .first_name }}<br> {{ .last_name }}</p>
+                        <p class="c-gold lh-solid mv0 tracked-narrow">{{ .title }}</p>
+                    </div>
+                {{ end }}
+
+            </div>
+        </div>
+
+        <div class="section-animate mb-1_6875   mb-1_5-ns">
+            <h2 class="fade-in-right  c-gold f4 lh-1_5 mb-_5625 mt0 tracked-narrow ttu wrksns   f3-ns mb2-ns">Winter Park Staff</h2>
+            <div class="bg-gold h-_125 mb3"></div>
+            <div class="fade-in t-del-1 flex flex-wrap justify-between   css-portrait-grid">
+                {{ range .Params.winter_park_staff }}
+                    <div class="mb3   css-portrait-grid-item">
+                        <img alt="" class="db mb-1_1875" src="{{ .photo }}" />
+                        <p class="fw6 lh-solid mb2 mt0 tracked-narrow ttu wrksns">{{ .first_name }}<br> {{ .last_name }}</p>
+                        <p class="c-gold f6 lh-solid mv0 tracked-narrow   f5@42">{{ .title }}</p>
+                    </div>
+                {{ end }}
+                <!--   Empty Items to Maintain Grid   -->
+                <div class="mb3   css-portrait-grid-item"></div>
+                <div class="mb3   css-portrait-grid-item"></div>
+                <div class="mb3   css-portrait-grid-item"></div>
+                <!-- End Empty Items to Maintain Grid -->
+            </div>
+        </div>
+
+
+        {{ if .Params.daytona_beach_staff.show_staff }}
+            <div class="section-animate mb-2_8125">
+                <h2 class="fade-in-right  f4 lh-1_5 mb-_5625 mt0 tracked-narrow ttu wrksns   f3-ns mb2-ns">Daytona Beach Staff</h2>
+                <div class="bg-dark-brown h-_125 mb3"></div>
+                <div class="fade-in t-del-1   flex flex-wrap justify-between   css-portrait-grid">
+                    {{ range .Params.daytona_beach_staff.staff }}
+                        <div class="mb3   css-portrait-grid-item">
+                            <img alt="" class="db mb-1_1875" src="{{ .photo }}" />
+                            <p class="fw6 lh-solid mb2 mt0 tracked-narrow ttu wrksns">{{ .first_name }}<br> {{ .last_name }}</p>
+                            <p class="c-gold f6 lh-solid mv0 tracked-narrow   f5@42">{{ .title }}</p>
+                        </div>
+                    {{ end }}
+                    <!--   Empty Items to Maintain Grid   -->
+                    <div class="mb3   css-portrait-grid-item"></div>
+                    <div class="mb3   css-portrait-grid-item"></div>
+                    <div class="mb3   css-portrait-grid-item"></div>
+                    <!-- End Empty Items to Maintain Grid -->
+                </div>
+            </div>
+        {{ end }}
+    </div>
+</main>
+{{ end }}

@@ -1,0 +1,145 @@
+<body>
+<style>
+.header {
+  height: 350px;
+  position: relative;
+}
+
+.bg-2, .bg-3 {
+  height: 100%;
+  position: relative;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  -webkit-animation: fade 10s ease infinite;
+  -moz-animation: fade 10s ease infinite;
+  -ms-animation: fade 10s ease infinite;
+  -o-animation: fade 10s ease infinite;
+  animation: fade 10s ease infinite;
+}
+.bg-2 {
+  -webkit-animation-delay: 5s;
+  -mos-animation-delay: 5s;
+  -ms-animation-delay: 5s;
+  -o-animation-delay: 5s;
+  animation-delay: 5s;
+}
+
+.bg-3 {
+  -webkit-animation-delay: 0s;
+  -mos-animation-delay: 0s;
+  -ms-animation-delay: 0s;
+  -o-animation-delay: 0s;
+  animation-delay: 0s;
+}
+
+/**
+* #WRAPPERS
+*/
+/**
+* #BODY
+*/
+/**
+* #Keyframes Animations
+*/
+@-moz-keyframes fade {
+  0% {
+    opacity: 1;
+  }
+  12.5% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 1;
+  }
+  37.5% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  62.5% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 0;
+  }
+  87.5% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes fade {
+  0% {
+    opacity: 1;
+  }
+  12.5% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 1;
+  }
+  37.5% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  62.5% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 0;
+  }
+  87.5% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fade {
+  0% {
+    opacity: 1;
+  }
+  12.5% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 1;
+  }
+  37.5% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  62.5% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 0;
+  }
+  87.5% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+</style>
+  <div class="wrapper">
+
+    <!-- necessary structure for our slider -->
+    <div class="header">
+      <div class="bg bg-2"
+        style="background: url(http://placekitten.com/1800/350) no-repeat center;background-size: cover;"></div>
+      <div class="bg bg-3"
+        style="background: url(http://placekitten.com/1900/350) no-repeat center;background-size: cover;"></div>
+    </div> <!-- end slider -->
+
+  </div>
+</body>

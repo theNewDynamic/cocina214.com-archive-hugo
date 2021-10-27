@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html class="bg-near-white h-100" lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Cocina 214</title>
+
+		<link rel="canonical" href="" />
+		<meta name="description" content="" />
+    	<meta name="keywords" content="" />
+		<meta name="geo.region" content="" />
+		<meta name="geo.placename" content="" />
+		<meta name="robots" content="all" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<!-- Favicons -->
+		<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../../../assets/favicons/apple-touch-icon-144x144.png" />
+		<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../../assets/favicons/apple-touch-icon-152x152.png" />
+		<link rel="icon" type="image/png" href="../../../assets/favicons/favicon-32x32.png" sizes="32x32" />
+		<link rel="icon" type="image/png" href="../../../assets/favicons/favicon-16x16.png" sizes="16x16" />
+		<meta name="application-name" content="Cocina 214"/>
+		<meta name="msapplication-TileColor" content="#FFFFFF" />
+		<meta name="msapplication-TileImage" content="../../../assets/favicons/mstile-144x144.png" />
+
+        <!-- Sitewide Styles -->
+		<!--<link href="../../../assets/css/tachyons.css" rel="stylesheet">
+		<link href="../../../assets/css/utilities.css" rel="stylesheet">
+		<link href="../../../assets/css/styles.css" rel="stylesheet">
+		<link href="../../../assets/css/fonts.css" rel="stylesheet">
+		<link href="../../../assets/css/hamburger.css" rel="stylesheet">-->
+		<!--<link href="https://cdn.snipcart.com/themes/2.0/base/snipcart.min.css" rel="stylesheet" />-->
+		<!--<link href="../../../assets/css/snipcart-custom.css" rel="stylesheet">-->
+		<!---
+		<link href="../../../assets/css/blinking-headline.css" rel="stylesheet">
+		<link href="../../../assets/css/animations.css" rel="stylesheet">
+		<link href="../../../assets/css/site-transitions.css" rel="stylesheet">
+		-->
+
+		<link href="../../../assets/css/main.css" rel="stylesheet">
+
+		<!-- Global Site Tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=GA_TRACKING_ID"></script>
+		<script>
+  		window.dataLayer = window.dataLayer || [];
+  		function gtag(){dataLayer.push(arguments)};
+  		gtag('js', new Date());
+
+  		gtag('config', 'UA-107260340-1');
+		</script>
+
+		<!--[if IE]>
+			<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+	</head>
+	<body class="bg-white c-dark-brown center flex flex-column min-h-100 stag" style="baackground-image:url(/grid-8.svg);background-size:8px 8px;max-width:2000px">
+	<!--<body class="bg-white c-dark-brown center flex flex-column min-h-100 stag">-->
+		<div class="push-footer">
+        	<nav id="site-menu" class="bb b--light-gray bg-white fixed top-0 flex h-3 items-center justify-between w-100   h3-ns   static@50   bn-l db-l h-10_5-l    z-1">
+
+            	<a class="db ml3 z-1   ml4-ns   center-l mb2-l pt-2_625-l   css-nav-logo" href="/">
+                	<img alt="Cocina 214" class="db   nl1-ns   ml0-l" src="{{ .Site.BaseURL }}/assets/logos/nav_logo_full.svg" />
+            	</a>
+
+				<button aria-expanded="false" class="bg-transparent bn button-reset ma0 pa3 pointer w-3_5 z-1   mr3-ns dn@50   hamburger hamburger--squeeze" id="js-menu" type="button">
+  					<span class="db relative w-100 hamburger-box">
+    					<span class="db   hamburger-inner"></span>
+  					</span>
+					<span class="element-invisible">Menu</span>
+				</button>
+
+				{{ partial "nav" . }}
+
+				<!--   Cart Icon on Small Displays   -->
+		        <div class="absolute h-1_375 mr-3_5 nt-_1875 right-0 w-1_625   mr-4_5-ns   snipcart-summary snipcart-cart-small">
+		            <a href="#" class="db dim h-1_375 link w-1_625   snipcart-checkout" id="sniptrig"
+					style="background-image:url(/assets/icons/snipcart/cart_small.svg);background-repeat:no-repeat;
+					background-size:26px 22px;">
+		                <span class="bg-solid-red br-100 db h-_8125 ml-_8125 w-_8125 tc">
+		                    <span class="code db f-_5 fw5 pt-_125 white   snipcart-total-items">
+		                    </span>
+		                </span>
+		            </a>
+		        </div>
+				<!-- End Cart Icon on Small Displays -->
+        	</nav>
+
+
+			{{ block "main" . }}{{ end }}
+		</div>
+
+
+		{{ partial "footer" . }}
+
+		<!-- jQuery -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<!-- Site JS -->
+		<script src="{{ .Site.BaseURL }}/assets/js/app.js"></script>
+		<!-- Snipcart Dependencies -->
+		<script src="https://cdn.snipcart.com/scripts/2.0/snipcart.js"
+				id="snipcart" data-api-key="MDVhYjZlMmItZTBjMy00ZTRhLWJmZTUtNjFkOGE1MTY4NTFiNjM2NDIyOTkzMzEwMDQyNzA4"></script>
+
+		<!-- Snipcart Custom Fields -->
+        <script src="{{ .Site.BaseURL }}/assets/js/snipcart-fields.js" async=""></script>
+
+		<script>
+		/* Snipcart Select */
+		$('#js-snipcart-select').change(function() {
+			$('#js-snipcart-add-to-cart-button').data('item-custom1-value', $(this).val());
+		});
+		/* Snipcart Summary */
+		$(document).ready(function($) {
+    		setTimeout(function() {
+     			$(".snipcart-summary").addClass("css-snipcart-show-hide");
+    		}, 1);
+		});
+		</script>
+		<script>
+		/* Start opacity transition on dine hero images */
+		$(document).ready(function($) {
+    		setTimeout(function() {
+     			$(".css-slider").addClass("load");
+    		}, 500);
+		});
+		</script>
+	</body>
+</html>

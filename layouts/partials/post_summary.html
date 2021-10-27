@@ -1,0 +1,55 @@
+<div class="section-animate">
+    <!--   Featured Image on Small Displays   -->
+    {{ if .Params.featured_photo }}
+        <!-- <div class="fade-in h-15 h-25-ns   dn@53" style="background:url({{ .Params.featured_photo }}) no-repeat center center;background-size:cover;"></div> -->
+        <div class=" h-15 h-25-ns   dn@53 lazyload" 
+            data-bg="{{ .Params.featured_photo }}"
+            style="background-repeat: no-repeat; background-position: center center;background-size:cover;"></div>
+    {{ end }}
+    <!-- End Featured Image on Small Displays -->
+
+    <!--   Post Title   -->
+    <div class="ph3 ph4-ns flex@53 justify-end pr3@53 w-50@53   pl5-l   pr-7@79   bg-greeen">
+        <h2 class="fade-in t-del-1 f4 fw6 lh-1_75 mb-_4375 mt-2_1875 tracked-narrow ttu w-100 wrksns   f3-ns mb2-ns mt-2_125-ns   mt-3_625@53   w-25@79">
+            <a class="c-dark-brown db dim link" href="{{ .URL }}">{{ .Title }}</a>
+        </h2>
+    </div>
+    <!-- End Post Title -->
+
+    <!--   Post Summary   -->
+    <div class="mb5   flex@53 mb0@53">
+        <div class="w-50@53 flex@53 flex-column@53 items-end pr3   pr4-ns   pr3@53   pr-7@79">
+            <!--   Divider   -->
+            <div class="bg-dark-brown h-_125 mb-_625 mt0 w-100   w-27@90"></div>
+            <!-- End Divider -->
+
+            <!--   Mobile Location/Date   -->
+            <div class="fade-in t-del-1 flex justify-between mb-1_9375 pl3 w-100 bg-redd   pl4-ns   pl5-l  w-25@79 pl0@79">
+                {{ if .Params.additional_info }}<p class="c-gold mv0">{{ .Params.additional_info }}</p>{{ end }}
+                <p class="mb0 mv0"><span class="pr1">Posted</span> {{ .Date.Format "1/2/2006" }}</p>
+            </div>
+            <!-- End Mobile Location/Date -->
+
+            <!--   Summary Text   -->
+            <div class="fade-in t-del-1 lh-2 pl3   pl4-ns   pl5-l   w-25@79 pl0@79">
+                <div class="measure-wide nested-p   w-100@53">
+                    <p>{{ .Summary | markdownify }}</p>
+                    <a class="c-dark-brown dib f4 jean-luc lh-1_5 link tracked-narrow ttu   css-arrow-link" href="{{ .URL }}">Read More</a>
+                </div>
+            </div>
+            <!-- End Summary Text -->
+        </div>
+
+        <!--   Featured Image on Large Displays   -->
+        {{ if .Params.featured_photo }}
+            <div class="dn fade-in  db@53 w-50@53   pr4@53 pl3@53   pr5-l">
+                <picture>
+                    <source media="(min-width: 53rem)" srcset="{{ .Params.featured_photo }}" />
+                    <img alt="" class="db mt-_0625   w-31@79" src="{{ .Site.BaseURL }}/assets/images/placeholder.gif" />
+                </picture>
+            </div>
+        {{ end }}
+        <!-- End Featured Image on Large Displays -->
+    </div>
+    <!-- End Post Summary -->
+</div>

@@ -1,0 +1,166 @@
+---
+label: dine
+hide_body: true
+fields:
+- type: text
+  name: forestry_title
+  label: Title
+- type: field_group_list
+  name: hero_photos
+  label: Hero Photos
+  fields:
+  - type: text
+    name: location
+    label: location
+  - type: file
+    name: photo
+    label: photo
+  description: Slider will display no more than 4 photos
+- type: field_group
+  name: dine_with_us
+  label: Dine with Us
+  fields:
+  - type: file
+    name: photo
+    label: Photo
+    description: File names should not have spaces. e.g. "street tacos.jpg" should
+      be changed to "street_tacos.jpg"
+  - type: textarea
+    name: text
+    label: Text
+  - type: field_group_list
+    name: menus
+    label: Menus
+    fields:
+    - type: text
+      name: menu_name
+      label: Menu Name
+    - type: file
+      name: menu
+      label: Menu
+      description: File names should not have spaces. e.g. "dine in menu.pdf" should
+        be changed to "dine_in_menu.pdf"
+  - type: field_group
+    name: featured
+    label: Featured
+    fields:
+    - type: text
+      name: name
+      label: Name
+    - type: text
+      name: hours
+      label: Hours
+    - type: text
+      name: when
+      label: When
+    - type: text
+      name: menu_name
+      label: Menu Name
+    - type: file
+      name: menu
+      label: Menu
+      description: File names should not have spaces. e.g. "dine in menu.pdf" should
+        be changed to "dine_in_menu.pdf"
+  - type: field_group
+    name: reservations
+    label: Reservations
+    fields:
+    - type: textarea
+      name: text
+      label: Text
+    - type: text
+      name: phone
+      label: Phone
+- name: online_ordering
+  type: field_group
+  config: {}
+  fields:
+  - name: description
+    type: textarea
+    default: ''
+    config:
+      required: false
+      wysiwyg: false
+      schema:
+        format: markdown
+    label: Description
+  label: Online Ordering
+- type: field_group
+  name: catering
+  label: Catering
+  fields:
+  - type: textarea
+    name: text
+    label: Text
+  - type: file
+    name: menu
+    label: Menu
+    description: File names should not have spaces. e.g. "dine in menu.pdf" should
+      be changed to "dine_in_menu.pdf"
+  - type: file
+    name: photo
+    label: Photo
+    description: File names should not have spaces. e.g. "street tacos.jpg" should
+      be changed to "street_tacos.jpg"
+- type: field_group
+  name: private_dining
+  label: Private Dining
+  fields:
+  - type: textarea
+    name: text
+    label: Text
+  - type: field_group_list
+    name: menus
+    label: Menus
+    fields:
+    - type: text
+      name: link_text
+      label: Link Text
+    - type: file
+      label: Menu
+      name: menu
+      description: File names should not have spaces. e.g. "dine in menu.pdf" should
+        be changed to "dine_in_menu.pdf"
+  - type: file
+    name: photo
+    label: Photo
+    description: File names should not have spaces. e.g. "street tacos.jpg" should
+      be changed to "street_tacos.jpg"
+- type: field_group
+  name: happy_hour
+  label: Happy Hour
+  fields:
+  - type: textarea
+    name: text
+    label: Text
+  - type: file
+    name: menu
+    label: Menu
+  - type: file
+    label: Photo
+    name: photo
+    description: File names should not have spaces. e.g. "street tacos.jpg" should
+      be changed to "street_tacos.jpg"
+- type: field_group
+  name: events
+  label: Events
+  fields:
+  - type: text
+    name: title
+    label: Title
+  - type: file
+    name: winter_park_photo
+    label: Winter Park Photo
+    description: Image dimensions should be 1000px by 775px
+  - type: textarea
+    name: winter_park_text
+    label: Winter Park Text
+  - type: file
+    name: daytona_beach_photo
+    label: Daytona Beach Photo
+    description: Image dimensions should be 1000px by 775px
+  - type: textarea
+    name: daytona_beach_text
+    label: Daytona Beach Text
+pages:
+- content/dine.md

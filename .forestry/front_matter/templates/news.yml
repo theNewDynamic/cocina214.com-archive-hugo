@@ -1,0 +1,183 @@
+---
+label: news
+hide_body: false
+fields:
+- name: title
+  label: Title
+  type: text
+  hidden: false
+  default: ''
+  config:
+    required: true
+- name: date
+  label: Date
+  type: datetime
+  hidden: false
+  default: now
+  config:
+    required: true
+  description: '"Posted" date only. Will be displayed as e.g. "Posted 9/15/19"'
+- name: additional_info
+  type: text
+  config:
+    required: false
+  label: Additional Info
+  description: Will be displayed alongside the date in the post summary. Please keep
+    as short as possible to avoid breaking the layout. e.g. "Happening Now!" "Deal
+    Ends 9/16/19"
+- type: select
+  name: category
+  config:
+    source:
+      type: simple
+      section: news
+    options:
+    - awards
+    - current
+    - past-events
+    - press
+    - upcoming
+    required: true
+  label: Category
+  default: awards
+- type: file
+  name: featured_photo
+  label: Featured Photo
+  description: File names should not have spaces. e.g. "street tacos.jpg" should be
+    changed to "street_tacos.jpg"
+- type: image_gallery
+  name: photos
+  label: photos
+  description: File names should not have spaces. e.g. "street tacos.jpg" should be
+    changed to "street_tacos.jpg"
+- type: text
+  name: video_key
+  label: Video Key
+  description: To embed a YouTube video, find the URL (e.g. https://www.youtube.com/watch?v=CdrCNx06eGA)
+    and copy the key after 'watch?v=' (e.g. CdrCNx06eGA)
+pages:
+- content/news/2019-dining-awards-readers-choice.md
+- content/news/2019-dining-awards-readers-spotlight-2.md
+- content/news/2019-orlando-sentinel-foodie-awards-best-happy-hour.md
+- content/news/2019-orlando-sentinel-foodie-awards.md
+- content/news/4th-of-july-takeout-package.md
+- content/news/5-taco-special.md
+- content/news/6th-annual-running-of-the-chihuahuas.md
+- content/news/an-additional-post.md
+- content/news/another-post.md
+- content/news/back-to-school-package.md
+- content/news/beach-yoga-on-national-yoga-day.md
+- content/news/best-margaritas-around-orlando-according-to-yelpers.md
+- content/news/book-your-holiday-party-now.md
+- content/news/calirosa-tequila-dinner-at-cocina-214.md
+- content/news/calling-all-daytona-locals--help-us-create-our--daytona-local--margarita-.md
+- content/news/catering-special.md
+- content/news/celebrate-2021-with-our-new-year-s-package.md
+- content/news/celebrate-cinco-de-mayo-and-our-7-year-anniversary.md
+- content/news/celebrate-cinco-de-mayo-at-the-beach-with-cocina-214-daytona-.md
+- content/news/celebrate-national-avocado-day-at-cocina-214--tuesday--july-31st-.md
+- content/news/celebrate-national-avocado-day-with-cocina-214.md
+- content/news/celebrate-national-best-friend-day-cocina-214-with-margaritas.md
+- content/news/celebrate-national-guacamole-day-at-cocina-214-1.md
+- content/news/celebrate-national-guacamole-day-at-cocina-214-2.md
+- content/news/celebrate-national-guacamole-day-at-cocina-214.md
+- content/news/celebrate-national-taco-on-friday-october-4-2019.md
+- content/news/celebrate-national-tequila-day-at-cocina-214.md
+- content/news/celebrate-the-season-with-cocina-214.md
+- content/news/christmas-eve-and-christmas-day.md
+- content/news/cinco-2020.md
+- content/news/cinco-de-mayo-1.md
+- content/news/cinco-de-mayo-at-cocina-214.md
+- content/news/cinco-de-mayo.md
+- content/news/cocina-214-a-daytona-favorite.md
+- content/news/cocina-214-daytona-beach-coming-in-january.md
+- content/news/cocina-214-debuts-on-the-beach-.md
+- content/news/cocina-214-featured-on-the-orlando-sentinel-valentine-s-day-dining-list.md
+- content/news/cocina-214-holds-job-fair-next-week-in-daytona.md
+- content/news/cocina-214-makes-orlando-weekly-s-50-fave.md
+- content/news/cocina-214-mentioned-by-orlando-weekly-for-valentine-s-day.md
+- content/news/cocina-214-on-citysurfing-orlando-.md
+- content/news/cocina-214-s-annual-running-of-the-chihuahuas.md
+- content/news/cocina-214-s-back-to-school-package.md
+- content/news/cocina-214-s-easter-menu.md
+- content/news/cocina-214-s-high-quality-margaritas-.md
+- content/news/cocina-214-s-holiday-package.md
+- content/news/cocina-214-updates-as-of-march-18-2020.md
+- content/news/cocina-214-voted-best-gluten-free-restaurant-.md
+- content/news/consider-voting-for-cocina-214.md
+- content/news/daytona-beach-1-year-anniversary.md
+- content/news/daytona-beach-bike-week-.md
+- content/news/daytona-beach-grand-opening-.md
+- content/news/daytona-beach-new-year-s-eve-dinner-dancing.md
+- content/news/daytona-s-landshark--cocina-214-eateries-officially-start-the-party.md
+- content/news/december-beachfront-yoga.md
+- content/news/easter-menu.md
+- content/news/edible-orlando-features-cocina-214-s-guac.md
+- content/news/election-watch-party-package.md
+- content/news/enjoy-christmas-eve-dinner-with-us-at-cocina-214.md
+- content/news/enjoy-national-drink-beer-day-at-cocina-214.md
+- content/news/enjoy-new-year-s-eve-dinner-at-cocina-214.md
+- content/news/enjoy-our-friendsgiving-dinner-package-this-season.md
+- content/news/enjoy-our-new-margarita-flights.md
+- content/news/enjoy-our-special-margarita-flights-for-national-margarita-day-on-monday-february-22nd.md
+- content/news/father-s-day-package-1.md
+- content/news/father-s-day-package.md
+- content/news/february-sunday-funday.md
+- content/news/february-yoga-brunch.md
+- content/news/girls-night-out-justin-wine-dinner.md
+- content/news/great-things-coming.md
+- content/news/halloween-party-package.md
+- content/news/halloween-themed-yoga-brunch!.md
+- content/news/happy-hour-of-giving-at-cocina-214-daytona-beach.md
+- content/news/january-beachfront-yoga-in-daytona-beach.md
+- content/news/jenna-s-promotion-was-included-in-the-orlando-sentinel-s--people-on-the-move--.md
+- content/news/kindness-for-kyle.md
+- content/news/let-cocina-214-host-or-cater-your-holiday-party.md
+- content/news/margarita-mondays-for-club-214-members.md
+- content/news/may-beachside-yoga-brunch.md
+- content/news/mexico-world-cup-game---cocina-214-june-23rd-with-happy-hour-specials-.md
+- content/news/mother-s-day-at-cocina-214.md
+- content/news/mother-s-day-special-take-out-menu.md
+- content/news/national-margarita-day-1.md
+- content/news/national-margarita-day-2.md
+- content/news/national-margarita-day-dinner-with-drinks.md
+- content/news/national-margarita-day.md
+- content/news/national-nacho-day.md
+- content/news/national-taco-day.md
+- content/news/national-tequila-day.md
+- content/news/national-wine-day.md
+- content/news/need-a-break.md
+- content/news/new-cocina-214-hours-and-menu.md
+- content/news/new-cocina-214-hours-limited-menu-for-curbside-pick-up.md
+- content/news/new-family-dinner-options-for-take-out-and-delivery.md
+- content/news/new-happy-hour-cocktail-menu-for-takeout-and-delivery.md
+- content/news/new-year-s-week-restaurant-hours.md
+- content/news/november-beach-yoga.md
+- content/news/order-cocina-214-online-and-get-curbside-pick-up-or-delivery.md
+- content/news/order-the-cocina-214-super-bowl-fiesta-for-the-big-game.md
+- content/news/orlando-sentinel-s--people-on-the-move--1.md
+- content/news/orlando-sentinel-s--people-on-the-move-.md
+- content/news/orlando-sentinel-s-lauren-delgado-takes-a-look-at-cocina-214-s-new-menu.md
+- content/news/our-favorite-romantic-weekend-getaways-from-orlando.md
+- content/news/our-new-family-packages-for-takeout.md
+- content/news/pictures-from-the-7th-annual-running-of-the-chihuahuas.md
+- content/news/registration-now-open-for-cocina-214-s-annual-running-of-the-chihuahuas.md
+- content/news/restaurants-open-in-daytona-.md
+- content/news/running-of-the-chihuahuas.md
+- content/news/santa-came-early-to-cocina-214.md
+- content/news/sunday-funday-on-deember-9th.md
+- content/news/takeout-menu-for-2020-graduates.md
+- content/news/teacher-tuesday-at-cocina-214.md
+- content/news/thankful-thursdays-at-cocina-214.md
+- content/news/the-best-of-may-events-in-orlando-.md
+- content/news/this-is-a-post.md
+- content/news/tis-the-season-to-be-jolly.md
+- content/news/try-some-smashing-avocado-dishes-for-national-day.md
+- content/news/updates-from-cocina-214.md
+- content/news/valentine-s-day-1.md
+- content/news/valentine-s-day-package-for-2.md
+- content/news/valentine-s-day.md
+- content/news/we-are-open-and-offer-online-ordering-curbside-pick-up-catering-deliveries.md
+- content/news/we-have-news.md
+- content/news/yoga-brunch-beachfront-at-cocina-214-daytona-beach.md
+- content/news/you-can-now-order-cocina-214-online.md

@@ -1,0 +1,470 @@
+/***** Main/Host Page CSS *****/
+.body
+{
+    font-family: "Verdana",sans-serif;
+    text-align: left;
+    color: #2b2422fa;
+}
+
+#centeringDiv
+{
+    position: relative;
+}
+
+.page
+{
+    font-family: "Verdana",sans-serif;
+    background-color: #e5dfd1;
+}
+
+    /** Form text CSS **/
+#titleText
+{
+    font-weight: bold;
+    color: #2b2422;
+}
+#instructionalText
+{
+    font-weight: 600;
+    color: #2b2422;
+}
+
+#instructionalText_LoginPage
+{
+    font-weight: 600;
+    color: #2b2422;
+    margin-bottom: 36px !important;
+    font-size: 18pt;
+}
+
+.pageInstructions /**Main instructions on client color's background**/
+{
+    font-weight: 600;
+    color: #2b2422;
+}
+
+.formHeadlines
+{
+    color: #2b2422;
+}
+
+.inputLabel
+{
+    color: #2b2422;
+}
+
+.formLabel
+{
+    color: #2b2422;
+}
+
+.formLabelSmall
+{
+    color: #2b2422;
+}
+
+.footerText
+{
+    color: #2b2422;
+}
+
+hr
+{
+    background-color: #2b2422;
+    color: #2b2422;
+}
+    /** Form text CSS **/
+    
+#userTag
+{
+    color: #2b2422;
+    background-color: rgb(200,200,160);
+    border-width: 2px;
+    border-style: solid;
+    border-color: rgb(80,80,60);
+    text-align: center;
+}
+    
+a.userTagLink:link
+{
+    font-size: 12px; 
+    font-weight: 600; 
+    font-style:  normal; 
+    margin-top: 0px;
+    color: #2b2422;
+}
+
+a.userTagLink:hover
+{
+    font-size: 12px; 
+    font-weight: 600; 
+    font-style:  normal; 
+    margin-top: 0px;
+    color: #2b2422;
+}
+
+#forgotPasswordLink
+{
+    font-weight: 400;
+    color: #2b2422;
+    font-size: 9pt;
+}
+
+    /** Link CSS **/
+.links 
+{ 
+    text-decoration: none;
+}
+
+a:link  
+{
+    margin: 0px;
+    padding: 0px;
+    color: #2b2422;
+    text-decoration: none;
+}
+a:active
+{
+    margin: 0px;
+    padding: 0px;
+    color: #2b2422;
+    text-decoration: none;
+}
+a:visited
+{
+    margin: 0px;
+    padding: 0px;
+    color: #2b2422;
+    text-decoration: none;
+}
+a:hover
+{
+    margin: 0px;
+    padding: 0px;
+    color: #2b2422;
+    text-decoration: none;
+}
+
+.mainNavLink
+{
+    color: #2b2422;
+    font-size: 16pt;
+    font-weight: 600;
+    font-style: normal;
+    clear: none;
+    display: inline;
+}
+
+.secondNavLink
+{
+    color: #2b2422;
+    font-size: 16pt;
+    font-weight: 600;
+    font-style: normal;
+    clear: none;
+    display:inline;
+}
+    /** Link CSS **/
+
+.mainDelimiter
+{
+    font-size: 18pt;
+    font-weight: 600;
+    font-style: normal;
+    clear: none;
+    display:inline;
+    margin: 0px 10px 0px 10px;
+}
+
+.secondDelimiter
+{    
+    font-size: 18pt;
+    font-weight: 600;
+    font-style: normal;
+    clear: none;
+    display:inline;
+    margin: 0px 10px 0px 10px;
+}
+
+.title
+{
+    font-size: 24pt;
+    font-weight: bold;
+    font-style: normal;
+    color: #2b2422;
+    text-align: center;
+}
+
+.instructions /**Instructions on white background**/
+{
+    font-size: 13pt;
+    font-weight: normal;
+    font-style: normal;
+    line-height: 16pt;
+    color: #2b2422;
+    text-align: center;
+}
+
+.homePageLink 
+{
+    font-size: 18pt;
+    font-weight: bold;
+    font-style: normal;
+   color: #2b2422;
+    text-align: center;
+    text-decoration: none;
+}
+
+.disclaimerText
+{
+    font-size: 9pt;
+    font-weight: normal;
+    font-style: normal;
+    color: #2b2422;
+    text-align: center;
+}
+
+.asterisk 
+{
+    font-size:11pt;
+    font-weight:normal;
+    font-style:normal;
+    color: #2b2422;
+    text-align:left;
+}
+/***** Main/Host Page CSS *****/
+
+
+/***** Login Page CSS *****/
+.login {
+    font-size:11pt;
+    font-weight:bold;
+    font-style:normal;
+    color: #2b2422;
+    text-align:center;
+}
+.errorMessage
+{
+    color: red;
+    text-align: center;
+}
+/***** Login Page CSS *****/
+
+
+/***** Standings Page *****/
+h1.standingsHeadline
+{
+    font-size: 32px;
+    font-weight: 600;
+    color: #2b2422;
+    margin: 0px 0px 10px 0px;
+    padding: 0px;
+    text-align: left;
+}
+
+h2.standingsHeadline
+{
+    font-size: 48px;
+    font-weight: 900;
+    color: #2b2422;
+    margin: 0px;
+    padding: 0px;
+}
+
+h3.standingsHeadline
+{
+    font-size: 16px;
+    font-style: oblique;
+    margin: 0px 0px 5px 20px;
+    padding: 0px;
+}
+
+.standingsText
+{
+    margin: 0px;
+}
+/***** Standings Page *****/
+
+
+/***** Profile/Bonus Plan Pages CSS *****/
+.pageHeadlines
+{
+    color: #2b2422;
+    margin: auto;
+    text-align: center;
+}
+
+.fldLabel 
+{
+    font-family: Tahoma,Arial,Helvetica,sans-serif;
+    font-size:11pt;
+    font-weight:normal;
+    font-style:normal;
+    color: #2b2422;
+    text-align:right;
+    width:50%;
+}
+
+.fldData 
+{
+    font-family: Tahoma,Arial,Helvetica,sans-serif;
+    font-size:11pt;
+    font-weight:normal;
+    font-style:normal;
+    color:rgb(0, 0, 0);
+    text-align:left;
+    background-color: #2b2422;
+    width:230px;
+}
+
+.BPName 
+{ 
+    font-family: Tahoma,Arial,Helvetica,sans-serif;
+    font-size:11pt;
+    font-weight:bold;
+    font-style:normal;
+    color: #2b2422;
+    text-align:right;
+}
+
+.BPBalance {
+    font-family: Tahoma,Arial,Helvetica,sans-serif;
+    font-size:11pt;
+    font-weight:normal;
+    font-style:normal;
+    color: #2b2422;
+    text-align:left;
+}
+
+.grpbox {
+    font-family: Tahoma,Arial,Helvetica,sans-serif;
+    font-size:11pt;
+    font-weight:bold;
+    font-style:normal;
+    color: #2b2422;
+    text-align:left;
+}
+
+.Txn_both {
+    font-family: Tahoma, Arial, Helvetica, sans-serif;
+    font-size:  10pt;
+    font-weight: bold;
+    font-style: normal;
+    color: #2b2422;
+    text-align: left;
+}
+
+.Txn_one {
+    font-family: Tahoma, Arial, Helvetica, sans-serif;
+    font-size:  18pt;
+    font-weight: bold;
+    font-style: normal;
+    color: #2b2422;
+    text-align: left;
+}
+
+.eCardBalance_both {
+    font-family: Tahoma, Arial, Helvetica, sans-serif; 
+    font-size: 10pt; 
+    font-weight: bold; 
+    font-style: normal; 
+    color: #2b2422; 
+    text-align: center;
+}
+
+.eCardBalance_one {
+    font-family: Tahoma, Arial, Helvetica, sans-serif; 
+    font-size: 12pt; 
+    font-weight: bold; 
+    font-style: normal; 
+    color: #2b2422;
+    text-align: center;
+}
+
+.TxnValues_both {
+    font-family: Tahoma, Arial, Helvetica, sans-serif; 
+    font-size: 10pt; 
+    font-weight: bold; 
+    font-style: normal; 
+    color: #2b2422; 
+    text-align: left; 
+}
+
+.TxnValues_one {
+    font-family: Tahoma, Arial, Helvetica, sans-serif; 
+    font-size: 14pt; 
+    font-weight: bold; 
+    font-style: normal; 
+    color: #2b2422; 
+    text-align: left;
+}
+
+.EditProfile { 
+        font-family: Tahoma,Arial,Helvetica,sans-serif; 
+        font-size:10pt; 
+        font-weight:normal; 
+        font-style:normal; 
+       color: #2b2422; 
+        text-align:center 
+}
+
+#main {
+    margin: 0px auto 12px auto !important;
+}
+
+.formDiv {
+    max-width: 480px;
+    margin-bottom: 40px !important;
+    background: #d18419e6;
+    padding-right: 0 !important;
+}
+
+#ieCustomization {
+    padding-left: 0 !important;
+}
+
+.homelink {
+    font-size: 13pt;
+}
+
+.endHR {
+    display: none;
+}
+
+#topHR {
+    margin-bottom: 12px;
+    margin-top: 30px;
+}
+
+.formFields {
+    width: 100% !important;
+    max-width: 186px;
+}
+
+.formLabel {
+    text-align: left !important;
+}
+
+#securityQuestions {
+    max-width: 131px;
+}
+
+#newAccountForm {
+    max-width: 406px !important;
+    margin-left: auto;
+    margin-right: auto;  
+}
+
+p.submit {
+    width: 100% !important;
+    height: auto !important;
+}
+
+input[type=submit] {
+    width: 8.5rem;
+    height: 2.5rem;
+    background: #e5dfd1 !important;
+    border-color: #2b2422;
+    padding: 0 !important;
+    cursor: pointer;
+}

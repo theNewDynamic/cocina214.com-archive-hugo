@@ -1,0 +1,16 @@
+---
+Address:
+  part_one: 151 E. Welbourne Avenue
+  part_two: Winter Park, Florida 32789
+  google_maps_url: https://www.google.com/maps/place/Cocina+214/@28.596916,-81.3525747,17z/data=!3m1!4b1!4m5!3m4!1s0x88e7701a9984e623:0x16d50fb8ac0d377e!8m2!3d28.596916!4d-81.350386
+Phone: 407. 790. 7997
+Email: info@cocina214.com
+Social_Media:
+  twitter: https://twitter.com/Cocina214
+  facebook: https://www.facebook.com/Cocina214/
+  instagram: https://instagram.com/Cocina214
+Hours:
+- days: Sunday - Thursday
+  times: 11:30 am - 9:00 pm
+- days: Friday & Saturday
+  times: 11:30 am – 10:00 pm

@@ -1,0 +1,74 @@
+<!--Nav for Displays 50em and Wider -->
+<div class="main-sitemap dn h3 w-100   db@50   css-ie-flex-shrink">
+    <div class="f5 flex fw5 h3 items-center justify-between ph4 wrksns   pt-_125@50   center-l f-1_0625-l fw6-l ph5-l pt-1_25-l   mw-64@72 ph0@72">
+        <a class="c-gold dn fw6 hover-c-dark-brown lh-solid link mb0 pb0 tracked-narrow ttu   db-l
+        {{ if eq .Title "Cocina 214" }}css-current-page-link{{ end }}" href="/">Home</a>
+        <a class="c-gold db hover-c-dark-brown lh-solid link mb0 pb0 tracked-narrow ttu
+        {{ if eq .Title "About" }}css-current-page-link{{ end }}" href="/about">About</a>
+        <a class="c-gold db hover-c-dark-brown lh-solid link mb0 pb0 tracked-narrow ttu
+        {{ if eq .Title "Loyalty" }}css-current-page-link{{ end }}" href="/loyalty">Loyalty</a>
+        <a class="c-gold db hover-c-dark-brown lh-solid link mb0 pb0 tracked-narrow ttu
+        {{ if eq .Title "Dine" }}css-current-page-link{{ end }}" href="/dine">Dine</a>
+        <a class="c-gold db hover-c-dark-brown lh-solid link mb0 pb0 tracked-narrow ttu
+        {{ if eq .Title "News" }}css-current-page-link{{ else if eq .Section "news" }}css-current-page-link{{ end }}" href="/news">News</a>
+        <a class="c-gold db hover-c-dark-brown lh-solid link mb0 pb0 tracked-narrow ttu
+        {{if or (eq .Title "Shops") (eq .Section "shop")}}css-current-page-link{{ end }}" href="/shop">Shop</a>
+        <a class="c-gold db hover-c-dark-brown lh-solid link mb0 pb0 tracked-narrow ttu
+        {{ if eq .Title "Contact" }}css-current-page-link{{ end }}" href="/contact">Contact</a>
+
+        <style>
+        .snipcart-summary.snipcart-cart-small{display:none}
+        /*jquery checks for class snipcart-summary-empty. if snipcart-summary-empty doesn't exist we'll add class
+        has-items*/
+        .snipcart-summary.snipcart-cart-small.css-snipcart-show-hide{display:block}
+        .snipcart-summary.snipcart-cart-small.snipcart-summary-empty.css-snipcart-show-hide{display:none}
+
+
+
+        /*jquery checks for class snipcart-summary-empty. if snipcart-summary-empty doesn't exist we'll add class
+        has-items*/
+        @media screen and (min-width:50em) {
+
+            .snipcart-summary.snipcart-cart-small.css-snipcart-show-hide{display:none}
+
+            .snipcart-summary.snipcart-summary-large{display:none}
+            .snipcart-summary.snipcart-summary-large.snipcart-summary-empty.css-snipcart-show-hide{display:none}
+            .snipcart-summary.snipcart-summary-large.css-snipcart-show-hide{display:-webkit-box;display:-ms-flexbox;display:flex}
+        }
+        </style>
+
+
+        <!--   Cart Icon   -->
+        <div class="h-1_375 mb1 w-1_625   absolute-l center-l h-1_8125-l justify-end-l left-0-l mb0-l mt-2_6875-l ph5-l right-0-l top-0-l w-100-l   mw-64@72 ph0@72   snipcart-summary snipcart-summary-large">
+            <a href="#" class="db dim h-1_375 link w-1_625   h-1_8125-l w-1_8125-l   snipcart-checkout css-snipcart-checkout-large">
+                <span class="bg-solid-red br-100 db h-_8125 ml-_8125 w-_8125 tc   h1-l w1-l">
+                    <span class="code db f-_5 fw5 pt-_125 white   f-_5625-l fw6-l pt-_1875-l   snipcart-total-items">
+                    </span>
+                </span>
+            </a>
+        </div>
+        <!-- End Cart Icon -->
+
+    </div>
+</div>
+
+<!--Nav for Displays Narrower than 50em -->
+<div class="bg-white-95 dt fixed right-0 top-0 vh-100 w-100 z-0   dn@50  js-nav">
+    <div class="fixed top-0 h-3 bb b--light-gray w-100   h3-ns" style="margin-top:1px;"></div>
+    <div class="dtc f-1_0625 fw4 ph3 pt4 tc v-mid wrksns   f4@23   ph4-ns">
+        <a class="b--light-gray bb c-gold db hover-c-dark-brown lh-solid link mb3 pb3 tracked
+        {{ if eq .Title "Cocina 214" }}css-current-page-link{{ end }}" href="/">Home</a>
+        <a class="b--light-gray bb c-gold db hover-c-dark-brown lh-solid link mb3 pb3 tracked
+        {{ if eq .Title "About" }}css-current-page-link{{ end }}" href="/about">About</a>
+        <a class="b--light-gray bb c-gold db hover-c-dark-brown lh-solid link mb3 pb3 tracked
+        {{ if eq .Title "Loyalty" }}css-current-page-link{{ end }}" href="/loyalty">Loyalty</a>
+        <a class="b--light-gray bb c-gold db hover-c-dark-brown lh-solid link mb3 pb3 tracked
+        {{ if eq .Title "Dine" }}css-current-page-link{{ end }}" href="/dine">Dine</a>
+        <a class="b--light-gray bb c-gold db hover-c-dark-brown lh-solid link mb3 pb3 tracked
+        {{ if eq .Title "News" }}css-current-page-link{{ else if eq .Section "news" }}css-current-page-link{{ end }}" href="/news">News</a>
+        <a class="b--light-gray bb c-gold db hover-c-dark-brown lh-solid link mb3 pb3 tracked
+        {{ if eq .Title "Shops" }}css-current-page-link{{ else if eq .Section "shop" }}css-current-page-link{{ end }}" href="/shop">Shop</a>
+        <a class="                 c-gold db hover-c-dark-brown lh-solid link         tracked
+        {{ if eq .Title "Contact" }}css-current-page-link{{ end }}" href="/contact">Contact</a>
+    </div>
+</div>

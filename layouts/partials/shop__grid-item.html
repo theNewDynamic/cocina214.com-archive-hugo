@@ -1,0 +1,21 @@
+<!--   Product   -->
+<div class="fade-in t-del-1 mt-2_3125   css-product-grid-item">
+        <!--   Product Photo   -->
+        <a class="db dim mb-_6875   mb-_9375-ns" href="{{ .URL }}">
+            <img alt="" class="db w-100" src="{{ .Params.featured_image }}" />
+        </a>
+        <!-- End Product Photo -->
+
+        <!--   Product Info   -->
+        <a class="c-dark-brown db dim link" href="{{ .URL }}">
+            <!--   Product Name   -->
+            <h3 class="f6 fw6 mb-_375 mt0 tracked-narrow ttu wrksns   f5-ns lh-1_5-ns mb-_0625-ns">{{ .Title }}</h3>
+            <!-- End Product Name -->
+
+            <!--   Product Price   -->
+            <p class="f5 fw6 jean-luc mv0   f-1_125-ns">${{ .Params.price }}</p>
+            <!-- End Product Price -->
+        </a>
+        <!-- End Product Info -->
+    </div>
+    <!-- End Product -->

@@ -1,0 +1,37 @@
+{{ define "main" }}
+<main class="bg-white mt-5_5 pb5   mt-6_5-ns   mt-2_5@50   mt-3_5@53 pb-6_5@53">
+    <h1 class="element-invisible">News</h1>
+
+
+    {{ partial "news-categories" . }}
+
+
+    {{ $paginator := .Paginate (where .Data.Pages "Type" "news") 3 }}
+    {{ range $paginator.Pages }}
+        {{ partial "post_summary" . }}
+    {{ end }}
+
+
+    {{if or (.Paginator.HasPrev) (.Paginator.HasNext)}}
+        <div class="section-animate">
+            <div class="center ph3   ph4-ns   mt5@53   ph5-l   mw-64@79 ph0@79">
+                <!--   Divider   -->
+                <div class="bg-dark-brown h-_125 mb-_625 mt0 "></div>
+                <!-- End Divider -->
+            </div>
+            <div class="fade-in center ph3 w-100   ph4-ns   ph5-l   mw-64@79 ph0@79">
+                {{ if .Paginator.HasPrev }}
+                    <!--   Back to News Button   -->
+                    <a class="c-dark-brown dib f4 jean-luc lh-solid link mv0 tracked-narrow ttu   css-back-arrow-link" href="{{ .Paginator.Prev.URL }}">Previous Page</a>
+                    <!-- End Back to News Button -->
+                {{ end }}
+                {{ if .Paginator.HasNext }}
+                    <!--   Back to News Button   -->
+                    <a class="c-dark-brown dib f4 jean-luc lh-solid link mv0 tracked-narrow ttu   css-arrow-link   fr" href="{{ .Paginator.Next.URL }}">Next Page</a>
+                    <!-- End Back to News Button -->
+                {{ end }}
+            </div>
+        </div>
+    {{ end }}
+</main>
+{{ end }}

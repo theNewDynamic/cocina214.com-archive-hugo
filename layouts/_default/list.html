@@ -1,0 +1,98 @@
+{{ define "main" }}
+
+    <link href="{{ .Site.BaseURL }}/assets/css/home.css" rel="stylesheet">
+
+    {{ partial "slider/styles" . }}
+
+    {{ partial "slider/markup" . }}
+    
+    <main class="ph3-ns">
+        <div class="center mw-66 ph3 section-animate  flex@48 justify-between@48   ph0-l">
+            <div class="fade-in-right t-del-4 pb4 pt-3_5   pl3-ns   w-50@48   pb-5-l pl4-l w-55-l   w-60@79">
+                {{ partial "headline" . }}
+                <h1 class="element-invisible">Mexican Kitchen &amp; Bar</h1>
+            </div>
+            <div class="fade-in-up t-del-6 f5 lh-2 mt-_1875 measure-wide nested-p pb-4_6875   ph3-ns   pl4@48 pr3@48 pt-3_5@48 w-50@48   w-45-l   pl3@79 pr0@79 w-39@79">
+                <p>{{ .Content | markdownify }}</p>
+                <a class="b--c-dark-brown ba bw1 c-dark-brown dib f-1_125 h-2_5 hover-bg-dark-brown hover-white jean-luc lh-1_5 link mt-_3125 ph4 pt-_375 tracked-narrow ttu" href="/about">Learn More</a>
+            </div>
+        </div>
+
+
+        <!--   Upcoming Events   -->
+        <div class="bg-gold section-animate flex flex-column-reverse   flex-row-l">
+            <div class=" pb-2_5625 pt-3_5   pb-1_0625-ns   min-h-28-l w-55-l   w-58@79">
+                <h2 class="fade-in-right   f4 fw6 lh-2 ml3 mv0 pt-_0625 tracked-narrow ttu wrksns   f3-ns ml4-ns   pt0@48   mw-31_5-l   fr@79 mr-6_5@79">Upcoming Events</h2>
+                <div class="bg-dark-brown h-_125 mb-1_4375 mr3 mt-_3125   mr4-ns   mb-_4375@79 mr-6_5@79 mt-2_375@79"></div>
+                <div class="flex flex-wrap justify-between lh-2 mt3 ph3 tracked-narrow   ml4-ns ph0-ns   mw-31_5-l   fr@79 mr-6_5@79">
+                    {{ range .Params.upcoming_events.events }}
+                        <div class="fade-in t-del-2  mb-1_75 w-100   mb-3_25-ns pr3-ns w-50-ns   pr0-l w-13-l">
+                            <h3 class="f-1_125 fw4 lh-1_5 mb1 mt0 white">{{ .event_name }}</h3>
+                            <p class="mv0">{{ .event_date }}</p>
+                            <p class="mv0">{{ .event_time }}</p>
+                            <p class="mv0">{{ .event_description }}</p>
+
+                            {{ range .event_links }}
+                                {{ if ( .event_link_url ) and ( .event_link_url "!=" "") }}
+                                    <div class="w-100">
+                                        <a class="c-dark-brown dib f5 jean-luc lh-solid link mb0 mt3 tracked-narrow ttu   css-arrow-link" href="{{ .event_link_url }}">{{ .event_link_text }}</a>
+                                    </div>
+                                {{ end }}
+                            {{ end }}
+                            
+                            {{ if ( .photo_link.photo_link_text ) and ( .photo_link.photo_link_photo "!=" "") }}
+                                <div class="w-100">
+                                    <a class="c-dark-brown dib f5 jean-luc lh-solid link mb0 mt3 tracked-narrow ttu   css-arrow-link" href="{{ .photo_link.photo_link_photo }}">{{ .photo_link.photo_link_text }}</a>
+                                </div>
+                            {{ end }}
+                        </div>
+                    {{ end }}
+                </div>
+            </div>
+            <div class="bg-gold overflow-hidden w-100 h-20   h-auto-l w-45-l   w-42@79"
+            style="background-image:url({{ .Params.upcoming_events.photo}});background-position:center center;background-size:cover">
+            </div>
+            <!--
+            <div class="bg-gold overflow-hidden w-100 h-20   h-auto-l w-45-l   w-42@79">
+                <div data-bg="{{ .Params.upcoming_events.photo}}" style="height: 100%;width:100%;background-position:center center;background-size:cover" class="lazyload scaleUpImg t-del-2"></div>
+            </div>-->
+        </div>
+        <!-- End Upcoming Events -->
+
+
+        <!--   Catering   -->
+        <div class="flex@48 mv-1_25@48 section-animate bg-dark-brown">
+            <div class="h-20 mv2   h-30-ns mv3-ns   h-auto@48 mv0@48 w-50@48   w-55-l   w-58@79"
+            style="background-image:url({{ .Params.catering.photo}});background-position:center center;background-size:cover">
+            </div>
+
+            <div class=" pb-4_6875 pr3 pt-3_5   w-50@48   pr4-ns   w-45-l   pr-3@79 w-42@79">
+                <h2 class="fadeInLeft  c-gold f4 fw6 lh-2 ml3 mv0 pt-_0625 tracked-narrow ttu wrksns   f3-ns ml4-ns   pt0@48   ml5@79 mw-39@79">Catering</h2>
+                <div class="bg-gold h-_125 mb-1_1875 mt-_3125   mt-_375-ns"></div>
+                <div class="fade-in t-del-2 lh-2 ml3 measure-wide nested-p tracked-narrow white   ml4-ns   ml5@79 mw-39@79">
+                    <p>{{ .Params.catering.text | markdownify }}</p>
+                    <a class="b--white ba bw1 dib f-1_125 h-2_5 hover-bg-white hover-c-dark-brown jean-luc lh-1_5 link mt-_3125 ph4 pt-_375 tracked-narrow ttu white" href="/dine">Learn More</a>
+
+                    {{ partial "online-ordering__catering" . }}
+                </div>
+            </div>
+        </div>
+        <!-- End Catering -->
+
+
+        <!--   Private Dining   -->
+        <div class="section-animate   flex flex-column-reverse   flex-row@48 mv-1_25@48">
+            <div class="bg-red mb2 pb-4_6875 pr3 pt-3_5   mb3-ns pr4-ns   mb0@48 w-50@48   w-55-l   pr-3@79 w-58@79">
+                <h2 class="fadeInLeft    f4 fw6 lh-2 pl3 mv0 pr3 pt-_0625 tracked-narrow ttu wrksns w-100 white   f3-ns pl4-ns pr4-ns pt0@48   fr@79 mw-39@79 pl3@79   pl0@81">Private Dining</h2>
+                <div class="bg-white h-_125 mb-1_1875 mt-_3125   mt-2_375@79" ></div>
+                <div class="fade-in t-del-2    lh-2 ml3 measure-wide nested-p tracked-narrow white   ml4-ns   fr@79 ml5@79 mw-39@79">
+                    <p>{{ .Params.private_dining.text | markdownify }}</p>
+                    <a class="b--white ba bw1 dib f-1_125 h-2_5 hover-bg-white hover-c-red jean-luc lh-1_5 link mt-_3125 ph4 pt-_375 tracked-narrow ttu white" href="/dine">Learn More</a>
+                </div>
+            </div>
+            <div class="h-20 mv2   h-30-ns mv3-ns   h-auto@48 mv0@48 w-50@48   w-45-l   w-42@79" style="background-image:url({{ .Params.private_dining.photo}});background-position:center center;background-size:cover">
+            </div>
+        </div>
+        <!-- End Private Dining -->
+    </main>
+{{ end }}

@@ -1,0 +1,126 @@
+{{ define "main" }}
+<main class="bg-white mt-3 pb5   mt5-ns   mt0@50">
+    <div class="section-animate flex@53">
+        <!--   Product Info / Add-to-Cart   -->
+        <div class=" mb-2_8125 pr3 pt4   pr4-ns   mb0@53 pt-3_5@53 w-55@53   pr5@72 w-50@72">
+            <!--   Product Name   -->
+            <div class="pr3   pr4-ns   pr5-l   flex@72 justify-end@72 pr0@72">
+                <h1 class="fade-in-right f4 fw6 lh-2 ml3 mv0 pt-_0625 tracked-narrow ttu wrksns w-100   f3-ns ml4-ns pt0-ns   ml5-l   mw-28@72">{{ .Title }}</h1>
+            </div>
+            <!-- End Product Name -->
+
+            <!--   Divider   -->
+            <div class="flex@72 justify-end@72">
+                <div class="bg-gold h-_125 mb-1_375 mt-_3125 w-100   mt-_375-ns   w-30@90"></div>
+            </div>
+            <!-- End Divider -->
+
+            <!--   Product Info / Add-to-Cart   -->
+            <div class="fade-in t-del-1 flex@72 justify-end@72">
+                <div class="lh-2 ml3 tracked-narrow   ml4-ns   ml5-l   mw-28@72">
+                    <!--   Product Description   -->
+                    <div class="measure-wide">
+                        <p class="f3 fw6 jean-luc mb-1_3125 mt0   f-1_75-ns">${{ .Params.price }}</p>
+                        <div class="mb-2_8125 nested-p">
+                            {{ .Content }}
+                        </div>
+                    </div>
+                    <!-- End Product Description -->
+
+                    <!--   Product Details/Add-to-Cart   -->
+                    <div class="flex flex-column-reverse   flex-row@40 justify-between@40   justify-start@49   flex-column-reverse@53">
+                        {{if .Params.details }}
+                            <!--   Product Details   -->
+                            <div class="lh-2 nested-list   pr4@49 w-27@49   pr0@53 w-auto@53">
+                                <h2 class="f-1_125 fw6 mb-2_0625 mt0 tracked-narrow ttu wrksns   nt-_375@40   mt0@53">Details</h2>
+                                <ul>
+                                    {{ range .Params.details }}
+                                        <li>{{ . }}</li>
+                                    {{ end }}
+                                </ul>
+                            </div>
+                            <!-- End Product Details -->
+                        {{ end }}
+
+                        <!--   Add-to-Cart   -->
+                        <div class="mb-2_875   mb0@40   {{if .Params.details }}ml4@40   ml-_75@49{{end}}   mb-2_875@53 ml0@53">
+                            <div class="flex justify-between mb-_1875 w-18">
+                                {{if .Params.sizes }}
+                                    <select class="b--c-dark-brown ba bg-transparent br0 bw1 custom-dim fw6 h-2_5 input-reset jean-luc pl3 pointer tracked-narrow w-8_5   css-select" id="js-snipcart-select">
+                                        {{ range .Params.sizes }}
+                                            <option value="{{ . }}">{{ . }}</option>
+                                        {{ end }}
+                                    </select>
+                                {{ end }}
+                                <button class="bg-red bn fw6 h-2_5 hover-b--c-red hover-ba hover-bg-white hover-bw1 hover-c-red jean-luc pointer tracked-narrow w-8_5 white   snipcart-add-item"
+                                    data-item-taxable="{{ if .Params.no_tax }}false{{ else }}true{{end}}"
+                                    data-item-name="{{ .Title }}"
+                                    data-item-id="{{ .Params.id }}"
+                                    data-item-image="{{ .Params.featured_image }}"
+                                    data-item-url="{{.Site.BaseURL}}{{ .URL }}"
+                                    data-item-price="{{ .Params.price }}"
+                                    data-item-weight="{{ .Params.shipping_weight }}"
+                                    {{if .Params.sizes }}
+                                    data-item-custom1-name="Size"
+                                    data-item-custom1-options="{{ range first 1 .Params.sizes }}{{ . }}{{ end }}{{ range after 1 .Params.sizes }}|{{ . }}{{ end }}"
+                                    {{ end }}
+                                    id="js-snipcart-add-to-cart-button">
+                                    Add to Cart
+                                </button>
+                            </div>
+                            {{if .Params.size_guide }}
+                                <a class="c-dark-brown custom-dim f7 hover-no-underline link mv0 underline wrksns" href="{{ .Params.size_guide }}">Size Guide</a>
+                            {{ end }}
+                        </div>
+                        <!-- End Add-to-Cart -->
+                    </div>
+                    <!-- End Product Details/Add-to-Cart -->
+                </div>
+            </div>
+            <!-- End Product Info / Add-to-Cart -->
+        </div>
+        <!-- End Product Info / Add-to-Cart -->
+
+
+        <!--   Product Photos   -->
+        <div class="fade-in-left t-del-1 ph3 self-start   ph4-ns   pl0@53 w-45@53   pr0-l   w-50@72">
+            <div class="flex-ns   db@53 mt-3_5@53 mw-27@53   mr5-l   ml-5@72">
+                <!--   Featured Product Photo   -->
+                <div class="self-start   mw-27-ns">
+                    <img class="db w-100   js-product-photo-featured" src="{{ .Params.featured_image }}" />
+                </div>
+                <!-- End Featured Product Photo -->
+
+                <!---   Product Photo Grid   -->
+                {{ if .Params.images }}
+                    <div class="flex flex-wrap justify-between   flex-column-ns justify-start-ns mw-5_5-ns w-5_5-ns   flex-row@53 justify-start@53 mw-100@53 w-100@53   css-no-flex-shrink css-product-photo-grid   js-product-photo-grid">
+                        <div class="css-product-photo-grid-item-outer">
+                            <a class="custom-dim db   css-product-photo-grid-item-inner" href="{{ .Params.featured_image }}">
+                                <img class="db mb0 w-100" src="{{ .Params.featured_image }}" />
+                            </a>
+                        </div>
+                        {{ range .Params.images }}
+                            <div class="css-product-photo-grid-item-outer">
+                                <a class="custom-dim db   css-product-photo-grid-item-inner" href="{{ . }}">
+                                    <img class="db mb0 w-100" src="{{ . }}" />
+                                </a>
+                            </div>
+                        {{ end }}
+                    </div>
+                {{ end }}
+                <!-- End Product Photo Grid -->
+            </div>
+        </div>
+        <!-- End Product Photos -->
+    </div>
+
+
+    <div class="ph3   ph4-ns   ph5-l">
+        <div class="center mw-64 w-100">
+            <!--   Back to News Button   -->
+            <a class="c-dark-brown dib f4 jean-luc lh-solid link mb0 mt-2_4375 tracked-narrow ttu   css-back-arrow-link" href="/shop">Back to Shop</a>
+            <!-- End Back to News Button -->
+        </div>
+    </div>
+</main>
+{{ end }}

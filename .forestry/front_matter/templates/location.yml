@@ -1,0 +1,13 @@
+---
+label: location
+hide_body: true
+fields:
+- type: text
+  name: forestry_title
+  label: Title
+- type: image_gallery
+  name: hero_photos
+  label: Hero Photos
+  description: Slider will display no more than 4 photos
+pages:
+- content/location.md

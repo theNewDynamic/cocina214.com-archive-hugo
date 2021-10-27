@@ -1,0 +1,114 @@
+{{ define "main" }}
+
+{{ partial "slider/styles" . }}
+
+{{ partial "slider/markup" . }}
+
+
+<main class=" ph3-ns">
+    <h1 class="element-invisible">Our Locations</h1>
+
+    <!--   Location One   -->
+    <div class="section-animate  bg-dark-brown  mv2   mv3-ns   flex-l   css-ie-flex-shrink">
+        <!--   Location Info   -->
+        <div class=" c-gold pb5 pr3 pt-3_5   pr4-ns   w-50-l   pr-7@79">
+            <!--   Location   -->
+            <div class="flex@79 justify-end@79">
+                <h2 class="fade-in-right  f4 fw6 lh-2 ml3 mv0 pt-_0625 tracked-narrow ttu w-100 wrksns   f3-ns ml4-ns pt0-ns   w-25@79">Winter Park, Florida</h2>
+            </div>
+            <!-- End Location -->
+
+            <!--   Divider   -->
+            <div class="flex@90 justify-end@90">
+                <div class="bg-gold h-_125 mb-1_1875 mt-_3125 w-100   mt-_375-ns   w-27@90"></div>
+            </div>
+            <!-- End Divider -->
+
+            <!--   Address & Hours/Event Coordination   -->
+            <div class="fade-in t-del-2  flex@79 justify-end@79">
+                <div class="lh-2 ml3 tracked-narrow   ml4-ns   flex@40 justify-between@40   db-l mw-26-l   w-25@79">
+                    <!--   Address & Hours   -->
+                    <div class="w-60@40   w-100-l">
+                        <h3 class="element-invisible">Address</h3>
+                        <p class="mb-_8125 mt0">{{ .Site.Data.Winter_Park_Info.Address.part_one }}<br>{{ .Site.Data.Winter_Park_Info.Address.part_two }}</p>
+                        <a class="b--c-gold ba bw1 c-gold dib f-1_125 h-2_5 hover-bg-gold hover-c-dark-brown jean-luc lh-1_5 link mb-2_1875 ph4 pt-_375 tracked-narrow ttu white" href="{{ .Site.Data.Winter_Park_Info.Address.google_maps_url }}">Get Directions</a>
+
+                        <h3 class="f5 fw4 mv0">Hours:</h3>
+                        {{ range .Site.Data.Winter_Park_Info.Hours }}
+                            <div class="flex justify-between   justify-start-ns">
+                                <p class="f6 mv0 w-50   f5@23   w-48@25   mw-12-ns">{{ .days }}</p>
+                                <p class="f6 mv0 w-50 white   f5@23   w-48@25   ml3-ns w-auto-ns">{{ .times }}</p>
+                            </div>
+                        {{ end }}
+                    </div>
+                    <!-- End Address & Hours -->
+                </div>
+            </div>
+            <!-- End Address & Hours/Event Coordination -->
+        </div>
+        <!-- End Location Info -->
+
+        <!--   Map   -->
+        <div class="fade-in bg-mid-gray h-20   h-28_5-ns   h-auto-l w-50-l" id="location_one_map"></div>
+        <!-- End Map -->
+    </div>
+    <!-- End Location One -->
+
+
+
+    <!--   Location Two   -->
+    <div class="section-animate  bg-gold   mv2   mv3-ns   flex-l min-h-28-l   css-ie-flex-shrink">
+        <!--   Location Info   -->
+        <div class="pb5 pr3 pt-3_5   pr4-ns   w-50-l   pr-7@79">
+            <!--   Location   -->
+            <div class="flex@79 justify-end@79">
+                <h2 class="fade-in-right f4 fw6 lh-2 ml3 mv0 pt-_0625 tracked-narrow ttu w-100 wrksns   f3-ns ml4-ns pt0-ns   w-25@79">Daytona Beach, Florida</h2>
+            </div>
+            <!-- End Location -->
+
+            <!--   Divider   -->
+            <div class="flex@90 justify-end@90">
+                <div class="bg-dark-brown h-_125 mb-1_1875 mt-_3125 w-100   mt-_375-ns   w-27@90"></div>
+            </div>
+            <!-- End Divider -->
+
+            <!--   Address & Hours/Event Coordination   -->
+            <div class="fade-in t-del-2  flex@79 justify-end@79">
+                <div class="lh-2 ml3 tracked-narrow   ml4-ns   flex@40 justify-between@40   db-l mw-26-l   w-25@79">
+                    <!--   Address & Hours   -->
+                    <div class="mb-3_8125   mb0@40 mr2@40 w-60@40   mb-3_8125-l mr0-l w-100-l">
+                        <h3 class="element-invisible">Address</h3>
+                        <p class="mb-_8125 mt0">{{ .Site.Data.Daytona_Beach_Info.Address.part_one }}<br>{{ .Site.Data.Daytona_Beach_Info.Address.part_two }}</p>
+
+                        {{ if $.Site.Data.Daytona_Beach_Info.show_coming_soon_badge }}
+                            <p class="b--c-dark-brown ba bg-dark-brown bw1 c-gold dib f-1_125 h-2_5 jean-luc lh-1_5 link mb-2_1875 mt0 ph4 pt-_375 tracked-narrow ttu">Coming Soon</p>
+                        {{ end }}
+
+                        <div class="{{ if $.Site.Data.Daytona_Beach_Info.show_coming_soon_badge }}dn{{ end }}">
+                            <a class="b--c-dark-brown ba bw1 c-dark-brown dib f-1_125 h-2_5 hover-bg-dark-brown hover-c-gold jean-luc lh-1_5 link mb-2_1875 ph4 pt-_375 tracked-narrow ttu" href="{{ .Site.Data.Daytona_Beach_Info.Address.google_maps_url }}">Get Directions</a>
+
+                            <h3 class="f5 fw4 mv0">Hours:</h3>
+                            {{ range .Site.Data.Daytona_Beach_Info.Hours }}
+                                <div class="flex justify-between   justify-start-ns">
+                                    <p class="f6 mv0 w-50   f5@23   w-48@25   mw-12-ns">{{ .days }}</p>
+                                    <p class="f6 mv0 w-50 white   f5@23   w-48@25   ml3-ns w-auto-ns">{{ .times }}</p>
+                                </div>
+                            {{ end }}
+                        </div>
+                    </div>
+                    <!-- End Address & Hours -->
+                </div>
+            </div>
+            <!-- End Address & Hours/Event Coordination -->
+        </div>
+        <!-- End Location Info -->
+
+        <!--   Map   -->
+        <div class="fade-in bg-mid-gray h-20   h-28_5-ns   h-auto-l w-50-l   {{ if $.Site.Data.Daytona_Beach_Info.show_coming_soon_badge }}h-43_6875@53{{ end }}" id="location_two_map"></div>
+        <!-- End Map -->
+    </div>
+    <!-- End Location Two -->
+
+    {{ partial "map_js" . }}
+</main>
+{{ end }}

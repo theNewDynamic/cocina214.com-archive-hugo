@@ -1,0 +1,70 @@
+{{ define "main" }}
+<main class="bg-white mt-3 pb-5_5 ph3   mt5-ns ph4-ns   mt0@50   ph5-l">
+    <h1 class="element-invisible">Shop</h1>
+
+    <div class=" center mw-64">
+
+        <div class="section-animate mb-_8125">
+            <!--   Product Category   -->
+            <h2 class="fade-in-right  f4 fw6 lh-1_5 mb-_5625 mt0 pt-2_3125 tracked-narrow ttu wrksns   f3-ns lh-1_75-ns mb2-ns pt-2_125-ns   pt-3_625@53">{{ .Site.Data.Shop_Online_Ordering.Title }}</h2>
+            <!-- End Product Category -->
+    
+            <!--   Divider   -->
+            <div class="bg-gold h-_125 mt0 nb-_3125"></div>
+            <!-- End Divider -->
+    
+            <!--   Product Grid   -->
+            <div class=" flex flex-wrap justify-between   css-product-grid">
+                <!--   Product   -->
+                <div class="fade-in t-del-1 mt-2_3125   css-product-grid-item__large">
+                    <!--   Product Info   -->
+                    <a class="c-dark-brown db dim link" href="https://GOOGLE.COM" target="_blank">
+                        <!--   Product Name   -->
+                        <p class="f6 fw4 mb3 mt0 tracked-narrow   f5-ns lh-1_5">{{ .Site.Data.Shop_Online_Ordering.Description }}</p>
+                        <!-- End Product Name -->
+
+                        <!--   Product Price   -->
+                        <a class="online-ordering-btn wrksns" href="https://cocina214.alohaorderonline.com" target="_blank">
+                            <span>Order Now</span>
+                        </a>
+                        <!-- End Product Price -->
+                    </a>
+                    <!-- End Product Info -->
+                </div>
+                <!-- End Product -->
+            </div>
+            <!-- End Product Grid -->
+        </div>
+
+        {{ range .Data.Pages.GroupByParam "category" }}
+            <div class="section-animate mb-_8125">
+                <!--   Product Category   -->
+                <h2 class="fade-in-right  f4 fw6 lh-1_5 mb-_5625 mt0 pt-2_3125 tracked-narrow ttu wrksns   f3-ns lh-1_75-ns mb2-ns pt-2_125-ns   pt-3_625@53">{{.Key}}</h2>
+                <!-- End Product Category -->
+
+                <!--   Divider   -->
+                <div class="bg-gold h-_125 mt0 nb-_3125"></div>
+                <!-- End Divider -->
+
+                <!--   Product Grid   -->
+                <div class=" flex flex-wrap justify-between   css-product-grid">
+                    {{ if eq .Key "Gift Cards" }}
+
+                        {{ range sort .Pages "Params.price" }}
+                            {{ partial "shop__grid-item" . }}
+                        {{ end }}
+
+                    {{ else }}
+
+                        {{ range .Pages }}
+                            {{ partial "shop__grid-item" . }}
+                        {{ end }}
+                        
+                    {{ end }}
+                </div>
+                <!-- End Product Grid -->
+            </div>
+        {{ end }}
+    </div>
+</main>
+{{ end }}

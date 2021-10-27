@@ -1,0 +1,97 @@
+---
+label: home
+hide_body: false
+fields:
+- name: title
+  label: Title
+  type: text
+  hidden: true
+  default: ''
+  description: ''
+- name: type
+  label: Type
+  type: text
+  hidden: true
+  default: ''
+- type: text
+  name: forestry_title
+  label: Title
+  default: Home
+- type: image_gallery
+  name: hero_photos
+  label: Hero Photos
+  description: Slider will display no more than 4 photos
+- type: field_group
+  name: upcoming_events
+  label: Upcoming Events
+  fields:
+  - type: file
+    name: photo
+    label: Photo
+    default: ''
+    description: File names should not have spaces. e.g. "street tacos.jpg" should
+      be changed to "street_tacos.jpg"
+  - type: field_group_list
+    name: events
+    label: Events
+    fields:
+    - type: text
+      name: event_name
+      label: Event Name
+    - type: text
+      name: event_date
+      label: Event Date
+    - type: text
+      name: event_time
+      label: Event Time
+    - type: text
+      name: event_description
+      label: Event Description
+    - type: field_group_list
+      name: event_links
+      label: Event Links
+      fields:
+      - type: text
+        name: event_link_text
+        label: Event Link Text
+        description: ' e.g. "Learn More", "Register", "View Event Menu"'
+      - type: text
+        name: event_link_url
+        label: Event Link URL
+        description: This can link to a news post, other website, file, etc.
+    - type: field_group
+      name: photo_link
+      label: Photo Link
+      fields:
+      - type: text
+        name: photo_link_text
+        label: Photo Link Text
+      - type: file
+        name: photo_link_photo
+        label: Photo Link Photo
+- type: field_group
+  name: catering
+  label: Catering
+  fields:
+  - type: textarea
+    name: text
+    label: Text
+  - type: file
+    name: photo
+    label: Photo
+    description: File names should not have spaces. e.g. "street tacos.jpg" should
+      be changed to "street_tacos.jpg"
+- type: field_group
+  name: private_dining
+  label: Private Dining
+  fields:
+  - type: textarea
+    name: text
+    label: text
+  - type: file
+    name: photo
+    label: photo
+    description: File names should not have spaces. e.g. "street tacos.jpg" should
+      be changed to "street_tacos.jpg"
+pages:
+- content/_index.md

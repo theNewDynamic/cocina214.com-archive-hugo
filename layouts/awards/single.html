@@ -1,0 +1,48 @@
+{{ define "main" }}
+
+<main class="mt-3 pb-4_25 ph3   mt5-ns ph4-ns   mt0@50   pb-6_5@53   ph5-l   ph0@72">
+    <div class="center mw-64">
+        <!--   Post Title   -->
+        <!--<p class="dn c-gold   db-l mb-_375-l mt-2_125-l">{{ .Params.location }}</p>-->
+        <div class="">
+            <h1 class="f4 fw6 lh-1_5 mb-_5625 mt0 pt-2_3125 tracked-narrow ttu w-100 wrksns
+            f3-ns lh-1_75-ns mb2-ns pt-2_125-ns
+            pt-3_625@53   mt-2_125-l pt0-l w-80-l">{{ .Title }}</h1>
+        </div>
+        <!-- End Post Title -->
+
+        <!--   Divider   -->
+        <div class="bg-dark-brown h-_125 mb-_625 mt0   mb2-l"></div>
+        <!-- End Divider -->
+
+        <div class="flex@53 justify-between@53">
+            <div class="mt-1_9375   pr3@53 w-50@53   mt-1_6875-l pr0-l">
+                <div class="lh-2 measure-wide nested-p nested-link   mb-2_8125@53">
+                    {{ .Content }}
+                </div>
+            </div>
+            <div class="flex@40 justify-between@40 flex-wrap@40   db@53 mt1@53 pl3@53 w-50@53   mt0-l pl4-l w-64-l">
+                {{ if .Params.video_key }}
+                    <div class="db mt-2_8125 self-start w-100   w-48@40   mt4@53 w-100@53">
+                        <div id="video-container">
+                            <iframe class="z-0" src='https://www.youtube.com/embed/{{ .Params.video_key }}' frameborder='0' allowfullscreen></iframe>
+                        </div>
+                    </div>
+                {{ end }}
+                {{ if .Params.featured_photo }}
+                    <img alt="" class="db mt-2_8125 self-start w-100   w-48@40   mt4@53 w-100@53" src="{{ .Params.featured_photo }}" />
+                {{ end }}
+                {{ if .Params.photos }}
+                    {{ range .Params.photos }}
+                        <img alt="" class="db mt-2_8125 self-start w-100   w-48@40   mt4@53 w-100@53" src="{{ . }}" />
+                    {{ end }}
+                {{ end }}
+            </div>
+        </div>
+
+        <!--   Back to News Button   -->
+        <a class="c-dark-brown dib f4 jean-luc lh-solid link mb0 mt-2_4375 tracked-narrow ttu   absolute@53 nt-1_0625@53   css-back-arrow-link" href="/news">Back to all news</a>
+        <!-- End Back to News Button -->
+    </div>
+</main>
+{{ end }}

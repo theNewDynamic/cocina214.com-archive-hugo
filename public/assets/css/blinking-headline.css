@@ -1,0 +1,47 @@
+/*Fill*/
+/*.fill-orange {fill: #f9b456;}*/
+.fill-orange {fill: #d18419;}
+/**/
+
+/*Original Blinker*/
+.blinking-headline path {
+	
+	animation-duration:900ms;
+	animation-fill-mode:both;
+	animation-iteration-count: infinite;
+	animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.blinking-headline path:nth-of-type(8n+1) {
+	animation-name: blinker-2;
+}
+.blinking-headline path:nth-of-type(16n+1) {
+	animation-name: blinker-2;
+	animation-duration:1200ms;
+	animation-delay:.5s;	
+}
+
+
+/*// Blinker 1*/
+@keyframes blinker-1 {
+	0% {
+		fill: #d18419;
+	}
+	50% {
+		fill: #fff;
+	}
+	100% {
+		fill: #d18419;
+	}
+}
+@keyframes blinker-2 {
+	0% {
+		fill: #ffdaa6;
+	}
+	50% {
+		fill: #d18405;
+	}
+	100% {
+		fill: #ffdaa6;
+	}
+}

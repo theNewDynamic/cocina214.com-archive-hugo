@@ -1,0 +1,41 @@
+{{ define "main" }}
+<main class="bg-white mt-5_5   mt-6_5-ns   mt-2_5@50   mt-3_5@53 pb-6_5@53">
+    <h1 class="element-invisible">{{ .Title }}</h1>
+
+
+    {{ partial "news-categories" . }}
+
+
+    {{ if eq .Title "News: Awards"}}
+        {{ range (where .Site.Pages "Type" "news") }}
+            {{ if in .Params.category "awards" }}
+                {{ partial "post_summary" . }}
+            {{ end }}
+        {{ end }}
+    {{ else if eq .Title "News: Current" }}
+        {{ range (where .Site.Pages "Type" "news") }}
+            {{ if in .Params.category "current" }}
+                {{ partial "post_summary" . }}
+            {{ end }}
+        {{ end }}
+    {{ else if eq .Title "News: Past Events" }}
+        {{ range (where .Site.Pages "Type" "news") }}
+            {{ if in .Params.category "past-events" }}
+                {{ partial "post_summary" . }}
+            {{ end }}
+        {{ end }}
+    {{ else if eq .Title "News: Press" }}
+        {{ range (where .Site.Pages "Type" "news") }}
+            {{ if in .Params.category "press" }}
+                {{ partial "post_summary" . }}
+            {{ end }}
+        {{ end }}
+    {{ else if eq .Title "News: Upcoming" }}
+        {{ range (where .Site.Pages "Type" "news") }}
+            {{ if in .Params.category "upcoming" }}
+                {{ partial "post_summary" . }}
+            {{ end }}
+        {{ end }}
+    {{ end }}
+</main>
+{{ end }}

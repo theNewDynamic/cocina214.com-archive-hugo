@@ -1,0 +1,63 @@
+---
+label: loyalty
+hide_body: true
+fields:
+- type: text
+  name: forestry_title
+  label: Title
+- type: image_gallery
+  name: hero_photos
+  label: Hero Photos
+  description: Slider will display no more than 4 photos
+- type: text
+  name: content_section_1_title
+  label: Content Section 1 Title
+- type: textarea
+  name: content_section_1
+  label: Content Section 1
+  config:
+    wysiwyg: false
+    schema:
+      format: markdown
+- type: file
+  name: section_1_image
+  label: Section 1 Image
+- type: text
+  name: content_section_2_title
+  label: Content Section 2 Title
+- type: textarea
+  name: content_section_2
+  label: Content Section 2
+  config:
+    wysiwyg: false
+    schema:
+      format: markdown
+- type: file
+  name: section_2_image
+  label: Section 2 Image
+- type: text
+  name: content_section_3_title
+  label: Content Section 3 Title
+- type: textarea
+  name: content_section_3
+  label: Content Section 3
+  config:
+    wysiwyg: false
+    schema:
+      format: markdown
+- type: file
+  name: section_3_image
+  label: Section 3 Image
+- type: text
+  name: content_section_4_title
+  label: Content Section 4 Title
+- type: textarea
+  name: content_section_4
+  label: Content Section 4
+  config:
+    wysiwyg: false
+    schema:
+      format: markdown
+- type: file
+  name: section_4_image
+  label: Section 4 Image

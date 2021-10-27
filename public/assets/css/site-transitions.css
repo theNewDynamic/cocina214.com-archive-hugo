@@ -1,0 +1,139 @@
+/* ------------------------------ Transitions ------------------------------ */
+
+/*-------------------------------Main Sitemap--------------------------------*/
+.news-categories_links,
+.main-sitemap .snipcart-checkout,
+.css-nav-logo {
+	opacity: 0;
+	animation-duration:900ms;
+	animation-fill-mode:both;
+}
+.news-categories_links {
+	animation-delay:.5s !important;
+
+}
+
+.main-sitemap .lh-solid {
+	opacity: 0;
+	will-change:transform;	
+	animation-duration:750ms;
+	animation-fill-mode:both;
+}
+/*.main-sitemap .lh-solid:nth-child(1) {
+	animation-delay: 0.5s;
+}*/
+.main-sitemap .lh-solid:nth-child(2) {
+	animation-delay: .1s;
+}
+.main-sitemap .lh-solid:nth-child(3) {
+	animation-delay: .2s;
+}
+.main-sitemap .lh-solid:nth-child(4) {
+	animation-delay: .3s;
+}
+.main-sitemap .lh-solid:nth-child(5) {
+	animation-delay: .4s;
+}
+.main-sitemap .lh-solid:nth-child(6) {
+	animation-delay: .5s;
+}
+.main-sitemap .lh-solid:nth-child(7) {
+	animation-delay: .6s;
+}
+.main-sitemap .lh-solid:nth-child(8) {
+	animation-delay: .7s;
+}
+.main-sitemap .lh-solid:nth-child(9) {
+	animation-delay: .8s;
+}
+.main-sitemap .lh-solid:nth-child(10) {
+	animation-delay: .9s;
+}
+
+/*---------------------------------------------------------------------------*/
+/*--------------------------- Section Animations ----------------------------*/
+/*.fadeIn,
+.fadeInLeft,
+.fadeInUp,
+.fadeInRight {
+	opacity: 0;
+}*/
+.t-all {
+	transition: opacity 1s cubic-bezier(.37,.01,0,.98), 
+				transform 1s cubic-bezier(.37,.01,0,.98);	
+}
+.fade-in {
+	opacity: 0;
+	transition: opacity 1s cubic-bezier(.37,.01,0,.98);
+}
+.fade-in-up {
+	opacity: 0;
+	transform: translate(0,8px);
+	transition: opacity 1s cubic-bezier(.37,.01,0,.98), transform 1s cubic-bezier(.37,.01,0,.98);
+}
+.fade-in-left {
+	opacity: 0;
+	transform: translate(40px,0);
+	transition: opacity 1s cubic-bezier(.37,.01,0,.98), 
+				transform 1s cubic-bezier(.37,.01,0,.98);	
+}
+
+.fade-in-right {
+	opacity: 0;
+	transform: translate(-40px,0);	
+	transition: opacity 1s cubic-bezier(.37,.01,0,.98), 
+				transform 1s cubic-bezier(.37,.01,0,.98);	
+}
+
+
+/*----------------------------Section Animation Delay Classes-----------------------------*/
+/*.a-del-1 {animation-delay: 0.25s !important;}
+.a-del-2 {animation-delay: 0.5s !important;}
+.a-del-3 {animation-delay: 0.75s !important;}
+.a-del-4 {animation-delay: 1s !important;}
+.a-del-5 {animation-delay: 1.25s !important;}
+.a-del-6 {animation-delay: 1.75s !important;}*/
+/*----------------------------Section Transition Delay Classes-----------------------------*/
+.t-del-1 {transition-delay: 0.15s !important;}
+.t-del-2 {transition-delay: 0.3s !important;}
+.t-del-3 {transition-delay: 0.45s !important;}
+.t-del-4 {transition-delay: .6s !important;}
+.t-del-5 {transition-delay: .75s !important;}
+.t-del-6 {transition-delay: 1s !important;}
+.t-del-7 {transition-delay: 1.15s !important;}
+
+/*---------------------------- Section Animated -----------------------------*/
+.animated .fade-in,
+.animated .fade-in-up,
+.animated .fade-in-right,
+.animated .fade-in-left {
+	transform: translate(0,0);
+	opacity: 1;
+}
+.animate-now.fade-in-right {
+	transform: translate(0,0);
+	opacity: 1;
+}
+
+/*Scale Up*/
+/*.scaleUpImg {
+	opacity: .0 !important;
+ 	transition: opacity 1s cubic-bezier(.37,.01,0,.98) .5s, 
+				transform 1s cubic-bezier(.37,.01,0,.98) .5s;	
+}
+.animated .scaleUpImg {
+	opacity: 1 !important;
+}
+*/
+
+/*----------------------------------Loaded-----------------------------------*/
+
+.load--done .main-sitemap .lh-solid {
+	animation-name: fadeInUp;
+}
+
+.load--done .css-nav-logo,
+.news-categories_links,
+.load--done .main-sitemap .snipcart-checkout {
+	animation-name: fadeIn;
+}
