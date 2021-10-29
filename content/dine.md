@@ -24,7 +24,7 @@ dine_with_us:
   - menu_name: 'Drink/Cocktail '
     menu: "/uploads/2021/10/29/drinks-october-2021.pdf"
   - menu_name: After Dinner Drink and Dessert
-    menu: "/uploads/2021/06/22/afterdinner_june-2021.pdf"
+    menu: "/uploads/2021/10/29/afterdinner_october-2021.pdf"
   featured:
     name: Happy Hour
     hours: '4:00 pm – 6:30 pm '
