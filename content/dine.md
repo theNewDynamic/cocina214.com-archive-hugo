@@ -14,7 +14,7 @@ dine_with_us:
     and “Best Family Place”.   So whatever the occasion you’re sure to enjoy.'
   menus:
   - menu_name: Dine-In and Takeout
-    menu: "/uploads/2021/06/22/cocina-214-menu-june-2021.pdf"
+    menu: "/uploads/2021/10/29/cocina-214-menu-october-2021.pdf"
   - menu_name: Family Packages for Takeout, Curbside Pickup and/or Delivery
     menu: "/uploads/2021/06/21/family-packages-menu-2021.jpg"
   - menu_name: Kids’
@@ -22,7 +22,7 @@ dine_with_us:
   - menu_name: Happy Hour Menu
     menu: "/uploads/2021/06/22/happy-hour-2021.pdf"
   - menu_name: 'Drink/Cocktail '
-    menu: "/uploads/2021/06/25/drinks-june-2021.pdf"
+    menu: "/uploads/2021/10/29/drinks-october-2021.pdf"
   - menu_name: After Dinner Drink and Dessert
     menu: "/uploads/2021/06/22/afterdinner_june-2021.pdf"
   featured:
@@ -86,5 +86,6 @@ online_ordering:
   description: Ordering is quick and easy. Select a location and time. Choose your
     items. Complete your checkout. Pickup and Catering Available. 20% Gratuity added
     on all online orders.
+hero_photos: []
 
 ---
