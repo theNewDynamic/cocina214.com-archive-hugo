@@ -9,4 +9,6 @@ type: awards
 url: "/news/awards"
 
 ---
-### Cocina 214 made a name for itself in the Orlando area. Cocina 214 is regarded as one of the best restaurants in Orlando and has won over 80 awards.
+### _Cocina 214 is a contemporary Mexican and Tex-Mex kitchen that combines bold flavors with the freshest local ingredients – all served in a vibrant and elegant setting._ 
+
+### _Cocina 214 has won over 80 awards and we look forward to serving you!_
