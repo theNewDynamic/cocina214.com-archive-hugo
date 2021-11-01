@@ -1,6 +1,6 @@
 +++
 additional_info = ""
-category = "current"
+category = "past-events"
 date = 2021-08-09T17:53:54Z
 featured_photo = "/uploads/2021/08/09/thankful-thursday-frontline-healthcare-special-2021.jpg"
 photos = []
