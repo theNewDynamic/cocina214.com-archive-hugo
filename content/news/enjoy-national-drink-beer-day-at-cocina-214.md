@@ -1,6 +1,6 @@
 +++
 additional_info = ""
-category = "upcoming"
+category = "past-events"
 date = 2021-09-23T16:04:02Z
 featured_photo = "/uploads/2021/09/23/national-drink-beer-day_2021.jpg"
 photos = []

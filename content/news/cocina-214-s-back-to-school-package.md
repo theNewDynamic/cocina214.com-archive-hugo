@@ -1,6 +1,6 @@
 +++
 additional_info = ""
-category = "current"
+category = "past-events"
 date = 2021-08-03T19:56:26Z
 featured_photo = "/uploads/2021/08/03/back-to-school_2021.jpg"
 photos = []
