@@ -1,6 +1,6 @@
 +++
 additional_info = "Friday, November 12th at 7:00 pm"
-category = "upcoming"
+category = "current"
 date = 2021-10-22T21:25:35Z
 featured_photo = "/uploads/2021/10/22/calirosa-tequila-dinner-flyer-final_nov-2021.jpg"
 photos = []
