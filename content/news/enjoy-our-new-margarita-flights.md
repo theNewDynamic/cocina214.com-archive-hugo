@@ -1,6 +1,6 @@
 +++
 additional_info = ""
-category = "current"
+category = "past-events"
 date = 2021-02-26T18:47:44Z
 featured_photo = "/uploads/2021/02/26/margarita-flights-poster-2021.jpg"
 photos = []
