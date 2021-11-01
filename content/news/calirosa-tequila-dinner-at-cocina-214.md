@@ -1,7 +1,7 @@
 +++
 additional_info = "Friday, November 12th at 7:00 pm"
 category = "current"
-date = 2021-10-22T21:25:35Z
+date = 2021-11-01T15:37:00Z
 featured_photo = "/uploads/2021/10/22/calirosa-tequila-dinner-flyer-final_nov-2021.jpg"
 photos = []
 title = "Calirosa Tequila Dinner at Cocina 214"
