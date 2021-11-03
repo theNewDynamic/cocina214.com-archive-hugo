@@ -19,7 +19,7 @@ catering:
 upcoming_events:
   photo: "/uploads/2019/09/05/Rocks_Margarita_w_limes.jpg"
   events:
-  - event_name: National Happy Hour Day
+  - event_name: Celebrate National Happy Hour Day at Award-Winning Cocina 214
     event_date: Friday, November 12th
     event_time: All Day Long!
     event_description: ''
