@@ -25,25 +25,26 @@
                 <h2 class="fade-in-right   f4 fw6 lh-2 ml3 mv0 pt-_0625 tracked-narrow ttu wrksns   f3-ns ml4-ns   pt0@48   mw-31_5-l   fr@79 mr-6_5@79">Upcoming Events</h2>
                 <div class="bg-dark-brown h-_125 mb-1_4375 mr3 mt-_3125   mr4-ns   mb-_4375@79 mr-6_5@79 mt-2_375@79"></div>
                 <div class="flex flex-wrap justify-between lh-2 mt3 ph3 tracked-narrow   ml4-ns ph0-ns   mw-31_5-l   fr@79 mr-6_5@79">
-                    {{ range .Params.upcoming_events.events }}
+                    {{ range $event := .Params.upcoming_events.events }}
                         <div class="fade-in t-del-2  mb-1_75 w-100   mb-3_25-ns pr3-ns w-50-ns   pr0-l w-13-l">
                             <h3 class="f-1_125 fw4 lh-1_5 mb1 mt0 white">{{ .event_name }}</h3>
                             <p class="mv0">{{ .event_date }}</p>
                             <p class="mv0">{{ .event_time }}</p>
                             <p class="mv0">{{ .event_description }}</p>
 
-                            {{ range .event_links }}
-                                {{ if ( .event_link_url ) and ( .event_link_url "!=" "") }}
+                            {{ range $event_link := .event_links }}
+                                {{ with .event_link_url }}
                                     <div class="w-100">
-                                        <a class="c-dark-brown dib f5 jean-luc lh-solid link mb0 mt3 tracked-narrow ttu   css-arrow-link" href="{{ .event_link_url }}">{{ .event_link_text }}</a>
+                                        <a class="c-dark-brown dib f5 jean-luc lh-solid link mb0 mt3 tracked-narrow ttu   css-arrow-link" href="{{ . }}">{{ $event_link.event_link_text }}</a>
                                     </div>
                                 {{ end }}
                             {{ end }}
-                            
-                            {{ if ( .photo_link.photo_link_text ) and ( .photo_link.photo_link_photo "!=" "") }}
-                                <div class="w-100">
-                                    <a class="c-dark-brown dib f5 jean-luc lh-solid link mb0 mt3 tracked-narrow ttu   css-arrow-link" href="{{ .photo_link.photo_link_photo }}">{{ .photo_link.photo_link_text }}</a>
-                                </div>
+                            {{ with $photo := .photo_link }}
+                                {{ with and .photo_link_text .photo_link_photo }}
+                                    <div class="w-100">
+                                        <a class="c-dark-brown dib f5 jean-luc lh-solid link mb0 mt3 tracked-narrow ttu   css-arrow-link" href="{{ $photo.photo_link_photo }}">{{ $photo.photo_link_text }}</a>
+                                    </div>
+                                {{ end }}
                             {{ end }}
                         </div>
                     {{ end }}
