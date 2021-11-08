@@ -93,18 +93,18 @@
 
 
 		{{ partial "footer" . }}
-
-		<!-- jQuery -->
+		
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 		<!-- Site JS -->
-		<script src="{{ .Site.BaseURL }}/assets/js/app.js"></script>
+		{{ partial "huge/scripts/tags" (slice "main") }}
 		<!-- Snipcart Dependencies -->
 		<script src="https://cdn.snipcart.com/scripts/2.0/snipcart.js"
 				id="snipcart" data-api-key="MDVhYjZlMmItZTBjMy00ZTRhLWJmZTUtNjFkOGE1MTY4NTFiNjM2NDIyOTkzMzEwMDQyNzA4"></script>
 
-		<!-- Snipcart Custom Fields -->
-        <script src="{{ .Site.BaseURL }}/assets/js/snipcart-fields.js" async=""></script>
-
+		{{ with resources.Get "js/snipcart-fields.js" }}
+			<script src="{{ .RelPermalink }}" async=""></script>
+		{{ end }}
+		
 		<script>
 		/* Snipcart Select */
 		$('#js-snipcart-select').change(function() {
@@ -115,14 +115,6 @@
     		setTimeout(function() {
      			$(".snipcart-summary").addClass("css-snipcart-show-hide");
     		}, 1);
-		});
-		</script>
-		<script>
-		/* Start opacity transition on dine hero images */
-		$(document).ready(function($) {
-    		setTimeout(function() {
-     			$(".css-slider").addClass("load");
-    		}, 500);
 		});
 		</script>
 	</body>
