@@ -36,8 +36,11 @@
 		<link href="../../../assets/css/site-transitions.css" rel="stylesheet">
 		-->
 
-		<link href="../../../assets/css/main.css" rel="stylesheet">
-
+		{{ partial "huge/styles/tags" (slice "main") }}
+		{{ partial "huge/fonts/tags" "tags" }}
+		{{ if .IsHome }}
+			{{ partial "huge/styles/tags" (slice "home") }}
+		{{ end }}
 		<!-- Global Site Tag (gtag.js) - Google Analytics -->
 		<script async src="https://www.googletagmanager.com/gtag/js?id=GA_TRACKING_ID"></script>
 		<script>
