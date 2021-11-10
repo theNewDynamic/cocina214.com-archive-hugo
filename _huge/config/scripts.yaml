@@ -1,0 +1,9 @@
+scripts:
+- name: main
+  path: js/app.js
+- name: home
+  path: js/home.js
+- name: snipcart-fields
+  path: js/snipcart-fields.js
+  internal: true
+  format: cjs

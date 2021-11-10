@@ -1,0 +1,20 @@
+fonts:
+- family: Stag Book
+  file: fonts/Stag-Book
+  weight: 400
+  style: normal
+- family: Work Sans
+  file: fonts/WorkSans-Regular
+  weight: 400
+  style: normal
+- family: Work Sans
+  file: fonts/WorkSans-Medium
+  weight: 500
+  style: normal
+- family: Work Sans
+  file: fonts/WorkSans-SemiBold
+  weight: 600
+  style: normal
+- family: JeanLuc
+  file: fonts/jeanlucweb-bold
+  weight: 600

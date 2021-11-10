@@ -1,0 +1,5 @@
+styles:
+- name: main
+  path: css/main.scss
+- name: home
+  path: css/home.css
