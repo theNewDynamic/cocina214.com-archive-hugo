@@ -26,7 +26,8 @@ video_key = ""
 
 **$125 For The Package** _feeds up to 6 ppl_
 
-  
 **PLACE YOUR ORDER ONLINE AT** [https://cocina214.com/shop/](https://cocina214.com/shop/ "https://cocina214.com/shop/")
 
 **OR CALL THE RESTAURANT TO ORDER AT 407.790.7997**
+
+Cocina 214 will be closed on New Year's Day and will re-open on Sunday, January 2nd at 11:30am. All New Year's Eve Orders must be picked up Friday, December 31st.
