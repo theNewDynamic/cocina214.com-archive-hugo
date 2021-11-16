@@ -20,7 +20,7 @@ images:
 weight: 400
 no_tax: false
 shipping_weight: "439.52"
-
+draft: true
 ---
 The back of this Limited Edition BLACK Cocina shirt features a 9.5" silk screened reproduction of the label's character dial. The front is a centered chest print featuring the saying "I hate running but I love tacos". The back features a small centered print featuring the Cocina 214 logo.  
 
