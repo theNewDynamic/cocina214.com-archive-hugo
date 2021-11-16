@@ -11,7 +11,7 @@ size_guide = "https://www.bellacanvas.com/spec/3001CVC%20specs.pdf"
 sizes = ["Small", "Medium", "Large", "X-Large", "2XL"]
 title = "I Hate Running but I Love Tacos T-Shirt (Grey with Blues)"
 weight = 400
-
+draft = true
 +++
 The back of this Limited Edition Athletic Heather Cocina shirt features a 9.5" silk screened reproduction of the label's character dial. The front is a centered chest print featuring the saying "I hate running but I love tacos". The back features a small centered print featuring the Cocina 214 logo.
 
