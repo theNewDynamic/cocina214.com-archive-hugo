@@ -5,16 +5,9 @@ fields:
 - type: text
   name: forestry_title
   label: Title
-- type: field_group_list
+- type: image_gallery
   name: hero_photos
   label: Hero Photos
-  fields:
-  - type: text
-    name: location
-    label: location
-  - type: file
-    name: photo
-    label: photo
   description: Slider will display no more than 4 photos
 - type: field_group
   name: dine_with_us
