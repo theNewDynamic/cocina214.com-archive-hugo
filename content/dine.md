@@ -72,8 +72,8 @@ events:
   daytona_beach_photo: "/uploads/2019/11/19/Brownies,-Churros-and-Strawberries.jpg"
   daytona_beach_text: ''
 hero_photo:
-- location: 'Winter Park '
-  photo: "/uploads/2017/12/01/dine.jpg"
+- location: ''
+  photo: "/uploads/2021/11/12/Cocina-214-41-2.jpg"
 happy_hour:
   text: |2-
 
