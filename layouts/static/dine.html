@@ -1,42 +1,9 @@
 {{ define "main" }}
 
-{{ partial "slider/styles" . }}
+
+    {{ partial "slider/styles" . }} {{ partial "slider/markup" . }}
 
 
-<div class="bg-black-01 h-26 mt-3 relative   mt5-ns   mt0@50   css-slider">
-    {{/* {{ if gt (len .Params.hero_photos) 3 }}
-        {{ range  first 1 (after 3 .Params.hero_photos) }}
-            <div class="absolute h-100 left-0 top-0 w-100  bg-3" style="background: url({{ .photo }}) no-repeat center;background-size: cover;">
-                <div class="absolute bottom-0 center left-0 ph3 right-0 tr w-100   ph5-l   mw-64@72 ph0@72">
-                    <p class="f4 jean-luc text-shadow tracked-narrow white">{{ .location }}</p>
-                </div>
-            </div>
-        {{ end }}
-    {{ end }}
-    {{ if gt (len .Params.hero_photos) 2 }}
-        {{ range  first 1 (after 2 .Params.hero_photos) }}
-            <div class="absolute h-100 left-0 top-0 w-100  bg-3" style="background: url({{ .photo }}) no-repeat center;background-size: cover;">
-                <div class="absolute bottom-0 center left-0 ph3 right-0 tr w-100   ph5-l   mw-64@72 ph0@72">
-                    <p class="f4 jean-luc text-shadow tracked-narrow white">{{ .location }}</p>
-                </div>
-            </div>
-        {{ end }}
-    {{ end }}
-    {{ range  first 1 (after 1 .Params.hero_photos) }}
-        <div class="absolute h-100 left-0 top-0 w-100  bg-2" style="background: url({{ .photo }}) no-repeat center;background-size: cover;">
-            <div class="absolute bottom-0 center left-0 ph3 right-0 tr w-100   ph5-l   mw-64@72 ph0@72">
-                <p class="f4 jean-luc text-shadow tracked-narrow white">{{ .location }}</p>
-            </div>
-        </div>
-    {{end}} */}}
-    {{ range first 1 .Params.hero_photo }}
-        <div class="absolute h-100 left-0 top-0 w-100  bg-1 using-this-one" style="background: url({{ .photo }}) no-repeat center;background-size: cover;">
-            <div class="absolute bottom-0 center left-0 ph3 right-0 tr w-100   ph5-l   mw-64@72 ph0@72">
-                <p class="f4 jean-luc text-shadow tracked-narrow white">{{ .location }}</p>
-            </div>
-        </div>
-    {{end}}
-</div>
 
 
 <main class="ph3-ns bg-black-03">

@@ -11,7 +11,7 @@ featured_staff:
   first_name: Maria
   last_name: ''
   title: Kitchen Manager
-winter_park_staff:
+staff:
 - photo: "/uploads/2021/06/02/miguel2small_new.jpg"
   first_name: Miguel
   last_name: ''
@@ -36,33 +36,6 @@ winter_park_staff:
   first_name: Christine
   last_name: ''
   title: Private Dining & Catering Manager
-daytona_beach_staff:
-  show_staff: false
-  staff:
-  - photo: ''
-    first_name: Heather
-    last_name: Cox
-    title: General Manager
-  - photo: ''
-    first_name: 'Maria '
-    last_name: 'Varon '
-    title: Manager
-  - photo: ''
-    first_name: 'Elizabeth '
-    last_name: Mireles
-    title: Manager
-  - first_name: Dasha
-    last_name: 'Ottich '
-    title: Manager
-    photo: ''
-  - photo: ''
-    first_name: Humberto
-    last_name: Castillo
-    title: Sous Chef
-  - photo: ''
-    first_name: Kristina
-    last_name: Fuertes
-    title: Events & Catering Manager
 forestry_title: About
 hero_photo: "/uploads/2019/12/03/kitchen-staff-and-Lambrine-2019-1500-2500.jpg"
 

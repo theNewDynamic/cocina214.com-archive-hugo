@@ -29,10 +29,10 @@
         </div>
 
         <div class="section-animate mb-1_6875   mb-1_5-ns">
-            <h2 class="fade-in-right  c-gold f4 lh-1_5 mb-_5625 mt0 tracked-narrow ttu wrksns   f3-ns mb2-ns">Winter Park Staff</h2>
+            <h2 class="fade-in-right  c-gold f4 lh-1_5 mb-_5625 mt0 tracked-narrow ttu wrksns   f3-ns mb2-ns">Staff</h2>
             <div class="bg-gold h-_125 mb3"></div>
             <div class="fade-in t-del-1 flex flex-wrap justify-between   css-portrait-grid">
-                {{ range .Params.winter_park_staff }}
+                {{ range .Params.staff }}
                     <div class="mb3   css-portrait-grid-item">
                         <img alt="" class="db mb-1_1875" src="{{ .photo }}" />
                         <p class="fw6 lh-solid mb2 mt0 tracked-narrow ttu wrksns">{{ .first_name }}<br> {{ .last_name }}</p>
@@ -45,29 +45,7 @@
                 <div class="mb3   css-portrait-grid-item"></div>
                 <!-- End Empty Items to Maintain Grid -->
             </div>
-        </div>
-
-
-        {{ if .Params.daytona_beach_staff.show_staff }}
-            <div class="section-animate mb-2_8125">
-                <h2 class="fade-in-right  f4 lh-1_5 mb-_5625 mt0 tracked-narrow ttu wrksns   f3-ns mb2-ns">Daytona Beach Staff</h2>
-                <div class="bg-dark-brown h-_125 mb3"></div>
-                <div class="fade-in t-del-1   flex flex-wrap justify-between   css-portrait-grid">
-                    {{ range .Params.daytona_beach_staff.staff }}
-                        <div class="mb3   css-portrait-grid-item">
-                            <img alt="" class="db mb-1_1875" src="{{ .photo }}" />
-                            <p class="fw6 lh-solid mb2 mt0 tracked-narrow ttu wrksns">{{ .first_name }}<br> {{ .last_name }}</p>
-                            <p class="c-gold f6 lh-solid mv0 tracked-narrow   f5@42">{{ .title }}</p>
-                        </div>
-                    {{ end }}
-                    <!--   Empty Items to Maintain Grid   -->
-                    <div class="mb3   css-portrait-grid-item"></div>
-                    <div class="mb3   css-portrait-grid-item"></div>
-                    <div class="mb3   css-portrait-grid-item"></div>
-                    <!-- End Empty Items to Maintain Grid -->
-                </div>
-            </div>
-        {{ end }}
+        </div>    
     </div>
 </main>
 {{ end }}
