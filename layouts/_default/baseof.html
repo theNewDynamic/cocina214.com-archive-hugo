@@ -35,7 +35,7 @@
 		<link href="../../../assets/css/animations.css" rel="stylesheet">
 		<link href="../../../assets/css/site-transitions.css" rel="stylesheet">
 		-->
-
+		{{ partial "tnd-snipcart/tags" . }}
 		{{ partial "huge/styles/tags" (slice "main") }}
 		{{ partial "huge/fonts/tags" "tags" }}
 		{{ if .IsHome }}
@@ -98,12 +98,6 @@
 		<!-- Site JS -->
 		{{ partial "huge/scripts/tags" (slice "main") }}
 		<!-- Snipcart Dependencies -->
-		<script src="https://cdn.snipcart.com/scripts/2.0/snipcart.js"
-				id="snipcart" data-api-key="MDVhYjZlMmItZTBjMy00ZTRhLWJmZTUtNjFkOGE1MTY4NTFiNjM2NDIyOTkzMzEwMDQyNzA4"></script>
-
-		{{ with resources.Get "js/snipcart-fields.js" }}
-			<script src="{{ .RelPermalink }}" async=""></script>
-		{{ end }}
 		
 		<script>
 		/* Snipcart Select */
