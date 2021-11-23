@@ -1,0 +1,14 @@
+{{ $s := newScratch }}
+{{ $s.Set "data" dict }}
+{{ with $.Params.featured_image }}
+    {{ $s.SetInMap "data" "image" (. | absURL) }}
+{{ end }}
+{{ with $.Params.sizes }}
+    {{ $custom_field := dict
+        "name" "Size"
+        "id" "size"
+        "options" .
+    }}
+    {{ $s.SetInMap "data" "custom_fields" (slice $custom_field) }}
+{{ end }}
+{{ return $s.Get "data" }}

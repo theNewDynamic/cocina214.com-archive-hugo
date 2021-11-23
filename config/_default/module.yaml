@@ -5,3 +5,4 @@ mounts:
     target: assets/_huge
 imports:
   - path: github.com/theNewDynamic/huge
+  - path: github.com/theNewDynamic/hugo-module-tnd-snipcart

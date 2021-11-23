@@ -335,3 +335,12 @@ margin-top:.25rem!important}
 #snip-layout-empty-cart > #snipcart-main-content > #snipcart-header{display:none}
 .snip-layout .snip-product__empty{font-family:"Stag Book",serif;font-family: 400;font-size: 1rem;letter-spacing: .05em;text-transform: none;padding-bottom:64px;padding-top:64px}
 /* --- End Empty Cart --- */
+
+
+.tnd-snipcart-form{
+    display: flex;
+    align-items: center;
+    .tnd-snipcart-control{
+        margin-right: 1rem;
+    }
+}
