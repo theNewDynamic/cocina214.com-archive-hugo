@@ -137,7 +137,6 @@ fields:
 - type: field_group_list
   name: events
   label: Events
-  display_field: title
   fields:
   - type: text
     name: title
