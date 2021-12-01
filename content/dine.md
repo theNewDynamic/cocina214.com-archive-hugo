@@ -67,7 +67,7 @@ private_dining:
       link_text: View Private Dining Menu
   menu: ""
 events:
-  title: Book Your Private Party or Catering
+- title: Book Your Private Party or Catering
   winter_park_photo: "/uploads/2019/11/19/quesadillas-with-salsa-trio-and-BOAT-for-catering.jpg"
   winter_park_text:
     "Please contact Christine, our Private Dining & Events Manager,
