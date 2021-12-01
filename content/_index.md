@@ -3,6 +3,8 @@ title: Home
 type: page
 date: '2017-10-12T00:00:00.000+00:00'
 forestry_title: Home
+intro:
+  image: "/uploads/2021/11/12/Cocina-214-8-3.jpg"
 private_dining:
   text: With a stylish and approachable family-friendly environment, Cocina 214 is
     a vibrant spot perfect for any special occasion. Our Private Dining Room, Bar

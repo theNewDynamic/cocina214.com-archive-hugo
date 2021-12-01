@@ -1,0 +1,83 @@
+:root {
+  --magenta: rgba(148, 78, 129, 1);
+  --magenta-dark: #340528;
+  --olympus-green: rgba(62, 89, 92, 1);
+  --olympus-green-light: #96d6dd;
+  --lady-liberty: rgba(150, 210, 183, 1);
+  --lady-liberty-dark: #4a6a5c;
+}
+
+.bg-olympus-green {
+  background-color: var(--olympus-green);
+}
+.bg-bm-magenta {
+  background-color: var(--magenta);
+}
+.bg-lady-liberty {
+  background-color: var(--lady-liberty);
+}
+
+.bg-bm-magenta-dark {
+  background-color: var(--magenta-dark);
+}
+.c-bm-magenta-dark {
+  color: var(--magenta-dark);
+}
+
+.bg-olympus-green-light {
+  background-color: var(--olympus-green-light);
+}
+.c-olympus-green-light {
+  color: var(--olympus-green-light);
+}
+
+.bg-lady-liberty-dark {
+  background-color: var(--lady-liberty-dark);
+}
+.c-lady-liberty-dark {
+  color: var(--lady-liberty-dark);
+}
+
+.c-olympus-green {
+  color: var(--olympus-green);
+}
+.c-bm-magenta {
+  color: var(--magenta);
+}
+.c-lady-liberty {
+  color: var(--lady-liberty);
+}
+
+/* THEMES */
+
+.theme-magenta {
+  background-color: var(--magenta);
+  color: var(--magenta-dark);
+  color: #D5AFCB;
+}
+.theme-magenta .divider {
+  background-color: var(--magenta-dark);
+}
+
+.theme-magenta p {
+  color: #340528;
+  color: #D5AFCB;
+  color: white;
+  line-height: 1.5;
+}
+
+
+
+
+.theme-magenta a:link,
+.theme-magenta a:active,
+.theme-magenta a:hover {
+  color: black;
+}
+.theme-magenta a:visited {
+  color: black;
+}
+
+.theme-magenta h3 {
+  color: white;
+}
