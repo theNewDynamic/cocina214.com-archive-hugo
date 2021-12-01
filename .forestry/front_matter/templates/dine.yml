@@ -134,9 +134,10 @@ fields:
     name: photo
     description: File names should not have spaces. e.g. "street tacos.jpg" should
       be changed to "street_tacos.jpg"
-- type: field_group
+- type: field_group_list
   name: events
   label: Events
+  display_field: title
   fields:
   - type: text
     name: title
@@ -155,18 +156,5 @@ fields:
   - type: textarea
     name: daytona_beach_text
     label: Daytona Beach Text
-- name: test
-  type: field_group_list
-  fields:
-  - name: title
-    type: text
-    config:
-      required: false
-    label: title
-  config:
-    min: 
-    max: 
-    labelField: 
-  label: Test
 pages:
 - content/dine.md
