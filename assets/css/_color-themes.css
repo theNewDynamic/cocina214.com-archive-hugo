@@ -50,13 +50,16 @@
 
 /* THEMES */
 
+
+/* MAGENTA */
+
 .theme-magenta {
   background-color: var(--magenta);
   color: var(--magenta-dark);
   color: #D5AFCB;
 }
 .theme-magenta .divider {
-  background-color: var(--magenta-dark);
+  /* background-color:#D5AFCB; */
 }
 
 .theme-magenta p {
@@ -65,8 +68,6 @@
   color: white;
   line-height: 1.5;
 }
-
-
 
 
 .theme-magenta a:link,
