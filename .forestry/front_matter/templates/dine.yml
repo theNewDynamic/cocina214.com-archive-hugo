@@ -155,5 +155,18 @@ fields:
   - type: textarea
     name: daytona_beach_text
     label: Daytona Beach Text
+- name: test
+  type: field_group_list
+  fields:
+  - name: title
+    type: text
+    config:
+      required: false
+    label: title
+  config:
+    min: 
+    max: 
+    labelField: 
+  label: Test
 pages:
 - content/dine.md
