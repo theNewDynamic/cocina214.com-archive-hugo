@@ -156,5 +156,7 @@ fields:
   - type: textarea
     name: daytona_beach_text
     label: Daytona Beach Text
+  config:
+    labelField: title
 pages:
 - content/dine.md
