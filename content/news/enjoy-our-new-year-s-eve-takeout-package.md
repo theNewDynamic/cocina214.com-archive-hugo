@@ -24,7 +24,7 @@ video_key = ""
 
 **1/2 Pan Of Chicken Fajitas,** Served With Side Of Guacamole, Sour Cream, Pico De Gallo, Rice, Beans & Tortillas
 
-**$125 For The Package** _feeds up to 6 ppl_
+**$175 For The Package** _feeds up to 6 ppl_
 
 **PLACE YOUR ORDER ONLINE AT** [https://cocina214.com/shop/](https://cocina214.com/shop/ "https://cocina214.com/shop/")
 
