@@ -181,19 +181,16 @@
         <!-- End Divider -->
         <div class=" flex@40">
             <div class="fade-in  w-50@40 mr2@40">
-                <img alt="" class="db mb-1_25" src="{{ .Params.events.winter_park_photo }}" />
+                <img alt="" class="db mb-1_25" src="{{ .Params.events.photo }}" />
                 <div class="mb-3_125   mw-18_5-l">
-                    <h3 class="f4 fw6 lh-1_5 jean-luc mb-_375 mt0 pt-_0625 tracked-narrow ttu">Winter Park Events</h3>
-                    <p class="lh-2 mb-1_5 mt0">{{ .winter_park_text }}</p>
+                    <h3 class="f4 fw6 lh-1_5 jean-luc mb-_375 mt0 pt-_0625 tracked-narrow ttu">Events</h3>
+                    <p class="lh-2 mb-1_5 mt0">{{ .text }}</p>
                     <p class="fw6 lh-solid mb-_4375 mt0 tracked-narrow ttu wrksns">{{ site.Data.Winter_Park_Info.Event_Coordinator.first_name }} {{ site.Data.Winter_Park_Info.Event_Coordinator.last_name }}</p>
                     <a class="c-dark-brown hover-c-gold lh-solid link mv0" href="tel:{{ site.Data.Winter_Park_Info.Event_Coordinator.phone }}">{{ site.Data.Winter_Park_Info.Event_Coordinator.phone }}</a>
                     <br>
                     <a class="c-dark-brown hover-c-gold lh-solid link mv0" href="mailto:{{ site.Data.Winter_Park_Info.Event_Coordinator.email }}">{{ site.Data.Winter_Park_Info.Event_Coordinator.email }}</a>
                 </div>
-            </div>
-            <div class="fade-in t-del-1 w-50@40 ml2@40">
-                <img alt="" class="db mb-1_25" src="{{ .daytona_beach_photo }}" />
-            </div>
+            </div>            
         </div>
     </div>
     {{ end }}
