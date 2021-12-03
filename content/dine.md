@@ -67,12 +67,16 @@ private_dining:
       link_text: View Private Dining Menu
   menu: ""
 events:
-- title: Book Your Private Party or Catering
-  photo: "/uploads/2019/11/19/quesadillas-with-salsa-trio-and-BOAT-for-catering.jpg"
-  text:
-    "Please contact Christine, our Private Dining & Events Manager,
-    to help plan your private party or catered event. Please allow up to 48hrs for
-    a response. Christine can be reached at: Party@Cocina214.com"  
+  - title: Book Your Private Party or Catering
+    photo: "/uploads/2019/11/19/quesadillas-with-salsa-trio-and-BOAT-for-catering.jpg"
+    text: "Please contact Christine, our Private Dining & Events Manager,
+      to help plan your private party or catered event. Please allow up to 48hrs for
+      a response. Christine can be reached at: Party@Cocina214.com"
+  - title: Book Your Private Party or Catering2
+    photo: "/uploads/2019/11/19/quesadillas-with-salsa-trio-and-BOAT-for-catering.jpg"
+    text: "tkPlease contact Christine, our Private Dining & Events Manager,
+      to help plan your private party or catered event. Please allow up to 48hrs for
+      a response. Christine can be reached at: Party@Cocina214.com"
 hero_photos:
   - "/uploads/2021/11/12/Cocina-214-41-2.jpg"
   - "/uploads/2021/11/12/Cocina-214-Patio.jpg"
