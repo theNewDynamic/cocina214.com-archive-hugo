@@ -64,9 +64,6 @@ private_dining:
     link_text: View Private Dining Menu
   menu: ''
 events:
-- title: Third event for testing
-  photo: "/uploads/RunningOfChihuahuasPoster2019_web.jpg"
-  text: just some random text
 - title: Book Your Private Party or Catering
   photo: "/uploads/2019/11/19/quesadillas-with-salsa-trio-and-BOAT-for-catering.jpg"
   text: 'Please contact Christine, our Private Dining & Events Manager, to help plan
@@ -82,6 +79,9 @@ events:
     model text, and a search for 'lorem ipsum' will uncover many web sites still in
     their infancy. Various versions have evolved over the years, sometimes by accident,
     sometimes on purpose (injected humour and the like).
+- title: Third event for testing
+  photo: "/uploads/RunningOfChihuahuasPoster2019_web.jpg"
+  text: just some random text
 hero_photos:
 - "/uploads/2021/11/12/Cocina-214-41-2.jpg"
 - "/uploads/2021/11/12/Cocina-214-Patio.jpg"
