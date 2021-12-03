@@ -5,39 +5,37 @@ layout: dine
 forestry_title: Dine
 dine_with_us:
   photo: "/uploads/2017/12/01/3_margaritas_in_the_bar.jpg"
-  text:
-    "Whether you’re looking to dine out in the charming Winter Park Historic District
+  text: 'Whether you’re looking to dine out in the charming Winter Park Historic District
     or want an authentic Tex-Mex dinner to take home, Cocina 214 is perfect for every
     occasion. Since its’ first year in business, Cocina 214 Winter Park has been blessed
     with numerous accolades from the media, including:  “Best Mexican Restaurant”,
     “Best Tex-Mex”, “Best Overall Restaurant in Orlando”, “Best Power Lunch”, “Best
     Upscale Casual Restaurant”, “Best Happy Hour”, “Best Take-Out”, “Best Appetizer”,
-    and “Best Family Place”.   So whatever the occasion you’re sure to enjoy."
+    and “Best Family Place”.   So whatever the occasion you’re sure to enjoy.'
   menus:
-    - menu_name: Dine-In and Takeout
-      menu: "/uploads/2021/10/29/cocina-214-menu-october-2021.pdf"
-    - menu_name: Family Packages for Takeout, Curbside Pickup and/or Delivery
-      menu: "/uploads/2021/06/21/family-packages-menu-2021.jpg"
-    - menu_name: Kids’
-      menu: "/uploads/2021/11/01/kids_menu_2021.jpg"
-    - menu_name: Happy Hour Menu
-      menu: "/uploads/2021/06/22/happy-hour-2021.pdf"
-    - menu_name: "Drink/Cocktail "
-      menu: "/uploads/2021/10/29/drinks-october-2021.pdf"
-    - menu_name: After Dinner Drink and Dessert
-      menu: "/uploads/2021/10/29/afterdinner_october-2021.pdf"
+  - menu_name: Dine-In and Takeout
+    menu: "/uploads/2021/10/29/cocina-214-menu-october-2021.pdf"
+  - menu_name: Family Packages for Takeout, Curbside Pickup and/or Delivery
+    menu: "/uploads/2021/06/21/family-packages-menu-2021.jpg"
+  - menu_name: Kids’
+    menu: "/uploads/2021/11/01/kids_menu_2021.jpg"
+  - menu_name: Happy Hour Menu
+    menu: "/uploads/2021/06/22/happy-hour-2021.pdf"
+  - menu_name: 'Drink/Cocktail '
+    menu: "/uploads/2021/10/29/drinks-october-2021.pdf"
+  - menu_name: After Dinner Drink and Dessert
+    menu: "/uploads/2021/10/29/afterdinner_october-2021.pdf"
   featured:
     name: Happy Hour
-    hours: "4:00 pm – 6:30 pm "
+    hours: '4:00 pm – 6:30 pm '
     when: Monday – Friday
     menu_name: Happy Hour
     menu: "/uploads/2021/06/22/happy-hour-2021.pdf"
   reservations:
     text: Call to make a reservation today!
-    phone: "Winter Park 407. 790. 7997 "
+    phone: 'Winter Park 407. 790. 7997 '
 catering:
-  text:
-    "Cocina 214 would love to cater your next event! Let us cater your Office
+  text: "Cocina 214 would love to cater your next event! Let us cater your Office
     Lunches or Corporate Functions, Engagement Parties, Bridal Showers, Rehearsal
     Dinners, Baby Showers, Alumni Gatherings, Birthdays, Anniversaries, Holiday Parties
     and much more! \n\nWe can bring our award-winning Tex-Mex/Mexican to your work,
@@ -51,8 +49,7 @@ catering:
   menu: "/uploads/2021/03/09/cateringmenu_march-2021.pdf"
   photo: "/uploads/2017/12/04/guac_bar.jpg"
 private_dining:
-  text:
-    "With a stylish and approachable environment, Cocina 214 is a vibrant spot
+  text: "With a stylish and approachable environment, Cocina 214 is a vibrant spot
     perfect for brunch, lunch or dinner. Our lively bar, contemporary dining room,
     private dining room and relaxing patio can be the perfect location for any major
     event, from corporate gatherings to wedding rehearsal dinners. We also offer buy-out
@@ -63,21 +60,31 @@ private_dining:
     party! She can be reached via email at: party@cocina214.com"
   photo: "/uploads/2017/12/09/CocinaAgedNyStrip_PresidentePackage_topview_optimized.jpg"
   menus:
-    - menu: "/uploads/2021/11/01/privatedining_wp-sept-10-2021.pdf"
-      link_text: View Private Dining Menu
-  menu: ""
+  - menu: "/uploads/2021/11/01/privatedining_wp-sept-10-2021.pdf"
+    link_text: View Private Dining Menu
+  menu: ''
 events:
-  title: Book Your Private Party or Catering
-  winter_park_photo: "/uploads/2019/11/19/quesadillas-with-salsa-trio-and-BOAT-for-catering.jpg"
-  winter_park_text:
-    "Please contact Christine, our Private Dining & Events Manager,
-    to help plan your private party or catered event. Please allow up to 48hrs for
-    a response. Christine can be reached at: Party@Cocina214.com"
-  daytona_beach_photo: "/uploads/2019/11/19/Brownies,-Churros-and-Strawberries.jpg"
-  daytona_beach_text: ""
+- title: Book Your Private Party or Catering
+  photo: "/uploads/2019/11/19/quesadillas-with-salsa-trio-and-BOAT-for-catering.jpg"
+  text: 'Please contact Christine, our Private Dining & Events Manager, to help plan
+    your private party or catered event. Please allow up to 48hrs for a response.
+    Christine can be reached at: Party@Cocina214.com'
+- title: Here's another element for testing
+  photo: "/uploads/2021/11/12/Cocina-214-45.jpg"
+  text: It is a long established fact that a reader will be distracted by the readable
+    content of a page when looking at its layout. The point of using Lorem Ipsum is
+    that it has a more-or-less normal distribution of letters, as opposed to using
+    'Content here, content here', making it look like readable English. Many desktop
+    publishing packages and web page editors now use Lorem Ipsum as their default
+    model text, and a search for 'lorem ipsum' will uncover many web sites still in
+    their infancy. Various versions have evolved over the years, sometimes by accident,
+    sometimes on purpose (injected humour and the like).
+- title: Third event for testing
+  photo: "/uploads/RunningOfChihuahuasPoster2019_web.jpg"
+  text: just some random text
 hero_photos:
-  - "/uploads/2021/11/12/Cocina-214-41-2.jpg"
-  - "/uploads/2021/11/12/Cocina-214-Patio.jpg"
+- "/uploads/2021/11/12/Cocina-214-41-2.jpg"
+- "/uploads/2021/11/12/Cocina-214-Patio.jpg"
 happy_hour:
   text: |2-
 
@@ -87,8 +94,8 @@ happy_hour:
   menu: "/uploads/2021/11/01/happy-hour-2021.jpg"
   photo: "/uploads/2017/12/01/happy_hour_margaritas_titos_beer_with_bowl_of_limes.jpg"
 online_ordering:
-  description:
-    Ordering is quick and easy. Select a location and time. Choose your
+  description: Ordering is quick and easy. Select a location and time. Choose your
     items. Complete your checkout. Pickup and Catering Available. 20% Gratuity added
     on all online orders.
+
 ---

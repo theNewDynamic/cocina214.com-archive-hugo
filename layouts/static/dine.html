@@ -174,29 +174,37 @@
         {{ end }}
     {{ end }}
     {{ range $events }}
-    <div class="section-animate center mw-64 ph3   ph4-ns   ph0@70">
+    <div class="section-animate center mw-64 ph3  mt-_375-ns  ph4-ns   ph0@70">
         <h2 class="fade-in-right f4 fw6 lh-1_5 mb-_5625 mt0 pt-_0625 tracked-narrow ttu wrksns   f3-ns mb-_625-ns pt0-ns">{{ .title }}</h2>
         <!--   Divider   -->
         <div class="bg-dark-brown h-_125 mb-1_5"></div>
         <!-- End Divider -->
-        <div class=" flex@40">
+        <div class="flex@40">
             <div class="fade-in  w-50@40 mr2@40">
-                <img alt="" class="db mb-1_25" src="{{ .Params.events.winter_park_photo }}" />
-                <div class="mb-3_125   mw-18_5-l">
-                    <h3 class="f4 fw6 lh-1_5 jean-luc mb-_375 mt0 pt-_0625 tracked-narrow ttu">Winter Park Events</h3>
-                    <p class="lh-2 mb-1_5 mt0">{{ .winter_park_text }}</p>
-                    <p class="fw6 lh-solid mb-_4375 mt0 tracked-narrow ttu wrksns">{{ site.Data.Winter_Park_Info.Event_Coordinator.first_name }} {{ site.Data.Winter_Park_Info.Event_Coordinator.last_name }}</p>
-                    <a class="c-dark-brown hover-c-gold lh-solid link mv0" href="tel:{{ site.Data.Winter_Park_Info.Event_Coordinator.phone }}">{{ site.Data.Winter_Park_Info.Event_Coordinator.phone }}</a>
-                    <br>
-                    <a class="c-dark-brown hover-c-gold lh-solid link mv0" href="mailto:{{ site.Data.Winter_Park_Info.Event_Coordinator.email }}">{{ site.Data.Winter_Park_Info.Event_Coordinator.email }}</a>
+                
+                <div class="mw-18_5-l">
+                   {{ template "events_data" . }}
                 </div>
-            </div>
-            <div class="fade-in t-del-1 w-50@40 ml2@40">
-                <img alt="" class="db mb-1_25" src="{{ .daytona_beach_photo }}" />
+                
+            </div>            
+            <div class="w-50@40 mb-3_125">
+            <img alt="" class="dib mb-1_25" src="{{ .photo }}" />                
             </div>
         </div>
     </div>
     {{ end }}
     
 </main>
+{{ end }}
+
+
+{{ define "events_data" }}
+    {{/* <h3 class="f4 fw6 lh-1_5 jean-luc mb-_375 mt0 pt-_0625 tracked-narrow ttu">Events</h3> */}}
+    <p class="lh-2 mb-1_5 mt0">{{ .text }}</p>
+    {{ with site.Data.Winter_Park_Info.Event_Coordinator }}
+        <p class="fw6 lh-solid mb-_4375 mt0 tracked-narrow ttu wrksns" style="border-top: 1px solid silver;padding-top:4px;">{{ .first_name }} {{ .last_name }}</p>
+        <a class="c-dark-brown hover-c-gold lh-solid link mv0" href="tel:{{ .phone }}">{{ .phone }}</a>
+        <br>
+        <a class="c-dark-brown hover-c-gold lh-solid link mv0" href="mailto:{{ .email }}">{{ .email }}</a>
+    {{ end }}
 {{ end }}
