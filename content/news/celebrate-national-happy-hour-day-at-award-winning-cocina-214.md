@@ -1,6 +1,6 @@
 +++
 additional_info = "Friday, November 12th"
-category = "current"
+category = "past-events"
 date = 2021-11-03T16:41:38Z
 featured_photo = "/uploads/2021/11/03/national-happy-hour-day_2021.jpg"
 photos = []

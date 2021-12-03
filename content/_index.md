@@ -21,16 +21,17 @@ catering:
 upcoming_events:
   photo: "/uploads/2019/09/05/Rocks_Margarita_w_limes.jpg"
   events:
-  - event_name: Celebrate National Happy Hour Day at Award-Winning Cocina 214
-    event_date: Friday, November 12th
-    event_time: All Day Long!
-    event_description: ''
+  - event_name: "'Tis the Season to be Jolly"
+    event_date: Now - December 31st
+    event_time: ''
+    event_description: Receive a $20 Cocina 214 Gift Card for Each $100 Gift Card
+      that you Purchase
     event_links:
     - event_link_text: Learn More
-      event_link_url: https://cocina214.com/news/celebrate-national-happy-hour-day-at-award-winning-cocina-214/
+      event_link_url: https://cocina214.com/news/tis-the-season-to-be-jolly-1/
     photo_link:
-      photo_link_text: View Event Poster
-      photo_link_photo: "/uploads/2021/11/03/national-happy-hour-day_2021.jpg"
+      photo_link_text: View Poster
+      photo_link_photo: "/uploads/2021/11/01/tis-the-seaon-to-be-jolly_postcard-2021.jpg"
   - event_name: Book Your Holiday Party with Cocina 214!
     event_date: ''
     event_time: ''

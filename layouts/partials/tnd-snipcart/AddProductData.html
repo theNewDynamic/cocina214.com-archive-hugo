@@ -3,6 +3,11 @@
 {{ with $.Params.featured_image }}
     {{ $s.SetInMap "data" "image" (. | absURL) }}
 {{ end }}
+
+{{ if isset $.Params "taxable" }}
+    {{ $s.SetInMap "data" "taxable" $.Params.taxable }}
+{{ end }}
+
 {{ with $.Params.sizes }}
     {{ $custom_field := dict
         "name" "Size"

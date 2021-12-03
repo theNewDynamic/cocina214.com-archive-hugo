@@ -10,5 +10,7 @@ github.com/theNewDynamic/hugo-module-tnd-snipcart v0.0.0-20211123151343-8d103757
 github.com/theNewDynamic/hugo-module-tnd-snipcart v0.0.0-20211123151343-8d103757eed0/go.mod h1:vs0svRvGf1ZZEL2S9hTQt/bAwkEAURGFk0hDMsg54A0=
 github.com/theNewDynamic/hugo-module-tnd-snipcart v0.0.0-20211123155715-995b17661081 h1:82gRvBYd6SjOgBtI7N93pHroESnKdtormPAPpApTM44=
 github.com/theNewDynamic/hugo-module-tnd-snipcart v0.0.0-20211123155715-995b17661081/go.mod h1:vs0svRvGf1ZZEL2S9hTQt/bAwkEAURGFk0hDMsg54A0=
+github.com/theNewDynamic/hugo-module-tnd-snipcart v0.0.0-20211203173748-a50ef9e0bb0b h1:SkFbUL9iQ+XeXeA6iAHrtNFUqHJ32q0a87QOxB4fqo8=
+github.com/theNewDynamic/hugo-module-tnd-snipcart v0.0.0-20211203173748-a50ef9e0bb0b/go.mod h1:vs0svRvGf1ZZEL2S9hTQt/bAwkEAURGFk0hDMsg54A0=
 github.com/theNewDynamic/hugo-module-tnd-tags v0.0.0-20210820151839-aaac3b65c97e h1:TPtoidPrSDO6Tr8mJAQQ5dTE5ncjJtyCehmFxhvCJvA=
 github.com/theNewDynamic/hugo-module-tnd-tags v0.0.0-20210820151839-aaac3b65c97e/go.mod h1:fuXjv9Nbt2hi6oaOVAqhPRrS4hL9uYcwroo6V/Mw7Uk=

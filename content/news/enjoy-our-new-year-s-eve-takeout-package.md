@@ -2,7 +2,7 @@
 additional_info = ""
 category = "upcoming"
 date = 2021-11-10T17:48:48Z
-featured_photo = ""
+featured_photo = "/uploads/2021/12/02/new-year-s-package-2022.jpg"
 photos = []
 title = "Enjoy our New Year's Eve Takeout Package!"
 video_key = ""
@@ -24,10 +24,12 @@ video_key = ""
 
 **1/2 Pan Of Chicken Fajitas,** Served With Side Of Guacamole, Sour Cream, Pico De Gallo, Rice, Beans & Tortillas
 
-**$125 For The Package** _feeds up to 6 ppl_
+**$175 For The Package** _feeds up to 6 ppl_
 
 **PLACE YOUR ORDER ONLINE AT** [https://cocina214.com/shop/](https://cocina214.com/shop/ "https://cocina214.com/shop/")
 
 **OR CALL THE RESTAURANT TO ORDER AT 407.790.7997**
 
 Cocina 214 will be closed on New Year's Day and will re-open on Sunday, January 2nd at 11:30am. All New Year's Eve Orders must be picked up Friday, December 31st.
+
+![](/uploads/2021/12/02/new-year-s-package-2022.jpg)
