@@ -103,7 +103,8 @@
   color: var(--olympus-green-light);
 }
 
-.theme-olympus-green h1 + div {
+.theme-olympus-green h1 + div,
+.theme-olympus-green h2 + div {
   background-color: var(--olympus-green-light);
 }
 
@@ -129,7 +130,7 @@
 
 /* LADY LIBERTY */
 
-.theme-lady-liberty{
+.theme-lady-liberty {
   background-color: var(--lady-liberty);
   color: var(--lady-liberty-dark);
 }
