@@ -1,6 +1,7 @@
 :root {
   --magenta: rgba(148, 78, 129, 1);
-  --magenta-dark: #340528;
+  --magenta-light: #cea1c2;
+  --magenta-dark: #452c4d;
   --olympus-green: rgba(62, 89, 92, 1);
   --olympus-green-light: #96d6dd;
   --lady-liberty: rgba(150, 210, 183, 1);
@@ -50,24 +51,26 @@
 
 /* THEMES */
 
+/* MAGENTA */
+
 .theme-magenta {
   background-color: var(--magenta);
-  color: var(--magenta-dark);
-  color: #D5AFCB;
+  color: white;
 }
-.theme-magenta .divider {
-  background-color: var(--magenta-dark);
+.theme-magenta h2 {
+  color: var(--magenta-light);
+}
+.theme-magenta h2 + div,
+.theme-magenta h1 + div {
+  background-color: var(--magenta-light);
 }
 
 .theme-magenta p {
   color: #340528;
-  color: #D5AFCB;
+  color: #d5afcb;
   color: white;
   line-height: 1.5;
 }
-
-
-
 
 .theme-magenta a:link,
 .theme-magenta a:active,
@@ -80,4 +83,56 @@
 
 .theme-magenta h3 {
   color: white;
+}
+
+.theme-magenta .online-ordering-btn,
+.theme-magenta a.online-ordering-btn {
+  background-color: var(--magenta-dark);
+  color: white;
+}
+
+.theme-magenta a.online-ordering-btn:hover {
+  background-color: var(--magenta-light);
+  color: white;
+}
+
+/* OLYMPUS GREEN */
+
+.theme-olympus-green {
+  background-color: var(--olympus-green);
+  color: var(--olympus-green-light);
+}
+
+.theme-olympus-green h1 + div {
+  background-color: var(--olympus-green-light);
+}
+
+.theme-olympus-green p {
+  color: white;
+  /* line-height: 1.5; */
+}
+
+.theme-olympus-green a:link,
+.theme-olympus-green a:active,
+.theme-olympus-green a:hover {
+  color: var(--olympus-green-light);
+  color: white;
+}
+.theme-olympus-green a:visited {
+  color: var(--olympus-green-light);
+  color: white;
+}
+
+.theme-olympus-green h3 {
+  color: white;
+}
+
+/* LADY LIBERTY */
+
+.theme-lady-liberty{
+  background-color: var(--lady-liberty);
+  color: var(--lady-liberty-dark);
+}
+.theme-lady-liberty h2 + div {
+  background-color: var(--lady-liberty-dark);
 }
