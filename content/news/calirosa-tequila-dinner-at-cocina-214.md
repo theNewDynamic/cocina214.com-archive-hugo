@@ -1,5 +1,5 @@
 +++
-additional_info = ""
+additional_info = "Friday, January 21st at 7 pm"
 category = "upcoming"
 date = 2021-12-21T19:08:49Z
 featured_photo = "/uploads/2021/12/21/calirosa-tequila-dinner-flyer-final_jan-2022.jpg"
