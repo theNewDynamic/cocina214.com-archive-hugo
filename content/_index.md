@@ -42,6 +42,16 @@ upcoming_events:
     photo_link:
       photo_link_text: View Poster
       photo_link_photo: "/uploads/2021/11/01/holiday-flyer-2021.jpg"
+  - event_name: Calirosa Tequila Dinner
+    event_date: Friday, January 21, 2022
+    event_time: 7 pm
+    event_description: Enjoy an Evening of Great Food and Calirosa Tequila!
+    event_links:
+    - event_link_text: Learn More
+      event_link_url: https://cocina214.com/news/calirosa-tequila-dinner-at-cocina-214/
+    photo_link:
+      photo_link_text: View Event Poster
+      photo_link_photo: "/uploads/2021/12/21/calirosa-tequila-dinner-flyer-final_jan-2022.jpg"
   - event_name: Join us for Happy Hour
     event_date: Monday-Friday
     event_time: 4:00-6:30 PM
