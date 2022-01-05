@@ -6,6 +6,19 @@
   --olympus-green-light: #96d6dd;
   --lady-liberty: rgba(150, 210, 183, 1);
   --lady-liberty-dark: #4a6a5c;
+  --pink-ladies: rgba(222, 123, 166, 1); 
+  --pink-ladies-dark: #A5597A; 
+  /* PINK LADIES DE7BA6 */
+}
+
+.bg-pink-ladies {
+  background-color: var(--pink-ladies);
+}
+.bg-pink-ladies-dark {
+  background-color: var(--pink-ladies-dark);
+}
+.c-pink-ladies-dark {
+  color: var(--pink-ladies-dark);
 }
 
 .bg-olympus-green {
