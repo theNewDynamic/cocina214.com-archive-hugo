@@ -329,7 +329,7 @@ span.error {
   }
   .css-current-page-link::after {
     margin-top: 0.125rem;
-    background-color: #d18419;
+    background-color: rgba(222, 123, 166, 1);
     content: "";
     float: left;
     height: 0.0625rem;
