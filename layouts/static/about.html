@@ -14,14 +14,14 @@
                     <div class="mb4 w-48   w-100@42   w-48@50   css-featured-grid-item">
                         <img alt="" class="db mb-1_1875" src="{{ .photo }}" />
                         <p class="fw6 lh-solid mb2 mt0 tracked-narrow ttu wrksns">{{ .first_name }}<br> {{ .last_name }}</p>
-                        <p class="c-bm-magenta lh-solid mv0 tracked-narrow">{{ .title }}</p>
+                        <p class="c-olympus-green-light lh-solid mv0 tracked-narrow">{{ .title }}</p>
                     </div>
                 {{ end }}
                 {{ range after 1 .Params.featured_staff }}
                     <div class="w-48   w-100@42   w-48@50   css-featured-grid-item">
                         <img alt="" class="db mb-1_1875" src="{{ .photo }}" />
                         <p class="fw6 lh-solid mb2 mt0 tracked-narrow ttu wrksns">{{ .first_name }}<br> {{ .last_name }}</p>
-                        <p class="c-bm-magenta lh-solid mv0 tracked-narrow">{{ .title }}</p>
+                        <p class="c-olympus-green-light lh-solid mv0 tracked-narrow">{{ .title }}</p>
                     </div>
                 {{ end }}
 
@@ -29,14 +29,14 @@
         </div>
 
         <div class="section-animate mb-1_6875   mb-1_5-ns">
-            <h2 class="fade-in-right  c-bm-magenta f4 lh-1_5 mb-_5625 mt0 tracked-narrow ttu wrksns   f3-ns mb2-ns">Staff</h2>
-            <div class="theme-olympus-green h-_125 mb3"></div>
+            <h2 class="fade-in-right  c-olympus-green-light f4 lh-1_5 mb-_5625 mt0 tracked-narrow ttu wrksns   f3-ns mb2-ns">Staff</h2>
+            <div class="bg-olympus-green-light h-_125 mb3"></div>
             <div class="fade-in t-del-1 flex flex-wrap justify-between   css-portrait-grid">
                 {{ range .Params.staff }}
                     <div class="mb3   css-portrait-grid-item">
                         <img alt="" class="db mb-1_1875" src="{{ .photo }}" />
                         <p class="fw6 lh-solid mb2 mt0 tracked-narrow ttu wrksns">{{ .first_name }}<br> {{ .last_name }}</p>
-                        <p class="c-bm-magenta f6 lh-solid mv0 tracked-narrow   f5@42">{{ .title }}</p>
+                        <p class="c-olympus-green-light f6 lh-solid mv0 tracked-narrow   f5@42">{{ .title }}</p>
                     </div>
                 {{ end }}
                 <!--   Empty Items to Maintain Grid   -->
