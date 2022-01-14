@@ -28,6 +28,10 @@
 a.hover-c-pink-ladies:hover {
   color: var(--pink-ladies);
 }
+.hover-bg-pink-ladies:hover, 
+a.hover-bg-pink-ladies:hover {
+  background-color: var(--pink-ladies);
+}
 
 .c-pink-ladies-dark {
   color: var(--pink-ladies-dark);
