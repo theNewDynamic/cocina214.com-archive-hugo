@@ -6,7 +6,7 @@ tnd_snipcart:
   forms:
     _default:
       buy_button_text: Add to cart
-      buy_button_classes: "bg-red bn fw6 h-2_5 hover-b--c-red hover-ba hover-bg-white hover-bw1 hover-c-red jean-luc pointer tracked-narrow w-8_5 white   snipcart-add-item"
+      buy_button_classes: "bg-bm-magenta bn fw6 h-2_5 hover-bg-pink-ladies hover-ba hover-bw1 jean-luc pointer tracked-narrow w-8_5 white   snipcart-add-item"
     with_sizes:
       buy_button_text: Buy {{price}}$
       fields:

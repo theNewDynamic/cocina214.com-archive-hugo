@@ -9,7 +9,7 @@
     <h1 class="element-invisible">Our Locations</h1>
 
     <!--   Location One   -->
-    <div class="section-animate  bg-dark-brown  mv2   mv3-ns   flex-l   css-ie-flex-shrink">
+    <div class="section-animate  theme-magenta  mv2   mv3-ns   flex-l   css-ie-flex-shrink">
         <!--   Location Info   -->
         <div class=" c-gold pb5 pr3 pt-3_5   pr4-ns   w-50-l   pr-7@79">
             <!--   Location   -->
@@ -20,7 +20,7 @@
 
             <!--   Divider   -->
             <div class="flex@90 justify-end@90">
-                <div class="bg-gold h-_125 mb-1_1875 mt-_3125 w-100   mt-_375-ns   w-27@90"></div>
+                <div class="theme-olympus-green h-_125 mb-1_1875 mt-_3125 w-100   mt-_375-ns   w-27@90"></div>
             </div>
             <!-- End Divider -->
 
@@ -31,7 +31,7 @@
                     <div class="w-60@40   w-100-l">
                         <h3 class="element-invisible">Address</h3>
                         <p class="mb-_8125 mt0">{{ .Site.Data.Winter_Park_Info.Address.part_one }}<br>{{ .Site.Data.Winter_Park_Info.Address.part_two }}</p>
-                        <a class="b--c-gold ba bw1 c-gold dib f-1_125 h-2_5 hover-bg-gold hover-c-dark-brown jean-luc lh-1_5 link mb-2_1875 ph4 pt-_375 tracked-narrow ttu white" href="{{ .Site.Data.Winter_Park_Info.Address.google_maps_url }}">Get Directions</a>
+                        <a class="b--c-gold ba bw1 c-gold dib f-1_125 h-2_5 hover-theme-olympus-green hover-c-dark-brown jean-luc lh-1_5 link mb-2_1875 ph4 pt-_375 tracked-narrow ttu white" href="{{ .Site.Data.Winter_Park_Info.Address.google_maps_url }}">Get Directions</a>
 
                         <h3 class="f5 fw4 mv0">Hours:</h3>
                         {{ range .Site.Data.Winter_Park_Info.Hours }}
@@ -57,7 +57,7 @@
 
 
     <!--   Location Two   -->
-    <div class="section-animate  bg-gold   mv2   mv3-ns   flex-l min-h-28-l   css-ie-flex-shrink">
+    <div class="section-animate  theme-olympus-green   mv2   mv3-ns   flex-l min-h-28-l   css-ie-flex-shrink">
         <!--   Location Info   -->
         <div class="pb5 pr3 pt-3_5   pr4-ns   w-50-l   pr-7@79">
             <!--   Location   -->
@@ -68,7 +68,7 @@
 
             <!--   Divider   -->
             <div class="flex@90 justify-end@90">
-                <div class="bg-dark-brown h-_125 mb-1_1875 mt-_3125 w-100   mt-_375-ns   w-27@90"></div>
+                <div class="theme-magenta h-_125 mb-1_1875 mt-_3125 w-100   mt-_375-ns   w-27@90"></div>
             </div>
             <!-- End Divider -->
 
@@ -81,11 +81,11 @@
                         <p class="mb-_8125 mt0">{{ .Site.Data.Daytona_Beach_Info.Address.part_one }}<br>{{ .Site.Data.Daytona_Beach_Info.Address.part_two }}</p>
 
                         {{ if $.Site.Data.Daytona_Beach_Info.show_coming_soon_badge }}
-                            <p class="b--c-dark-brown ba bg-dark-brown bw1 c-gold dib f-1_125 h-2_5 jean-luc lh-1_5 link mb-2_1875 mt0 ph4 pt-_375 tracked-narrow ttu">Coming Soon</p>
+                            <p class="b--c-dark-brown ba theme-magenta bw1 c-gold dib f-1_125 h-2_5 jean-luc lh-1_5 link mb-2_1875 mt0 ph4 pt-_375 tracked-narrow ttu">Coming Soon</p>
                         {{ end }}
 
                         <div class="{{ if $.Site.Data.Daytona_Beach_Info.show_coming_soon_badge }}dn{{ end }}">
-                            <a class="b--c-dark-brown ba bw1 c-dark-brown dib f-1_125 h-2_5 hover-bg-dark-brown hover-c-gold jean-luc lh-1_5 link mb-2_1875 ph4 pt-_375 tracked-narrow ttu" href="{{ .Site.Data.Daytona_Beach_Info.Address.google_maps_url }}">Get Directions</a>
+                            <a class="b--c-dark-brown ba bw1 c-dark-brown dib f-1_125 h-2_5 hover-theme-magenta hover-c-gold jean-luc lh-1_5 link mb-2_1875 ph4 pt-_375 tracked-narrow ttu" href="{{ .Site.Data.Daytona_Beach_Info.Address.google_maps_url }}">Get Directions</a>
 
                             <h3 class="f5 fw4 mv0">Hours:</h3>
                             {{ range .Site.Data.Daytona_Beach_Info.Hours }}

@@ -4,8 +4,8 @@ type: static
 layout: loyalty
 forestry_title: Loyalty
 hero_photos:
-- "/uploads/2017/12/01/patio.jpg"
-- "/uploads/2017/12/01/dine.jpg"
+- "/uploads/2021/11/12/Cocina-214-18-2.jpg"
+- "/uploads/2021/11/12/Cocina-214-5.jpg"
 content_section_1_title: Club 214 Member Perks
 content_section_1: |-
   *   Join Club 214 and get your first 1000 points
