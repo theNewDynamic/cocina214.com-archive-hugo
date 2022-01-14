@@ -403,8 +403,6 @@ span.error {
   font-weight: 400;
 }
 
-
-
 .bg-image {
   background-repeat: no-repeat;
   background-size: cover;
@@ -412,10 +410,23 @@ span.error {
 }
 
 @media screen and (min-width: 30em) {
-    .bg-image {
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: 50% 75%;
-      }
-      
+  .bg-image {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 75%;
+  }
+}
+
+.headline {
+  font-size: 1.25rem;
+}
+@media screen and (min-width: 20em) {
+  .headline {
+    font-size: 2rem;
+  }
+}
+@media screen and (min-width: 60em) {
+  .headline {
+    font-size: 5rem;
+  }
 }
