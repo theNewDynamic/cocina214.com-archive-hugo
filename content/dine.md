@@ -46,7 +46,7 @@ catering:
     all Catering orders.\n\nLet us plan the details of your catered event so that
     you can enjoy your gathering. Contact Christine, our Private Dining & Catering
     Manager, at: catering@cocina214.com "
-  menu: "/uploads/2021/03/09/cateringmenu_march-2021.pdf"
+  menu: "/uploads/2022/01/18/cateringmenu_jan-2022-4x8.pdf"
   photo: "/uploads/2017/12/04/guac_bar.jpg"
 private_dining:
   text: "With a stylish and approachable environment, Cocina 214 is a vibrant spot
