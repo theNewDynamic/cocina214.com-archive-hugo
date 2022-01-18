@@ -1,6 +1,6 @@
 +++
 additional_info = "Deal Ends December 31, 2021"
-category = "current"
+category = "past-events"
 date = 2021-12-02T16:07:36Z
 featured_photo = "/uploads/2021/11/01/tis-the-seaon-to-be-jolly_postcard-2021.jpg"
 photos = []

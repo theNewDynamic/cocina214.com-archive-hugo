@@ -1,6 +1,6 @@
 +++
 additional_info = ""
-category = "current"
+category = "past-events"
 date = 2021-12-20T17:48:48Z
 featured_photo = "/uploads/2021/12/02/new-year-s-package-2022.jpg"
 photos = []

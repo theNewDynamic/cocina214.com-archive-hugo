@@ -1,6 +1,6 @@
 +++
 additional_info = ""
-category = "current"
+category = "past-events"
 date = 2021-12-01T05:00:00Z
 featured_photo = "/uploads/2021/11/01/holiday-flyer-2021.jpg"
 photos = []
