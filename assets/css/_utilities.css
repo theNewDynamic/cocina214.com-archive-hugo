@@ -22,7 +22,7 @@
 .f-1_0625{font-size:1.0625rem}
 .f-1_125{font-size:1.125rem}
 .f-1_5{font-size:1.25rem}
-.font-bold{font-weight: bold;}
+.font-bold{font-weight: 600;}
 .lh-1_5{line-height: 1.5;}
 
 .hover-no-underline:hover{text-decoration:none}
