@@ -36,10 +36,12 @@
 				class="flex flex-wrap justify-between lh-2 mt3 ph3 tracked-narrow   ml4-ns ph0-ns   mw-31_5-l   fr@79 mr-6_5@79">
 				{{ range $event := .Params.upcoming_events.events }}
 				<div class="fade-in t-del-2  mb-1_75 w-100   mb-3_25-ns pr3-ns w-50-ns   pr0-l w-13-l">
-					<h3 class="f-1_125 fw4 lh-1_5 mb1 mt0 white">{{ .event_name }}</h3>
-					<p class="mv0">{{ .event_date }}</p>
-					<p class="mv0">{{ .event_time }}</p>
-					<p class="mv0">{{ .event_description }}</p>
+					<h3 class="f-1_5 font-bold fw4 lh-1_5 mb1 mt0 white">{{ .event_name }}</h3>
+
+					{{if (or .event_date .event_time) }}
+						<p class="mv0">{{ .event_date }}<br />{{ .event_time }}</p>
+					{{ end }}
+					<p class="mv0 lh-1_5">{{ .event_description }}</p>
 
 					{{ range $event_link := .event_links }}
 					{{ with .event_link_url }}

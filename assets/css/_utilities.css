@@ -21,6 +21,9 @@
 .f-_5{font-size:.5rem}
 .f-1_0625{font-size:1.0625rem}
 .f-1_125{font-size:1.125rem}
+.f-1_5{font-size:1.25rem}
+.font-bold{font-weight: bold;}
+.lh-1_5{line-height: 1.5;}
 
 .hover-no-underline:hover{text-decoration:none}
 
