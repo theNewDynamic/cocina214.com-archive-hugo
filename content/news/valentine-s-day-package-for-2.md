@@ -1,8 +1,8 @@
 +++
 additional_info = ""
-category = "past-events"
-date = 2021-02-03T20:46:12Z
-featured_photo = "/uploads/2021/02/03/valentine-s-package-2021.jpg"
+category = "upcoming"
+date = 2022-01-26T05:00:00Z
+featured_photo = "/uploads/2022/01/26/valentine-s-package-2022.jpg"
 photos = []
 title = "Valentine's Day Package for 2"
 video_key = ""
@@ -10,7 +10,7 @@ video_key = ""
 +++
 **Enjoy our Valentine's Day Package!**
 
-The Package feeds 2 people and is $75.
+The Package feeds 2 people and is $95.
 
 **Chips & Homemade Salsa**
 
@@ -28,4 +28,4 @@ Happy Valentine's Day!
 
 **You can place an Order Online at:**  [https://cocina214.com/shop/](https://cocina214.com/shop/ "https://cocina214.com/shop/") or you can **call the Restaurant to order at: 407.790.7997**
 
-![](/uploads/2021/02/03/valentine-s-package-2021.jpg)
+![](/uploads/2022/01/26/valentine-s-package-2022.jpg)
