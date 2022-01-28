@@ -78,7 +78,7 @@ happy_hour:
     Mondays – Fridays
     4:00p – 6:30p
     $5 214 Rocks, 214 Frozen & El Diablos, $3 Draft Beers, and $5 Wells
-  menu: "/uploads/2021/11/01/happy-hour-2021.jpg"
+  menu: "/uploads/2022/01/28/happy-hour-2022.pdf"
   photo: "/uploads/2017/12/01/happy_hour_margaritas_titos_beer_with_bowl_of_limes.jpg"
 online_ordering:
   description: Ordering is quick and easy. Select a location and time. Choose your
