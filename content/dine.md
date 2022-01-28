@@ -14,7 +14,7 @@ dine_with_us:
     and “Best Family Place”.   So whatever the occasion you’re sure to enjoy.'
   menus:
   - menu_name: Dine-In and Takeout
-    menu: "/uploads/2021/10/29/cocina-214-menu-october-2021.pdf"
+    menu: "/uploads/2022/01/28/cocina-214-menu-jan-2022.pdf"
   - menu_name: Family Packages for Takeout, Curbside Pickup and/or Delivery
     menu: "/uploads/2021/06/21/family-packages-menu-2021.jpg"
   - menu_name: Kids’
