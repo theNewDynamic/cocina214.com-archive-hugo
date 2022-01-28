@@ -20,11 +20,11 @@ dine_with_us:
   - menu_name: Kids’
     menu: "/uploads/2022/01/18/kids_menu_20223.jpg"
   - menu_name: Happy Hour Menu
-    menu: "/uploads/2021/06/22/happy-hour-2021.pdf"
+    menu: "/uploads/2022/01/28/happy-hour-2022.pdf"
   - menu_name: 'Drink/Cocktail '
-    menu: "/uploads/2021/10/29/drinks-october-2021.pdf"
+    menu: "/uploads/2022/01/28/drinks-jan-2022.pdf"
   - menu_name: After Dinner Drink and Dessert
-    menu: "/uploads/2021/10/29/afterdinner_october-2021.pdf"
+    menu: "/uploads/2022/01/28/afterdinner_jan-2022.pdf"
   featured:
     name: Happy Hour
     hours: '4:00 pm – 6:30 pm '
