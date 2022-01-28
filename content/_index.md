@@ -24,13 +24,13 @@ upcoming_events:
   - event_name: Valentine's Day Package for 2!
     event_date: ''
     event_time: ''
-    event_description: ''
+    event_description: A Special Valentine's Package for 2 people
     event_links:
     - event_link_text: Learn More
       event_link_url: https://cocina214.com/news/valentine-s-day-package-for-2/
     photo_link:
-      photo_link_text: ''
-      photo_link_photo: ''
+      photo_link_text: View Menu
+      photo_link_photo: "/uploads/2022/01/26/valentine-s-package-2022.jpg"
   - event_name: Join us for Happy Hour
     event_date: Monday-Friday
     event_time: 4:00-6:30 PM
