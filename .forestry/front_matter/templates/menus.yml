@@ -12,3 +12,5 @@ fields:
   - type: file
     name: file
     label: file
+pages:
+- data/menus.yml
