@@ -1,165 +1,109 @@
 {{ define "main" }}
+<div class="mt-4 lazyload mt5-ns t-del-2 mt0@50">
 
-<div class="mt-3 lazyload mt5-ns t-del-2 mt0@50">
+	<div class="mv2 jean-luc f4 mv3-ns" style="padding:4rem;margin:auto">
+		<h2> Unfortunately, the page you were looking may not exist.</h2>
 
-    <div class="mv2 jean-luc headline mv3-ns" style="padding:4rem 8rem;margin:auto">
-        This is not the page you were looking for.
-    </div>
+		{{ with site.Data.menus }}
+			<div class="mv2  f4 mv3-ns">
+				<h3>Our current Menus</h3>
+				<ul class="flex-l pl0">
+					{{ range . }}
+						{{ $name := .name }}
+						<li class="di-l pr4">
+							{{ with .file }}
+								<a href="{{ . }}" class="c-pink-ladies-dark hover-c-pink-ladies" target="_blank">{{ $name }}</a>
+							{{ end }}
+					</li>
+					{{ end }}
+				</ul>
+			</div>
+		{{ end }}
 
+	</div>
 </div>
 
 <main class=" ph3-ns">
-    <h1 class="element-invisible">Contact Us</h1>
+	<h1 class="element-invisible">Contact Us</h1>
 
-    <!-- Locations -->
-    <div class="mv2   mv3-ns   css-ie-flex-shrink section-animate ">
-        <!--   Location One   -->
-        <div class="section-animate  theme-olympus-green  mv2   mv3-ns   flex-l   css-ie-flex-shrink">
-            <!--   Location Info   -->
-            <div class=" pb5 pr3 pt-3_5   pr4-ns   w-50-l   pr-7@79">
-                <!--   Location   -->
-                <div class="flex@79 justify-end@79">
-                    <h2 class="fade-in-right  f4 fw6 lh-2 ml3 mv0 pt-_0625 tracked-narrow ttu w-100 wrksns   f3-ns ml4-ns pt0-ns   w-25@79">Winter Park, Florida</h2>
-                </div>
-                <!-- End Location -->
+	<!-- Locations -->
+	<div class="mv2   mv3-ns   css-ie-flex-shrink section-animate ">
+		<!--   Location One   -->
+		<div class="section-animate  theme-olympus-green  mv2   mv3-ns   flex-l   css-ie-flex-shrink">
+			<!--   Location Info   -->
+			<div class=" pb5 pr3 pt-3_5   pr4-ns   w-50-l   pr-7@79">
+				<!--   Location   -->
+				<div class="flex@79 justify-end@79">
+					<h2
+						class="fade-in-right  f4 fw6 lh-2 ml3 mv0 pt-_0625 tracked-narrow ttu w-100 wrksns   f3-ns ml4-ns pt0-ns   w-25@79">
+						Winter Park, Florida</h2>
+				</div>
+				<!-- End Location -->
 
-                <!--   Divider   -->
-                <div class="bg-olumpus-green-light flex@90 justify-end@90">
-                    <div class="divider h-_125 mb-1_1875 mt-_3125 w-100   mt-_375-ns   w-27@90"></div>
-                </div>
-                <!-- End Divider -->
+				<!--   Divider   -->
+				<div class="bg-olumpus-green-light flex@90 justify-end@90">
+					<div class="divider h-_125 mb-1_1875 mt-_3125 w-100   mt-_375-ns   w-27@90"></div>
+				</div>
+				<!-- End Divider -->
 
-                <!--   Phone & Address   -->
-                <div class="fade-in t-del-2    flex@79 justify-end@79">
-                    <div class="lh-2 ml3 tracked-narrow   ml4-ns   mw-26@54   w-25@79">
-                        <div class="flex">
-                            <p class="f6 mv0 w-3_75   f5-ns w-4_25-ns">Phone:</p>
-                            <p class="f6 ml2 mv0   f5-ns   ml3-ns w-auto-ns   ml4-l">{{ .Site.Data.Winter_Park_Info.Phone }}</p>
-                        </div>
-                        <div class="flex">
-                            <p class="f6 mv0 w-3_75   f5-ns w-4_25-ns">Address:</p>
-                            <p class="f6 ml2 mv0   f5-ns   ml3-ns w-auto-ns   ml4-l">{{ .Site.Data.Winter_Park_Info.Address.part_one }}<br>{{ .Site.Data.Winter_Park_Info.Address.part_two }}</p>
-                        </div>
-                        <div class="flex mb4 mt4">
-                            <a class="btn bw1 c-gold dib f-1_125 h-2_5 hover-theme-olympus-green hover-c-dark-brown jean-luc lh-1_5 link ph3 pt-_375 tracked-narrow ttu white   ph4-ns" href="{{ .Site.Data.Winter_Park_Info.Address.google_maps_url }}">Get Directions</a>
-                            <a class="btn bw1 c-gold dib f-1_125 h-2_5 hover-theme-olympus-green hover-c-dark-brown jean-luc lh-1_5 link ml3 ph3 pt-_375 tracked-narrow ttu white   ph4-ns   ml4-l" href="tel:{{ .Site.Data.Winter_Park_Info.Phone }}">Call Us</a>
-                        </div>
+				<!--   Phone & Address   -->
+				<div class="fade-in t-del-2    flex@79 justify-end@79">
+					<div class="lh-2 ml3 tracked-narrow   ml4-ns   mw-26@54   w-25@79">
+						<div class="flex">
+							<p class="f6 mv0 w-3_75   f5-ns w-4_25-ns">Phone:</p>
+							<p class="f6 ml2 mv0   f5-ns   ml3-ns w-auto-ns   ml4-l">{{
+								.Site.Data.Winter_Park_Info.Phone }}</p>
+						</div>
+						<div class="flex">
+							<p class="f6 mv0 w-3_75   f5-ns w-4_25-ns">Address:</p>
+							<p class="f6 ml2 mv0   f5-ns   ml3-ns w-auto-ns   ml4-l">{{
+								.Site.Data.Winter_Park_Info.Address.part_one }}<br>{{
+								.Site.Data.Winter_Park_Info.Address.part_two }}</p>
+						</div>
+						<div class="flex mb4 mt4">
+							<a class="btn bw1 c-gold dib f-1_125 h-2_5 hover-theme-olympus-green hover-c-dark-brown jean-luc lh-1_5 link ph3 pt-_375 tracked-narrow ttu white   ph4-ns"
+								href="{{ .Site.Data.Winter_Park_Info.Address.google_maps_url }}">Get Directions</a>
+							<a class="btn bw1 c-gold dib f-1_125 h-2_5 hover-theme-olympus-green hover-c-dark-brown jean-luc lh-1_5 link ml3 ph3 pt-_375 tracked-narrow ttu white   ph4-ns   ml4-l"
+								href="tel:{{ .Site.Data.Winter_Park_Info.Phone }}">Call Us</a>
+						</div>
 
-                        <h3 class="f5 fw4 mv0">Hours:</h3>
-                        {{ range .Site.Data.Winter_Park_Info.Hours }}
-                            <div class="flex justify-between   justify-start-ns">
-                                <p class="f6 mv0 w-50   f5@23   w-48@25   mw-12-ns">{{ .days }}</p>
-                                <p class="f6 mv0 w-50 white   f5@23   w-48@25   ml3-ns w-auto-ns">{{ .times }}</p>
-                            </div>
-                        {{ end }}
+						<h3 class="f5 fw4 mv0">Hours:</h3>
+						{{ range .Site.Data.Winter_Park_Info.Hours }}
+						<div class="flex justify-between   justify-start-ns">
+							<p class="f6 mv0 w-50   f5@23   w-48@25   mw-12-ns">{{ .days }}</p>
+							<p class="f6 mv0 w-50 white   f5@23   w-48@25   ml3-ns w-auto-ns">{{ .times }}</p>
+						</div>
+						{{ end }}
 
-                        <div style="position:relative; display:block; height:36px;"></div>
-                      
-                        <!--   Reservation Widget   -->
-                        <a href="https://resy.com/cities/orl/cocina214winterpark" id="resyButton-uk1lx0ui">Book your Cocina 214- Winter Park reservation on Resy</a>
+						<div style="position:relative; display:block; height:36px;"></div>
 
-                        <script src="https://widgets.resy.com/embed.js"></script>
+						<!--   Reservation Widget   -->
+						<a href="https://resy.com/cities/orl/cocina214winterpark" id="resyButton-uk1lx0ui">Book your
+							Cocina 214- Winter Park reservation on Resy</a>
 
-                        <script>
-                        resyWidget.addButton(document.getElementById('resyButton-uk1lx0ui'), {"venueId":2897,"apiKey":"rf4w2sdQmokQblphxG5lbPPA4Wl6C2lD","replace":true});
-                        </script>
-                        <!--   End Reservation Widget   -->
-                    </div>
-                </div>
-                <!-- End Phone & Address -->
-            </div>
-            <!-- End Location Info -->
+						<script src="https://widgets.resy.com/embed.js"></script>
 
-            <!--   Map   -->
-            <div class="fade-in bg-mid-gray h-20   h-28_5-ns   h-auto-l w-50-l" id="location_one_map"></div>
-            <!-- End Map -->
-        </div>
-        <!-- End Location One -->
+						<script>
+							resyWidget.addButton(document.getElementById('resyButton-uk1lx0ui'), { "venueId": 2897, "apiKey": "rf4w2sdQmokQblphxG5lbPPA4Wl6C2lD", "replace": true });
+						</script>
+						<!--   End Reservation Widget   -->
+					</div>
+				</div>
+				<!-- End Phone & Address -->
+			</div>
+			<!-- End Location Info -->
 
-        {{ partial "map_js" . }}
-    </div>
-    <!-- End Locations -->
+			<!--   Map   -->
+			<div class="fade-in bg-mid-gray h-20   h-28_5-ns   h-auto-l w-50-l" id="location_one_map"></div>
+			<!-- End Map -->
+		</div>
+		<!-- End Location One -->
 
-
-    <div class="section-animate center mt-4_75 mw-64 pb-5 ph3   ph4-ns   ph0@70">
-        <h2 class="fade-in-right f4 fw6 lh-1_5 mb-_5625 mt0 pt-_0625 tracked-narrow ttu wrksns   f3-ns mb-_625-ns pt0-ns">{{ .Params.form_title }}</h2>
-        <!--   Divider   -->
-        <div class="theme-magenta h-_125 mb-1_6875 mt0"></div>
-        <!-- End Divider -->
-        <div class="fade-in t-del-1 flex@50">
-            <div class="lh-2 nested-p  w-50@50 mr3@50">
-                <p>{{ .Params.form_text }}</p>
-            </div>
+		{{ partial "map_js" . }}
+	</div>
+	<!-- End Locations -->
 
 
-            <style>
-            /*
-                    Overriding Howdy Form confirmation box styles
-            */
-                .swal2-title {
-                    color:#2B2422!important;
-                    font-family: 'Work Sans'!important;
-                    font-size:24px!important;
-                    font-style:normal!important;
-                    font-weight:600!important;
-                    letter-spacing:.05em!important;
-                    text-transform: uppercase!important;
-                }
-                .swal2-content {
-                    font-family: 'Stag Book'!important;
-                    font-size:16px!important;
-                    font-style:normal!important;
-                    font-weight:normal!important;
-                }
-                .swal2-confirm, .swal2-styled {
-                    background-color:rgba(209,132,25,.9)!important;
-                    font-family: 'JeanLuc'!important;
-                    font-size:1.125rem!important;
-                    font-style:normal!important;
-                    font-weight:normal!important;
-                    height:2.5rem;
-                    letter-spacing:.05em!important;
-                    padding-top:1frem!important;
-                    text-transform:uppercase!important;
-                }
-            /*
-                    Overriding Howdy Form confirmation box styles
-            */
-            </style>
-            <div class="w-50@50 ml3@50">
-                <!-- BEGIN FORM -->
-                <!-- howdy form script -->
-                <script async src="https://static.howdyform.com/howdyClient.js?token=bGFtYnJpbmVAY29jaW5hMjE0LmNvbQ==" data-howdy-recipient="lambrine@cocina214.com"></script>
-                <!-- howdy form script -->
 
-                <form class="mt-_4375" method="POST">
-                    <!--  name -->
-                    <label class="db f5 jean-luc lh-solid mb-_875 mt0 tracked w-100" for="name">Name</label>
-                    <input class="b--c-dark-brown ba bw1 fw5 h-2_5 mb-1_625 ph2 pt-_125 w-100 wrksns" id="name" name="name" placeholder="Name" type="text">
-                    <!-- name -->
-
-                    <!--  phone -->
-                    <label class="db f5 jean-luc lh-solid mb-_875 mt0 tracked w-100" for="name">Phone</label>
-                    <input class="b--c-dark-brown ba bw1 fw5 h-2_5 mb-1_625 ph2 pt-_125 w-100 wrksns" id="phone" name="phone" placeholder="Phone" type="tel">
-                    <!-- phone -->
-
-                    <!-- email -->
-                    <label class="db f5 jean-luc lh-solid mb-_875 mt0 tracked-narrow w-100" for="email">Email</label>
-                    <input class="b--c-dark-brown ba bw1 fw5 h-2_5 mb-1_625 ph2 pt-_125 w-100 wrksns" id="email" name="email" placeholder="Email" type="text">
-                    <!-- email -->
-
-                    <!-- message -->
-                    <label class="db f5 jean-luc lh-solid mb-_875 mt0 tracked-narrow w-100" for="message">Note:</label>
-                    <textarea class="b--c-dark-brown ba bw1 fw5 h-11 mb-1_25 ph2 pt2 w-100 wrksns" style="resize:none" id="message" name="message" placeholder="Message" type="text" ></textarea>
-                    <!-- message -->
-
-                    <!-- submit button -->
-                    <input class="bn bg-bm-magenta fw6 h-2_5 hover-bg-pink-ladies hover-ba  hover-bw1 jean-luc mt0 pointer tracked-narrow w-8_5 white" type="submit" value="Submit">
-                    <!-- submit button -->
-                </form>
-                <!-- END FORM -->
-            </div>
-        </div>
-    </div>
 </main>
 {{ end }}
