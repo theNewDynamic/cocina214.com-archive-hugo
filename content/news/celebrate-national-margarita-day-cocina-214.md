@@ -12,11 +12,10 @@ video_key = ""
 
 **_Enjoy our House Flight of 3 Margaritas for $10_**
 
-_214 Rocks, El Diablo, & 214 Frozen_
+_Enjoy our Top-Selling 214 Rocks, El Diablo, & 214 Frozen Margaritas!_
 
 **_Enjoy our Premium Flight of 3 Margaritas for $25_**
 
-_Blue Agave, El Diablo, & Orange Blossom_
+_Enjoy our Premium hand-made Blue Agave, El Diablo, & Orange Blossom Margaritas!_
 
-  
 ![](/uploads/2022/02/03/national-margarita-day-poster-2022.jpg)
