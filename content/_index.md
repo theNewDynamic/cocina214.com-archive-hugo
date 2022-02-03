@@ -31,7 +31,7 @@ upcoming_events:
     photo_link:
       photo_link_text: View Menu
       photo_link_photo: "/uploads/2022/01/26/valentine-s-package-2022.jpg"
-  - event_name: National Margarita Day
+  - event_name: Join us on National Margarita Day!
     event_date: Tuesday, February 22nd
     event_time: All Day Long!
     event_description: 'Enjoy our Margarita Flights at a Special Price '
