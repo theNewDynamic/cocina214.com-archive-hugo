@@ -40,7 +40,7 @@ upcoming_events:
       event_link_url: https://cocina214.com/news/celebrate-national-margarita-day-cocina-214/
     photo_link:
       photo_link_text: View Poster
-      photo_link_photo: "/uploads/2022/02/03/national-margarita-day-poster-2022.jpg"
+      photo_link_photo: "/uploads/2022/02/05/national-margarita-day-poster-2022.jpg"
   - event_name: Join us for Happy Hour
     event_date: Monday-Friday
     event_time: 4:00-6:30 PM
