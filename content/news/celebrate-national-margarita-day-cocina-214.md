@@ -1,6 +1,6 @@
 +++
 additional_info = ""
-category = "upcoming"
+category = "past-events"
 date = 2022-02-03T19:47:20Z
 featured_photo = "/uploads/2022/02/05/national-margarita-day-poster-2022.jpg"
 photos = []

@@ -1,6 +1,6 @@
 +++
 additional_info = ""
-category = "upcoming"
+category = "past-events"
 date = 2022-01-26T05:00:00Z
 featured_photo = "/uploads/2022/01/26/valentine-s-package-2022.jpg"
 photos = []
