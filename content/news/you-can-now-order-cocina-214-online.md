@@ -20,7 +20,7 @@ Go to: [https://cocina214.com/shop/](https://cocina214.com/shop/ "https://cocina
 * Select Your Items from the Online Menu
 * Checkout
 
-**_Cocina 214 has won over 70 Awards and now you can order from your computer or your phone!_** Voted Best Tex-Mex, Best Mexican, Best Happy Hour, & more!
+**_Cocina 214 has won over 75 Awards and now you can order from your computer or your phone!_** Voted Best Tex-Mex, Best Mexican, Best Happy Hour, & more!
 
 ![](/uploads/2020/02/24/ONLINE-ORDERING-POSTCARD-page1-2.jpg)
 
