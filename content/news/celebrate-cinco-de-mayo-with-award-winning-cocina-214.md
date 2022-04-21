@@ -14,15 +14,15 @@ video_key = ""
 
 We will have Drink and Food specials all day long, along with promos and giveaways throughout the day.
 
-_Drink Specials_ !*
+**_Drink Specials_ !***
 
 **$5** 214 Rocks Margarita with Sauza **|** **$5** La Pinta Royale **|** **$3** Corona & Corona Premier Bottles **|** **$7** Hornitos Tequila Seltzers: Mango and Pineapple **|** Tres Gen Tequila Shots Cinco **$5** (Blanco), Seis **$6** (Reposado), Siete **$7** (Anejo)!
 
-_Food Specials_ !*
+**_Food Specials_ !***
 
 $5 2 Ground Beef Tacos _with Coastal Slaw, Jalapeños, Bell Peppers, & Citrus Dressing_
 
-Cinco at Home* for those you want to celebrate at home or at their office.
+Cinco at Home* for those who want to celebrate at home or at their office.
 
 _Cinco Home Edition Must be Ordered by Wednesday, May 4th @ 6pm_
 
