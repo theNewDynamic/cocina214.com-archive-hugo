@@ -38,7 +38,7 @@ upcoming_events:
     event_links: []
     photo_link:
       photo_link_text: View Menu
-      photo_link_photo: "/uploads/2020/08/20/happy-hour-2020.jpg"
+      photo_link_photo: "/uploads/2022/01/28/happy-hour-2022.jpg"
   - event_name: Order Cocina 214 Online and get Delivery or Curbside Pick-up!
     event_date: ''
     event_time: ''
