@@ -21,16 +21,6 @@ catering:
 upcoming_events:
   photo: "/uploads/2019/09/05/Rocks_Margarita_w_limes.jpg"
   events:
-  - event_name: Celebrate Cinco do Mayo & our 11-Year Anniversary with Cocina 214!
-    event_date: Thursday, May 5th
-    event_time: 11:00 am - 10:00 pm
-    event_description: ''
-    event_links:
-    - event_link_text: Learn More
-      event_link_url: https://cocina214.com/news/celebrate-cinco-de-mayo-with-award-winning-cocina-214/
-    photo_link:
-      photo_link_text: View Poster
-      photo_link_photo: "/uploads/2022/04/21/cincodemayoposter-2022-with-la-pinta.jpg"
   - event_name: Join us for Happy Hour
     event_date: Monday-Friday
     event_time: 4:00-6:30 PM

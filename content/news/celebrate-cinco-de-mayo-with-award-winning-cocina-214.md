@@ -1,6 +1,6 @@
 +++
 additional_info = ""
-category = "current"
+category = "past-events"
 date = 2022-04-21T17:00:56Z
 featured_photo = "/uploads/2022/04/21/cincodemayoposter-2022-with-la-pinta.jpg"
 photos = []
