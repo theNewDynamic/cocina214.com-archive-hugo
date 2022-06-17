@@ -26,8 +26,8 @@ upcoming_events:
     event_time: All Day Long!
     event_description: ''
     event_links:
-    - event_link_text: ''
-      event_link_url: ''
+    - event_link_text: Learn More
+      event_link_url: https://cocina214.com/news/celebrate-father-s-day-at-cocina-214/
     photo_link:
       photo_link_text: View Poster
       photo_link_photo: "/uploads/2022/06/17/father-s-day_2022.jpg"
