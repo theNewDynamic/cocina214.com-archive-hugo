@@ -1,6 +1,6 @@
 +++
 additional_info = ""
-category = "current"
+category = "past-events"
 date = 2022-06-17T16:02:16Z
 featured_photo = "/uploads/2022/06/17/father-s-day_2022.jpg"
 photos = []
