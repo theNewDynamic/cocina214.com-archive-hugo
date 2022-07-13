@@ -2,7 +2,6 @@
 additional_info = ""
 category = "upcoming"
 date = 2022-06-20T18:03:16Z
-draft = true
 featured_photo = "/uploads/2022/06/20/back-to-school_2022.jpg"
 photos = []
 title = "Cocina 214's Back to School Party Package!"
