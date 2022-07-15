@@ -25,7 +25,9 @@ upcoming_events:
     event_date: Sunday, July 24th
     event_time: All Day Long
     event_description: "$5 Rocks, Frozen, and El Diablo Margaritas"
-    event_links: []
+    event_links:
+    - event_link_text: Learn More
+      event_link_url: https://cocina214.com/news/national-tequila-day-at-cocina-214/
     photo_link:
       photo_link_text: View Event Poster
       photo_link_photo: "/uploads/2022/07/15/national-tequila-day-wp_2022.jpg"
