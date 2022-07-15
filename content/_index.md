@@ -34,7 +34,7 @@ upcoming_events:
   - event_name: National Avocado Day @ Cocina 214
     event_date: Sunday, July 31st
     event_time: All Day Long
-    event_description: ''
+    event_description: "$7 Avocado Bites"
     event_links:
     - event_link_text: Learn More
       event_link_url: https://cocina214.com/news/national-avocado-day-at-cocina-214/
