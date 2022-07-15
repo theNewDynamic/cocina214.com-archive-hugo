@@ -21,6 +21,14 @@ catering:
 upcoming_events:
   photo: "/uploads/2019/09/05/Rocks_Margarita_w_limes.jpg"
   events:
+  - event_name: National Tequila Day @ Cocina 214
+    event_date: Sunday, July 24th
+    event_time: All Day Long
+    event_description: "$5 Rocks, Frozen, and El Diablo Margaritas"
+    event_links: []
+    photo_link:
+      photo_link_text: View Event Poster
+      photo_link_photo: "/uploads/2022/07/15/national-tequila-day-wp_2022.jpg"
   - event_name: National Avocado Day @ Cocina 214
     event_date: Sunday, July 31st
     event_time: All Day Long
