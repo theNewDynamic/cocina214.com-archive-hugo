@@ -1,6 +1,6 @@
 +++
 additional_info = ""
-category = "upcoming"
+category = "past-events"
 date = 2022-07-15T17:21:31Z
 featured_photo = "/uploads/2022/07/15/national-tequila-day-wp_2022.jpg"
 photos = []
