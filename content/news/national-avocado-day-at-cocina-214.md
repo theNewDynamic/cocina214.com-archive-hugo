@@ -1,6 +1,6 @@
 +++
 additional_info = ""
-category = "upcoming"
+category = "past-events"
 date = 2022-07-15T17:20:22Z
 featured_photo = "/uploads/2022/07/15/national-avocado-day-2022.jpg"
 photos = []
