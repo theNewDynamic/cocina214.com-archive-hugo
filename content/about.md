@@ -12,10 +12,6 @@ featured_staff:
   last_name: ''
   title: Kitchen Manager
 staff:
-- photo: "/uploads/2021/06/02/miguel2small_new.jpg"
-  first_name: Miguel
-  last_name: ''
-  title: Sous Chef
 - photo: "/uploads/2021/06/02/humberto1_new.jpg"
   first_name: Humberto
   last_name: ''
@@ -24,10 +20,6 @@ staff:
   first_name: Eugenia
   last_name: ''
   title: Manager
-- photo: "/uploads/2021/06/02/dasha8_new.jpg"
-  first_name: Dasha
-  last_name: ''
-  title: Bar Manager
 - photo: "/uploads/2021/06/02/liz5_new.jpg"
   first_name: Elizabeth
   last_name: ''
