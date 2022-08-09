@@ -46,7 +46,7 @@ upcoming_events:
     event_description: Enjoy our Family Packages for Takeout
     event_links: []
     photo_link:
-      photo_link_photo: "/uploads/2021/06/21/family-packages-menu-2021.jpg"
+      photo_link_photo: "/uploads/2022/08/09/family-packages-menu-aug-2022.pdf"
       photo_link_text: View Menu
 hero_photos:
 - "/uploads/2017/12/08/MX-corn_white_background_optimized_web.jpg"
