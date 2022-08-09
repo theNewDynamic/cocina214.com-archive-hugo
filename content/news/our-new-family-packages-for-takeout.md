@@ -1,8 +1,9 @@
 +++
 additional_info = ""
-category = "current"
+category = "past-events"
 date = 2020-08-11T15:31:06Z
-featured_photo = "/uploads/2021/06/21/family-packages-menu-2021.jpg"
+draft = true
+featured_photo = "/uploads/2022/08/09/family-packages-menu-aug-2022.pdf"
 photos = []
 title = "Family Packages for Curbside Pick-up, Takeout and/or Delivery!!"
 video_key = ""
