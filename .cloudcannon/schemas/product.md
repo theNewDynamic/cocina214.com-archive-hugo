@@ -1,0 +1,13 @@
+---
+title:
+draft:
+id:
+category:
+price:
+shipping_weight:
+no_tax:
+details:
+sizes:
+featured_image:
+images:
+---

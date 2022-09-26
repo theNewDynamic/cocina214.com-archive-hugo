@@ -1,0 +1,292 @@
+%YAML 1.1
+---
+collections_config_override: true
+timezone: America/New_York
+_enabled_editors:
+- data
+paths:
+  data: data
+
+x-default_sort_options: &default-sort_options
+- key: date
+  order: desc
+- key: date
+- key: title
+- key: title
+  order: desc
+
+x-base-schema: &base-schema
+  hide_extra_inputs: true
+  remove_empty_inputs: true
+  remove_extra_inputs: false
+
+x-base-collection: &base-collection
+  sort_options: *default-sort_options
+  icon: article
+  schemas: 
+    default:
+      <<: *base-schema
+
+x-input-markdown: &input-markdown
+  type: markdown
+x-input-hidden: &input-hidden
+  hidden: true
+x-input-number: &input-number
+  type: number
+x-input-file: &input-file
+  type: file
+  comment: File names should not have spaces. e.g. "street tacos.jpg" should be changed to "street_tacos.jpg"
+x-input-array: &input-array
+  type: array
+x-input-image: &input-image
+  type: image
+x-input-checkbox: &input-checkbox
+  type: checkbox
+####################
+#### COLLETIONS ####
+###################
+
+####################
+#### Sidebar
+collection_groups:
+- heading: Updates
+  collections:
+  - posts
+
+####################
+#### Collections settings
+collections_config:
+  posts:
+    path: content/news
+    icon: article
+    sort_options: *default-sort_options
+    schemas: 
+      default:
+        <<: *base-schema
+        path: .cloudcannon/schemas/post.md
+    _inputs:
+      date:
+        comment: '"Posted" date only. Will be displayed as e.g. "Posted 9/15/19"'
+      additional_info: 
+        comment: 'Will be displayed alongside the date in the post summary. Please keep as short as possible to avoid breaking the layout. e.g. "Happening Now!" "Deal Ends 9/16/19"'
+  products:
+    path: content/shop
+    schemas: 
+      default:
+        <<: *base-schema
+        path: .cloudcannon/schemas/product.md
+    _inputs:
+      category:
+        type: text
+        comment: e.g. "T-Shirts", "Gift Cards"
+      shipping_weight:
+        comment: Necessary for calculating shipping. Weight must be in grams.
+      no_tax:
+        type: checkbox
+      details: *input-array
+      details[*]: *input-text
+      sizes: *input-array
+      sizes[*]: *input-text
+      size_guide: *input-text
+  pages:
+    path: content
+    disable_add: true
+    schemas: 
+      default:
+        <<: *base-schema
+        path: .cloudcannon/schemas/page.md
+    _inputs:
+      featured:
+        type: object
+        options:
+          structures:
+            values:
+              value:
+                name:
+                hours:
+                when:
+                menu_name:
+                menu:
+      reservations:
+        type: object
+        options:
+          structures:
+            values:
+              value:
+                text:
+                phone:
+      online_ordering:
+        type: object
+        options:
+          structures:
+            values:
+              _inputs:
+                description: *input-markdown
+              value:
+                description:
+      catering:
+        type: object
+        options:
+          structures:
+            values:
+              _inputs:
+                description: *input-markdown
+              value:
+                text:
+                menu:
+                photo:
+      
+#####################
+# INPUTS ####
+# This where global inputs configuration go.
+###################
+_inputs:
+  date:
+    instance_value: NOW
+  layout: *input-hidden
+  template: *input-hidden
+  copy: *input-markdown
+  caption: *input-markdown
+  seo:
+    type: object
+    comment: Everything SEO
+  private:
+    type: switch
+    comment: If turned on, the page will not be indexed by SEO engines like google.
+  draft:
+    label: Draft
+    comment: If drafted, this entry will not be published on the live site.
+    type: switch
+  weight:
+    type: number
+    comment: For ordering pages
+  translationkey:
+    label: Translation Key
+    comment: Must match the key assigned to corresponding translation.
+  video_key:
+    label: Video Key
+    comment: To embed a YouTube video, find the URL (e.g. https://www.youtube.com/watch?v=CdrCNx06eGA) and copy the key after 'watch?v=' (e.g. CdrCNx06eGA)
+  featured_photo:
+    <<: *input-file
+    comment: File names should not have spaces. e.g. "street tacos.jpg" should be changed to "street_tacos.jpg"
+  menu: *input-file
+  menus:
+    type: array
+    options:
+      structures: _structures.menus_structure
+  photo: *input-file
+  photos:
+    <<: *input-array
+  photos[*]: *input-file
+  images:
+    <<: *input-array
+  images[*]: *input-file
+  hero_photos:
+    <<: *input-array
+  hero_photos[*]: *input-file
+  price: *input-number
+  
+#####################
+# STRUCTURES
+# This is where structures for arrays, objects and blocks go. 
+###################
+_structures:
+  ctas:
+    values:
+      value:
+        url:
+        copy:
+  seo:
+    values:
+      _inputs:
+        title:
+          comment: SEO Title
+      value:
+        title:
+        description:
+        canonical:
+        image:
+  dine_with_us:
+    values:
+      value:
+        photo:
+        text:
+        menus:
+  menus_structure:
+    values:
+      value:
+        menu_name:
+        menu:
+  blocks:
+    style: modal
+    id_key: layout
+    values:
+    - label: Text
+      icon: article
+      value:
+        layout: text
+        title:
+        copy:
+        cta:
+    - label: Image
+      icon: image
+      _inputs:
+        copy:
+          label: Caption
+          comment: The caption will appear below the video
+      value:
+        layout: image
+        title:
+        image:
+        copy:
+    - label: Video
+      icon: videocam
+      value:
+        title:
+        video_id:
+
+####################
+#### SELECT DATA
+# This is where the select field options 
+# can be assigned
+###################
+_select_data:
+  categories:
+  - awards
+  - current
+  - past-events
+  - press
+  - upcoming
+
+####################
+#### EDITABLES
+# This is where the editors type goes. 
+###################
+_editables:
+  content:
+    image_size_attributes: false
+    blockquote: true
+    link: true
+    bold: true
+    format: p h1 h2 h3
+    italic: true
+    strike: false
+    subscript: false
+    superscript: false
+    underline: true
+    bulletedlist: true
+    indent: false
+    numberedlist: true
+    outdent: false
+    code: false
+    embed: true
+    horizontalrule: false
+    image: true
+    table: true
+    undo: true
+    redo: true
+    removeformat: true
+    copyformatting: true
+    center: text-center
+    left: text-left
+    right: text-right

@@ -1,0 +1,3 @@
+#!/bin/bash
+npm install
+install-hugo 0.89.1
