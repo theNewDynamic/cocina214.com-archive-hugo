@@ -1,0 +1,52 @@
+{{ with .block }}
+{{ $order := "" }}
+{{ $image_position := "right" }}
+{{ with .image_position }}
+  {{ if eq . "left" }}
+    {{ $image_position = . }}
+    {{ $order = "flex-row-reverse@53" }}
+  {{ end }}
+{{ end }}
+{{ $theme := "olympus-green" }}
+{{ with .theme }}
+  {{ $theme = . }}
+{{ end }}
+<div class="section-animate theme-{{ $theme }} mt  mv3-ns   flex@53 {{ $order }}">
+  <div class=" mb2 pb-5_3125 pt-3_5 tracked-narro  mb3-ns mb0@53 w-50@53 pr3 {{ if eq $image_position "right" }} pr5-l  pr-7@79 {{ else }}pl5-l  pl-7@79{{ end }}   ">
+    <div class="{{ if eq $image_position "right" }} fr@90 {{ end }} w-27@90">
+      <h2 class="wrksns fade-in-right  f4 fw6 lh-2 ml3 mv0 pt-_0625 tracked-narrow ttu w-100 wrk sns   f3-ns ml4-ns pt0-ns   fr@79 w-25@79">{{ .title }}</h2>
+
+      <!--   Divider   -->
+      <div class="h-_125 mb-1_1875 mt-_3125 w-100   mt-_375-ns   fr@79"></div>
+      <!-- End Divider -->
+
+      <div class=" lh-2 ml3  ml4-ns   fr@79 w-25@79">
+        <div class="fade-in t-del-2  mb-2_6875 measure-wide nested-p">
+          {{ .copy | markdownify }}
+          {{ with .menus }}
+            <div class="mt3">
+              {{ range $index, $v := . }}
+            {{ if $index }}
+              <br />
+            {{ end }}
+            <a class="dib f4 jean-luc lh-1_5 link tracked-narrow ttu white   css-arrow-link" href="{{ .file }}">{{ .copy }}</a>
+            {{ end }}
+            </div>
+          {{ end }}
+          {{ with .buttons }}
+           <div class="mt3">
+            {{ range $index, $v := . }}
+              {{ if $index }} <br />{{ end }}
+              <a class="btn dib bw1 mt3 c-dark-brown dib f-1_125 h-2_5 hover-white jean-luc lh-1_5 link ph4 pt-_375 tracked-narrow ttu" href="{{ .url }}" target="_blank">{{ .copy }}</a>
+            {{ end }}
+           </div>
+          {{ end }}
+          {{ partial "tnd-blocks/block__extra" $.block }}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="h-20   h-30-ns   h-auto@53 w-50@53" style="background-image:url({{ .image }});background-position:center center;background-size:cover"></div>
+</div>
+{{ end }}

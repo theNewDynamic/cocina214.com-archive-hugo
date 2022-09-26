@@ -1,5 +1,7 @@
 github.com/theNewDynamic/huge v0.1.0 h1:GEFDPHpTj9Bgm8b4dKiDn82NKv9nVAAPM3oTBLDIJX4=
 github.com/theNewDynamic/huge v0.1.0/go.mod h1:wZCHbuGglX7Iwa2xbJ/FcDIUzUsMGW6CyLboOp5iKR8=
+github.com/theNewDynamic/hugo-module-tnd-blocks v0.0.0-20220215182723-e6c693390ed3 h1:U+RLMzOUA3uc2QONF5Co1BYakvSjYb9P/VLLvl7wgfA=
+github.com/theNewDynamic/hugo-module-tnd-blocks v0.0.0-20220215182723-e6c693390ed3/go.mod h1:cCDN9pBAz39kHSuBU6qSmZSDt7IlO63jhdZUWofMd9U=
 github.com/theNewDynamic/hugo-module-tnd-imgix v0.2.2 h1:QyvV5FgRFNX6ZbMkB9uE2b5lnoCzVWlWSfM+ic1fYGc=
 github.com/theNewDynamic/hugo-module-tnd-imgix v0.2.2/go.mod h1:6P3SwYL7H/KccxwrB7BDl+wJW2qzaLTnVDf9m+Uj/Uo=
 github.com/theNewDynamic/hugo-module-tnd-media v0.0.0-20210627141852-8218fee868cb h1:az9J4QSOi7Jv0cIlqN/rlsDR+wm7L4MG1QiHnvrK2oo=
