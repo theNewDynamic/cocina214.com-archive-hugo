@@ -1,171 +1,17 @@
 {{ define "main" }}
 
 
-    {{ partial "slider/styles" . }} {{ partial "slider/markup" . }}
-
-
-
+{{ partial "slider/styles" . }}
+{{ partial "slider/markup" . }}
 
 <main class="ph3-ns bg-black-03">
-    <div class="section-animate theme-olympus-green mt2   mv3-ns   flex@53">
-        <div class=" mb2 pb-5_3125 pr3 pt-3_5 tracked-narrow   mb3-ns pr4-ns   mb0@53 w-50@53   pr5-l   pr-7@79">
-            <div class="fr@90 w-27@90">
-                <h1 class="fade-in-right  f4 fw6 lh-2 ml3 mv0 pt-_0625 tracked-narrow ttu w-100 wrksns   f3-ns ml4-ns pt0-ns   fr@79 w-25@79">Dine with Us</h1>
-
-                <!--   Divider   -->
-                <div class="divider  h-_125 mb-1_1875 mt-_3125 w-100   mt-_375-ns   fr@79"></div>
-                <!-- End Divider -->
-
-                <div class=" lh-2 ml3 white   ml4-ns   fr@79 w-25@79">
-                    <div class="fade-in t-del-2  mb-2_6875 measure-wide nested-p">
-                        <p>{{ .Params.dine_with_us.text | markdownify }}</p>
-                        <!--<a class="dib f4 jean-luc lh-1_5 link tracked-narrow ttu white   css-arrow-link" href="https://cocina214.alohaorderonline.com/StartOrder.aspx" target="_blank">ORDER ONLINE</a>
-                        <br>-->
-                        {{ range first 1 .Params.dine_with_us.menus }}
-                            <a class="dib f4 jean-luc lh-1_5 link tracked-narrow ttu white   css-arrow-link" href="{{ .menu }}">{{ .menu_name }} Menu</a>
-                        {{ end }}
-                        {{ range after 1 .Params.dine_with_us.menus }}
-                            <br>
-                            <a class="dib f4 jean-luc lh-1_5 link tracked-narrow ttu white   css-arrow-link" href="{{ .menu }}">{{ .menu_name }} Menu</a>
-                        {{ end }}
-                    </div>
-                    <!--
-                    <div class="theme-magenta h-_125 mb-1_1875"></div>
-
-                    <!--
-                    <div class="fade-in t-del-2 mb-2_6875   flex@25">
-                            <div class="mb-1_375   mb0@25 w-12@25">
-                                <p class="mv0">{{ .Params.dine_with_us.featured.name }}</p>
-                                <p class="mv0">{{ .Params.dine_with_us.featured.hours }}</p>
-                                <p class="mv0">{{ .Params.dine_with_us.featured.when }}</p>
-                            </div>
-                            <a class="dib f4 jean-luc link tracked-narrow ttu white   lh-2_25@25 ml4@25   self-end@25   css-arrow-link" href="{{ .Params.dine_with_us.featured.menu }}">{{ .Params.dine_with_us.featured.menu_name }} Menu</a>
-                    </div>-->
-
-
-                    <div class="bg-olympus-green-light h-_125 mb-1_1875"></div>
-
-                    <div class="fade-in t-del-2">
-                       <!--   Winter Park   -->
-                       <p class="f4 jean-luc lrh-solid mb0">Winter Park</p>
-                       <div class="flex@25 justify-between">
-                          <p class="mt0">
-                             151 E. Welbourne Ave</br>
-                             <a class="no-underline white" href="tel:{{ .Site.Data.Winter_Park_Info.Phone }}">{{ .Site.Data.Winter_Park_Info.Phone }}</a>
-                          </p>
-                           
-                          <!--   Reservation Widget   -->
-                          <div style="margin-top:4px">
-                             <a href="https://resy.com/cities/orl/cocina214winterpark" id="resyButton-uk1lx0ui">Book your Cocina 214- Winter Park reservation on Resy</a>
-
-                             <script src="https://widgets.resy.com/embed.js"></script>
-
-                             <script>
-                             resyWidget.addButton(document.getElementById('resyButton-uk1lx0ui'), {"venueId":2897,"apiKey":"rf4w2sdQmokQblphxG5lbPPA4Wl6C2lD","replace":true});
-                             </script>
-                             <!--   End Reservation Widget   -->
-                          </div>
-                       </div>
-                       <!-- End Winter Park -->
-                       
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="h-20   h-30-ns   h-auto@53 w-50@53" style="background-image:url({{ .Params.dine_with_us.photo }});background-position:center center;background-size:cover"></div>
-    </div>
-
-
-    <!--   Order Online   -->
-    <div class="section-animate   flex flex-column-reverse mv2   mv3-ns   flex-row@53">
-        <div class="h-20   h-30-ns    h-auto@53 w-50@53" style="background-image:url({{ .Params.happy_hour.photo }});background-position:center center;background-size:cover"></div>
+    {{ with .Params.blocks }}
+        {{ range $index, $v := . }}
+            {{ $block := . }}
+            {{ partial "tnd-blocks/block" (dict "Page" $ "block" $block) }}
+        {{ end }}
+    {{ end }}
     
-        <div class="theme-magenta pb-1_625 pt-3_5 tracked-narrow white   mb0@53 w-50@53   css-ie-flex-shrink">
-            <h2 class="fade-in-right t-del-1 c-gold f4 fw6 lh-2 ml3 mv0 pt-_0625 tracked-narrow ttu wrksns   f3-ns ml4-ns pt0-ns   mr5-l   ml-7@79 w-25@79">Order Online</h2>
-    
-            <!--   Divider   -->
-            <div class="theme-olympus-green h-_125 mb-1_1875 mr3 mt-_3125   mr4-ns mt-_375-ns   mr5-l   w-32@79   ml-5@90   w-27@90"></div>
-            <!-- End Divider -->
-    
-            <div class="fade-in t-del-2   lh-2 mb-2_6875 measure-wide mh3 nested-list nested-p   mh4-ns   mr5-l   ml-7@79 w-25@79">
-                <p>{{ .Params.online_ordering.description | markdownify }}</p>
-                <a class="online-ordering-btn wrksns" href="https://cocina214.alohaorderonline.com" target="_blank">
-                    <span>Order Now</span>
-                </a>
-            </div>
-        </div>
-    </div>
-    <!-- End Order Online -->
-
-
-    <!--   Happy Hour   -->
-    <div class="section-animate mb2   mb3-ns   flex@53">
-        <div class="theme-magentaTK theme-lady-liberty pb-1_625 pr3 pt-3_5 tracked-narrow   pr4-ns   w-50@53   pr5-l   pr-7@79   css-ie-flex-shrink">
-            <div class="fr@90 w-27@90">
-                <h2 class="fade-in-right f4 fw6 lh-2 ml3 mv0 pt-_0625 tracked-narrow ttu w-100 wrksns   f3-ns ml4-ns pt0-ns   fr@79 w-25@79">Happy Hour</h2>
-    
-                <!--   Divider   -->
-                <div class="bg-white h-_125 mb-1_1875 mt-_3125 w-100   mt-_375-ns   fr@79"></div>
-                <!-- End Divider -->
-    
-                <div class="fade-in t-del-1 lh-2 measure-wide ml3 nested-p   ml4-ns   fr@79 w-25@79" style="padding-bottom: 2rem">
-                    <p>{{ .Params.happy_hour.text | markdownify }}</p>
-                    <a class="dib f4 jean-luc lh-1_5 link mt-1_625 tracked-narrow ttu white   css-arrow-link" href="{{ .Params.happy_hour.menu }}">View Happy Hour Menu</a>
-                </div>
-            </div>
-        </div>
-        
-        <div class="h-20   h-30-ns    h-auto@53 w-50@53 lazyload" style="background-image:url({{ .Params.happy_hour.photo }});background-position:center center;background-size:cover"></div>
-    </div>
-    <!-- End Happy Hour -->
-
-
-    <!--   Catering   -->
-    <div class="section-animate   flex flex-column-reverse mb2 mb3-ns flex-row@53">
-        <div class="h-20   h-30-ns    h-auto@53 w-50@53" style="background-image:url({{ .Params.catering.photo }});background-position:center center;background-size:cover"></div>
-    
-        <div class="theme-olympus-greenTK theme-olympus-green pb-1_625 pt-3_5 tracked-narrow white   mb0@53 w-50@53   css-ie-flex-shrink">
-            <h2 class="fade-in-right t-del-1 f4 fw6 lh-2 ml3 mv0 pt-_0625 tracked-narrow ttu wrksns   f3-ns ml4-ns pt0-ns   mr5-l   ml-7@79 w-25@79">Catering</h2>
-    
-            <!--   Divider   -->
-            <div class="h-_125 mb-1_1875 mr3 mt-_3125   mr4-ns mt-_375-ns   mr5-l   w-32@79   ml-5@90   w-27@90"></div>
-            <!-- End Divider -->
-    
-            <div class="fade-in t-del-2   lh-2 mb-2_6875 measure-wide mh3 nested-list nested-p   mh4-ns   mr5-l   ml-7@79 w-25@79">
-                <p>{{ .Params.catering.text | markdownify }}</p>
-                <a class="dib f4 jean-luc lh-1_5 link mt-1_625 tracked-narrow ttu white   css-arrow-link" href="{{ .Params.catering.menu }}">View Catering Menu</a>
-
-                {{ partial "online-ordering__catering" . }}
-            </div>
-        </div>
-    </div>
-    <!-- End Catering -->
-
-
-    <!--   Private Dining   -->
-    <div class="section-animate mb-4_75   flex@53">
-        <div class="theme-magentaTK theme-lady-liberty pb-1_625 pr3 pt-3_5 tracked-narrow   pr4-ns   w-50@53   pr5-l   pr-7@79   css-ie-flex-shrink">
-            <div class="fr@90 w-27@90">
-                <h2 class="fade-in-right f4 fw6 lh-2 ml3 mv0 pt-_0625 tracked-narrow ttu w-100 wrksns   f3-ns ml4-ns pt0-ns   fr@79 w-25@79">Private Dining</h2>
-
-                <!--   Divider   -->
-                <div class="bg-white h-_125 mb-1_1875 mt-_3125 w-100   mt-_375-ns   fr@79"></div>
-                <!-- End Divider -->
-
-                <div class="fade-in t-del-1 lh-2 measure-wide ml3 nested-p   ml4-ns   fr@79 w-25@79" style="padding-bottom: 2rem">
-                    <p>{{ .Params.private_dining.text | markdownify }}</p>
-                    {{ range .Params.private_dining.menus }}
-                        <a class="dib f4 jean-luc lh-1_5 link mt-1_625 tracked-narrow ttu white   css-arrow-link" href="{{ .menu }}">{{ .link_text }}</a>
-                    {{ end }}
-                </div>
-            </div>
-        </div>
-        <div class="h-20   h-30-ns    h-auto@53 w-50@53 lazyload" style="background-image:url({{ .Params.private_dining.photo }});background-position:center center;background-size:cover">
-        </div>
-    </div>
-    <!-- End Private Dining -->
-
     {{ $events := slice }}
     {{ with .Params.events }}
         {{ $events = . }}
@@ -174,7 +20,7 @@
         {{ end }}
     {{ end }}
     {{ range $events }}
-    <div class="section-animate center mw-64 ph3  mt-_375-ns  ph4-ns   ph0@70">
+    <div class="section-animate center mw-64 ph3  pt5 mt-_375-ns  ph4-ns   ph0@70">
         <h2 class="fade-in-right f4 fw6 lh-1_5 mb-_5625 mt0 pt-_0625 tracked-narrow ttu wrksns   f3-ns mb-_625-ns pt0-ns">{{ .title }}</h2>
         <!--   Divider   -->
         <div class="theme-magenta h-_125 mb-1_5"></div>

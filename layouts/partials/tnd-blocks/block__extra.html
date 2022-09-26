@@ -1,0 +1,6 @@
+{{ $return := "" }}
+{{ with .extra_template }}
+  {{ if templates.Exists (printf "partials/tnd-blocks/blocks/%s__%s.html" $.layout .) }}
+    {{ partial (printf "tnd-blocks/blocks/%s__%s.html" $.layout .) (dict "block" $.block) }}
+  {{ end }}
+{{ end }}

@@ -1,3 +1,6 @@
 goldmark:
   extensions:
     linkify: false
+  renderer:
+    unsafe: true
+    hardWraps: true
