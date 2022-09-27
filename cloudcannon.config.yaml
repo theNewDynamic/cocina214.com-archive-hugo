@@ -81,6 +81,7 @@ collections_config:
       order: asc
     sort_options: *default-sort_options
     image_key: ''
+    parse_branch_index: true
     schemas: 
       default:
         <<: *base-schema
