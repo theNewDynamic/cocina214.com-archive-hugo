@@ -1,5 +1,7 @@
 ---
 _schema: landing
+_enabled_editors:
+  data
 title: Shop
 description: 
 blocks:
