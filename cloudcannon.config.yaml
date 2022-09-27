@@ -31,6 +31,8 @@ x-input-markdown: &input-markdown
   type: markdown
 x-input-hidden: &input-hidden
   hidden: true
+x-input-text: &input-text
+  type: text
 x-input-number: &input-number
   type: number
 x-input-file: &input-file
