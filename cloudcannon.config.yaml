@@ -80,6 +80,7 @@ collections_config:
       key: path
       order: asc
     sort_options: *default-sort_options
+    image_key: ''
     schemas: 
       default:
         <<: *base-schema
@@ -102,6 +103,7 @@ collections_config:
       size_guide: *input-text
       blocks:
         type: array
+        label: Shopping Blocks
         options:
           structures: _structures.products_blocks
   pages:
