@@ -246,6 +246,9 @@ _select_data:
     olympus-green: Green
     lady-liberty: Light Green
     magenta: Magenta
+  image_positions:
+    left: Left
+    right: Right
 ####################
 #### EDITABLES
 # This is where the editors type goes. 
