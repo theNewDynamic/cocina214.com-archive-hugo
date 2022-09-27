@@ -242,7 +242,10 @@ _select_data:
   - past-events
   - press
   - upcoming
-
+  themes:
+    olympus-green: Green
+    lady-liberty: Light Green
+    magenta: Magenta
 ####################
 #### EDITABLES
 # This is where the editors type goes. 
