@@ -76,6 +76,7 @@ collections_config:
         comment: 'Will be displayed alongside the date in the post summary. Please keep as short as possible to avoid breaking the layout. e.g. "Happening Now!" "Deal Ends 9/16/19"'
   products:
     path: content/shop
+    sort_options: *default-sort_options
     schemas: 
       default:
         <<: *base-schema
@@ -98,6 +99,14 @@ collections_config:
     image_key: ''
     icon: file_open
     disable_add: true
+    disable_add_folder: true
+    sort:
+      key: path
+      order: asc
+    sort_options:
+      - key: title
+      - key: title
+        order: desc
     schemas: 
       default:
         <<: *base-schema
