@@ -57,7 +57,7 @@ collection_groups:
   - posts
   - products
   - pages
-
+  - data
 ####################
 #### Collections settings
 collections_config:
@@ -80,7 +80,10 @@ collections_config:
     schemas: 
       default:
         <<: *base-schema
-        path: .cloudcannon/schemas/product.md
+        path: .cloudcannon/schemas/products/default.md
+      landing:
+        <<: *base-schema
+        path: .cloudcannon/schemas/products/landing.md
     _inputs:
       category:
         type: text
@@ -94,6 +97,10 @@ collections_config:
       sizes: *input-array
       sizes[*]: *input-text
       size_guide: *input-text
+      blocks:
+        type: array
+        options:
+          structures: _structures.products_blocks
   pages:
     path: content
     image_key: ''
@@ -128,6 +135,18 @@ collections_config:
       - dine.md
       - location.md
       - loyalty.md
+  data:
+    path: data
+    name: Global Settings
+    disable_add: true
+    disable_add_folder: true
+    sort:
+      key: path
+      order: asc
+    sort_options:
+      - key: title
+      - key: title
+        order: desc
 #####################
 # INPUTS ####
 # This where global inputs configuration go.
@@ -264,7 +283,23 @@ _structures:
         title:
         image:
         events:
-
+  products_blocks:
+    style: modal
+    id_key: layout
+    values:
+    - label: Call To Action
+      icon: smart_button
+      value:
+        layout: cta
+        title:
+        copy:
+        button:
+    - label: Products
+      icon: all_inbox
+      value:
+        layout: products
+        title: 
+        products:
 ####################
 #### SELECT DATA
 # This is where the select field options 

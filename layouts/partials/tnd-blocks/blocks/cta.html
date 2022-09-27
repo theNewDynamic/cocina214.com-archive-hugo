@@ -1,0 +1,25 @@
+{{ with .block }}
+<div class="section-animate mb-_8125">
+  <!--   Product Category   -->
+  <h2 class="fade-in-right  f4 fw6 lh-1_5 mb-_5625 mt0 pt-2_3125 tracked-narrow ttu wrksns   f3-ns lh-1_75-ns mb2-ns pt-2_125-ns   pt-3_625@53">{{ .title }}</h2>
+  <!-- End Product Category -->
+
+  <!--   Divider   -->
+  <div class="theme-olympus-green h-_125 mt0 nb-_3125"></div>
+  <!-- End Divider -->
+
+  <!--   Product Grid   -->
+  <div class=" flex flex-wrap justify-between   css-product-grid">
+      <!--   Product   -->
+      <div class="fade-in t-del-1 mt-2_3125   css-product-grid-item__large">
+        <p class="f6 fw4 mb3 mt0 tracked-narrow   f5-ns lh-1_5">{{ .copy }}</p>
+        {{ with .button }}
+        <a class="btn bg-lady-liberty hover-bg-pink-ladies online-ordering-btn wrksns" href="{{ .url }}}}" target="_blank">
+            <span>{{ .copy }}</span>
+        </a>
+        {{ end }}
+
+      </div>
+  </div>
+</div>
+{{ end }}

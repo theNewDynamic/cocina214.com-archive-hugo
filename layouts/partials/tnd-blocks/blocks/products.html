@@ -1,0 +1,23 @@
+{{ with .block }}
+    <div class="section-animate mb-_8125">
+        <!--   Product Category   -->
+        <h2 class="fade-in-right  f4 fw6 lh-1_5 mb-_5625 mt0 pt-2_3125 tracked-narrow ttu wrksns   f3-ns lh-1_75-ns mb2-ns pt-2_125-ns   pt-3_625@53">{{.title}}</h2>
+        <!-- End Product Category -->
+
+        <!--   Divider   -->
+        <div class="theme-olympus-green h-_125 mt0 nb-_3125"></div>
+        <!-- End Divider -->
+
+        <!--   Product Grid   -->
+        <div class=" flex flex-wrap justify-between   css-product-grid">
+          {{ with .products }}
+            {{ range . }}
+              {{ with site.GetPage . }}
+                {{ partial "shop__grid-item" . }}
+              {{ end }}
+            {{ end }}
+          {{ end }}
+        </div>
+        <!-- End Product Grid -->
+    </div>
+{{ end }}
