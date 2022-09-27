@@ -1,4 +1,5 @@
 ---
+_schema: contact
 title: Contact
 type: static
 layout: contact

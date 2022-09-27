@@ -95,11 +95,21 @@ collections_config:
       size_guide: *input-text
   pages:
     path: content
+    image_key: ''
+    icon: file_open
     disable_add: true
     schemas: 
       default:
         <<: *base-schema
         path: .cloudcannon/schemas/pages/default.md
+      about:
+        <<: *base-schema
+        icon: help_center
+        path: .cloudcannon/schemas/pages/about.md
+      contact:
+        <<: *base-schema
+        icon: local_post_office
+        path: .cloudcannon/schemas/pages/contact.md
     filter:
       base: none
       include:
@@ -151,6 +161,7 @@ _inputs:
     options:
       structures: _structures.links
   photo: *input-file
+  hero_photo: *input-file
   photos:
     <<: *input-array
   photos[*]: *input-file
@@ -161,7 +172,11 @@ _inputs:
     <<: *input-array
   hero_photos[*]: *input-file
   price: *input-number
-  
+  staff: &staff-array
+    type: array
+    options:
+      structures: _structures.staff_members
+  featured_staff: *staff-array
 #####################
 # STRUCTURES
 # This is where structures for arrays, objects and blocks go. 
@@ -198,6 +213,16 @@ _structures:
       value:
         copy:
         file:
+  staff_members:
+    values:
+      _inputs:
+        title:
+          label: Job Title
+      value:
+        photo:
+        first_name:
+        last_name:
+        title:
   events:
     values:
       _inputs:

@@ -1,4 +1,5 @@
 ---
+_schema: about
 title: About
 type: static
 layout: about
