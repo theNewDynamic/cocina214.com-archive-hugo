@@ -53,8 +53,8 @@ x-input-checkbox: &input-checkbox
 collection_groups:
 - heading: Updates
   collections:
-  - news
-  - shop
+  - posts
+  - products
   - pages
 
 ####################
