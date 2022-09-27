@@ -98,7 +98,7 @@ collections_config:
     schemas: 
       default:
         <<: *base-schema
-        path: .cloudcannon/schemas/page.md
+        path: .cloudcannon/schemas/pages/default.md
     filter:
       base: none
       include:
