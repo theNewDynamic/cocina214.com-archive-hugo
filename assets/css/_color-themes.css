@@ -149,7 +149,7 @@ a.hover-bg-pink-ladies:hover {
   background-color: var(--olympus-green-lighter);
 }
 
-.theme-olympus-green p {
+.theme-olympus-green p, ul {
   color: white;
   /* line-height: 1.5; */
 }
