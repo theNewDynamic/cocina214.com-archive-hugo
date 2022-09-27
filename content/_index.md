@@ -14,7 +14,6 @@ blocks:
 - layout: events
   title: Upcoming Events
   image: /uploads/2019/09/05/Rocks_Margarita_w_limes.jpg
-  image_position: right
   events:
   - name: Join us for Happy Hour
     date: Monday-Friday

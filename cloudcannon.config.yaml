@@ -51,7 +51,9 @@ x-input-checkbox: &input-checkbox
 collection_groups:
 - heading: Updates
   collections:
-  - posts
+  - news
+  - shop
+  - pages
 
 ####################
 #### Collections settings
@@ -95,47 +97,15 @@ collections_config:
       default:
         <<: *base-schema
         path: .cloudcannon/schemas/page.md
-    _inputs:
-      featured:
-        type: object
-        options:
-          structures:
-            values:
-              value:
-                name:
-                hours:
-                when:
-                menu_name:
-                menu:
-      reservations:
-        type: object
-        options:
-          structures:
-            values:
-              value:
-                text:
-                phone:
-      online_ordering:
-        type: object
-        options:
-          structures:
-            values:
-              _inputs:
-                description: *input-markdown
-              value:
-                description:
-      catering:
-        type: object
-        options:
-          structures:
-            values:
-              _inputs:
-                description: *input-markdown
-              value:
-                text:
-                menu:
-                photo:
-      
+    filter:
+      base: none
+      include:
+      - _index.md
+      - about.md
+      - contact.md
+      - dine.md
+      - location.md
+      - loyalty.md
 #####################
 # INPUTS ####
 # This where global inputs configuration go.
@@ -145,8 +115,12 @@ _inputs:
     instance_value: NOW
   layout: *input-hidden
   template: *input-hidden
+  type: *input-hidden
   copy: *input-markdown
   caption: *input-markdown
+  extra_template: *input-hidden
+  forestry_title: *input-hidden
+
   seo:
     type: object
     comment: Everything SEO
@@ -169,11 +143,10 @@ _inputs:
   featured_photo:
     <<: *input-file
     comment: File names should not have spaces. e.g. "street tacos.jpg" should be changed to "street_tacos.jpg"
-  menu: *input-file
-  menus:
+  buttons:
     type: array
     options:
-      structures: _structures.menus_structure
+      structures: _structures.links
   photo: *input-file
   photos:
     <<: *input-array
@@ -206,44 +179,54 @@ _structures:
         description:
         canonical:
         image:
-  dine_with_us:
+  links:
     values:
+      _inputs:
+        copy:
+          type: text
       value:
-        photo:
-        text:
-        menus:
-  menus_structure:
+        copy:
+        url:
+  menus:
     values:
+      _inputs:
+        copy:
+          type: text
       value:
-        menu_name:
-        menu:
+        copy:
+        file:
+  events:
+    values:
+      _inputs:
+        date: *input-text
+        time: *input-text
+      value:
+        name:
+        date:
+        time:
+        description:
+        links:
   blocks:
     style: modal
     id_key: layout
     values:
-    - label: Text
-      icon: article
+    - label: Section
+      icon: art_track
       value:
-        layout: text
-        title:
-        copy:
-        cta:
-    - label: Image
-      icon: image
-      _inputs:
-        copy:
-          label: Caption
-          comment: The caption will appear below the video
-      value:
-        layout: image
+        layout: section
         title:
         image:
+        image_position: right
         copy:
-    - label: Video
-      icon: videocam
+        buttons:
+        menus:
+    - label: Events
+      icon: calendar_month
       value:
+        layout: events
         title:
-        video_id:
+        image:
+        events:
 
 ####################
 #### SELECT DATA
