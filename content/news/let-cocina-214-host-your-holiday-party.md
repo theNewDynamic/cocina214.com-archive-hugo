@@ -12,7 +12,7 @@ video_key = ""
 
 'Tis the Season. Book our Private Dining Room, Patio, Bar, or Let Us Cater to You!
 
-**Email Christine to Book at:** Party@Cocina214.com
+**Email Christine to Book at:** **Party@Cocina214.com**
 
 May this Season bring you merriment, joy, and blessings!
 
