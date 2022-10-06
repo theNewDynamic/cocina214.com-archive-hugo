@@ -1,6 +1,6 @@
 +++
 additional_info = ""
-category = "current"
+category = "past-events"
 date = 2022-09-27T23:24:04Z
 featured_photo = "/uploads/2022/09/27/closd-due-to-hurricane_2022.jpg"
 photos = []
