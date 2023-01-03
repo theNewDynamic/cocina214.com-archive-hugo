@@ -1,6 +1,6 @@
 +++
 additional_info = ""
-category = "current"
+category = "past-events"
 date = 2022-10-06T16:48:34Z
 featured_photo = "/uploads/2022/10/06/holiday-2022-poster.jpg"
 photos = []
