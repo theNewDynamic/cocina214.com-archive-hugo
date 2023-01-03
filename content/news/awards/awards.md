@@ -3,7 +3,7 @@ title: Cocina 214 Awards
 location: Winter Park
 date: '2017-09-29T00:00:00.000+00:00'
 photos: []
-featured_photo: "/uploads/2022/01/19/cocina-214-awards_2021"
+featured_photo: "/uploads/2023/01/03/awards_-as-of-jan-2023.pdf"
 video_key: ''
 type: awards
 url: "/news/awards"
