@@ -1,6 +1,6 @@
 +++
 additional_info = ""
-category = "current"
+category = "past-events"
 date = 2022-11-21T19:46:48Z
 featured_photo = "/uploads/2022/11/21/happy-thanksgiving_cocina-214_2022.jpg"
 photos = []
