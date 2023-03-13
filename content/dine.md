@@ -45,7 +45,7 @@ catering:
     is required for delivery and for catered events. \n- 20% gratuity is added to
     all Catering orders.\n\nLet us plan the details of your catered event so that
     you can enjoy your gathering. Contact Christine, our Private Dining & Catering
-    Manager, at: catering@cocina214.com "
+    Manager, at: party@cocina214.com "
   menu: "/uploads/2022/08/09/cateringmenu_aug-2022-4x8.pdf"
   photo: "/uploads/2017/12/04/guac_bar.jpg"
 private_dining:
