@@ -21,9 +21,9 @@ catering:
 upcoming_events:
   photo: "/uploads/2019/09/05/Rocks_Margarita_w_limes.jpg"
   events:
-  - event_name: 'Cinco de Mayo '
+  - event_name: Cinco de Mayo & our 12-Year Anniversary!
     event_date: Friday, May 5th
-    event_time: 11:00 am - 10:00pm
+    event_time: 11:00 am - 10:00 pm
     event_description: Our 12-Year Anniversary & Cinco de Mayo
     event_links:
     - event_link_text: Learn More
