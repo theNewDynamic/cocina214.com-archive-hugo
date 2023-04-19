@@ -21,6 +21,16 @@ catering:
 upcoming_events:
   photo: "/uploads/2019/09/05/Rocks_Margarita_w_limes.jpg"
   events:
+  - event_name: 'Cinco de Mayo '
+    event_date: Friday, May 5th
+    event_time: 11:00 am - 10:00pm
+    event_description: Our 12-Year Anniversary & Cinco de Mayo
+    event_links:
+    - event_link_text: Learn More
+      event_link_url: https://cocina214.com/news/celebrate-cinco-de-mayo-with-award-winning-cocina-214-1/
+    photo_link:
+      photo_link_text: View Event Poster
+      photo_link_photo: "/uploads/2023/04/17/cincodemayoposter-2023.jpg"
   - event_name: Join us for Happy Hour
     event_date: Monday-Friday
     event_time: 4:00-6:30 PM
