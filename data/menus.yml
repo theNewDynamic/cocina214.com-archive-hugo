@@ -1,11 +1,11 @@
 ---
 - name: Main Menu
-  file: "/uploads/2022/01/28/cocina-214-menu-jan-2022.pdf"
+  file: "/uploads/2023-04-Cocina-214-Menu-April-2023.pdf"
 - name: Private Dining Menu
   file: "/uploads/2023/01/03/privatedining_wp-jan-2023.pdf"
 - name: Drinks Menu
-  file: "/uploads/2022/01/28/drinks-jan-2022.pdf"
+  file: "/uploads/2023-04-Drinks-April-2023.pdf"
 - name: Happy Hour Menu
   file: "/uploads/2022/01/28/happy-hour-2022.pdf"
 - name: After Dinner Menu
-  file: "/uploads/2022/01/28/afterdinner_jan-2022.pdf"
+  file: "/uploads/2023-04-AfterDinner_April-2023.pdf"
