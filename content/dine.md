@@ -14,17 +14,17 @@ dine_with_us:
     and “Best Family Place”.   So whatever the occasion you’re sure to enjoy.'
   menus:
   - menu_name: Dine-In and Takeout
-    menu: "/uploads/2022/01/28/cocina-214-menu-jan-2022.pdf"
+    menu: "/uploads/2022/01/28/2023-04-Cocina-214-Menu-April-2023.pdf"
   - menu_name: Family Packages for Takeout, Curbside Pickup and/or Delivery
-    menu: "/uploads/2022/08/09/family-packages-menu-aug-2022.pdf"
+    menu: "/uploads/2023-04-TakeOut_Menu_April-2023.pdf"
   - menu_name: Kids’
     menu: "/uploads/2022/01/18/kids_menu_20223.jpg"
   - menu_name: Happy Hour Menu
     menu: "/uploads/2022/01/28/happy-hour-2022.pdf"
   - menu_name: 'Drink/Cocktail '
-    menu: "/uploads/2022/01/28/drinks-jan-2022.pdf"
+    menu: "/uploads/2023-04-Drinks-April-2023.pdf"
   - menu_name: After Dinner Drink and Dessert
-    menu: "/uploads/2022/01/28/afterdinner_jan-2022.pdf"
+    menu: "/uploads/2023-04-AfterDinner_April-2023.pdf"
   featured:
     name: Happy Hour
     hours: '4:00 pm – 6:30 pm '
