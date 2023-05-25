@@ -16,7 +16,7 @@ dine_with_us:
   - menu_name: Dine-In and Takeout
     menu: "/uploads/2023-04-TakeOut_Menu_April-2023.pdf"
   - menu_name: Family Packages for Takeout, Curbside Pickup and/or Delivery
-    menu: "/uploads/uploads/2022/08/09/family-packages-menu-aug-2022.pdf"
+    menu: "/uploads/uploads/Family-Packages-Menu-June-2023.pdf"
   - menu_name: Kids’
     menu: "/uploads/2022/01/18/kids_menu_20223.jpg"
   - menu_name: Happy Hour Menu
