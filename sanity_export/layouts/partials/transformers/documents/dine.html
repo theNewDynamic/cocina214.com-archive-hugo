@@ -1,0 +1,139 @@
+{{ $s := newScratch }}
+{{ $s.Set "data" (partial "transformers/documents/base.html" .) }}
+{{ $s.SetInMap "data" "_type" "page" }}
+{{ $s.SetInMap "data" "slug" (dict
+  "_type" "slug"
+  "current" "dine"
+) }}
+{{ $blocks := slice }}
+
+{{ with .Params.dine_with_us }}
+  {{ $image := partial "transformers/imageObject" .photo }}
+  {{ $copySlice := slice ($.Page.RenderString .text) }}
+  {{ with .menus }}
+    {{ $files := slice }}
+    {{ range . }}
+      {{ $files = $files | append (dict
+        "title" .menu_name
+        "file" (partial "transformers/file" .menu)
+      ) }}
+    {{ end }}
+    {{ with $files }}
+      {{ $blockFiles := (dict "_type" "blockFiles" "files" $files) }}
+      {{ $copySlice = $copySlice | append (partial "transformers/shortcode" $blockFiles) }}
+    {{ end }}
+  {{ end }}
+  {{ $blocks = $blocks | append (dict
+    "_type" "blocks/section"
+    "title" "Dine with us"
+    "theme" "green"
+    "copyHTML" (delimit $copySlice "\n")
+    "image" $image
+  ) }}
+{{ end }}
+
+{{ with .Params.online_ordering }}
+  {{ $copySlice := slice ($.Page.RenderString .description) }}
+  {{ $copySlice = $copySlice | append (partial "transformers/shortcode" (dict
+    "_type" "blockLinks"
+    "links" (slice (dict
+      "copy" "Order Now"
+      "url" "https://cocina214.alohaorderonline.com/"
+    ))
+  )) }}
+  {{ $blocks = $blocks | append (dict
+    "_type" "blocks/section"
+    "title" "Order online"
+    "theme" "purple"
+    "copyHTML" (delimit $copySlice "\n")
+    "image" (partial "transformers/imageObject" .Params.happy_hour.photo)
+  ) }}
+{{ end }}
+
+{{ with .Params.happy_hour }}
+  {{ $blocks = $blocks | append (dict
+    "_type" "blocks/section"
+    "title" "Happy Hour"
+    "theme" "teal"
+    "copyHTML" ($.Page.RenderString .text)
+    "image" (partial "transformers/imageObject" .photo)
+  ) }}
+{{ end }}
+
+{{ with .Params.catering }}
+  {{ $image := partial "transformers/imageObject" .photo }}
+  {{ $copySlice := slice ($.Page.RenderString .text) }}
+  {{ $blockFiles := dict 
+    "_type" "blockFiles"
+    "files" (slice (dict
+      "title" "View catering menu"
+      "file" (partial "transformers/file" .menu)
+    )) }}
+    {{ $blockLinks := dict 
+      "_type" "blockLinks" 
+      "links" (slice 
+        (dict
+          "copy" "Pickup"
+          "url" "https://cocina214.alohaorderonline.com/StartOrder.aspx?SelectMenu=2&SelectSite=1"
+        )
+        (dict
+          "copy" "Delivery"
+          "url" "https://cocina214.alohaorderonline.com/StartOrder.aspx?SelectMenu=3&SelectSite=1"
+        )
+      ) }}
+  {{ $copySlice = $copySlice | append (partial "transformers/shortcode" $blockFiles) }}
+  {{ $copySlice = $copySlice | append  "<h3>Order catering online</h3>"}}
+  {{ $copySlice = $copySlice | append ($.Page.RenderString site.Data.Catering.Description) }}
+  {{ $copySlice = $copySlice | append (partial "transformers/shortcode" $blockLinks) }}
+  {{ $blocks = $blocks | append (dict
+    "_type" "blocks/section"
+    "title" "Catering"
+    "theme" "green"
+    "copyHTML" (delimit $copySlice "\n")
+    "image" $image
+  ) }}
+{{ end }}
+
+{{ with .Params.private_dining }}
+  {{ $copySlice := slice ($.Page.RenderString .text) }}
+  {{ $image := partial "transformers/imageObject" .photo }}
+  {{ with .menus }}
+    {{ $menus := slice }}
+    {{ range . }}
+      {{ $menus = $menus | append (dict
+        "title" .link_text
+        "file" (partial "transformers/file" .menu)
+      ) }}
+    {{ end }}
+    {{ $blockFiles := dict 
+      "_type" "blockFiles" 
+      "files" $menus 
+    }}
+    {{ $copySlice = $copySlice | append (partial "transformers/shortcode" $blockFiles) }}
+  {{ end }}
+  {{ $blocks = $blocks | append (dict
+    "_type" "blocks/section"
+    "title" "Private Dining"
+    "theme" "teal"
+    "copyHTML" (delimit $copySlice "\n")
+    "image" $image
+  ) }}
+{{ end }}
+
+{{ with .Params.events }}
+  {{ with index . 0 }}
+  {{ $blocks = $blocks | append (dict
+    "_type" "blocks/section"
+    "title" .title
+    "theme" "default"
+    "copyHTML" ($.Page.RenderString .text)
+    "image" (partial "transformers/imageObject" .photo)
+  ) }}
+  {{ end }}
+{{ end }}
+
+{{ with $blocks }}
+  {{ $s.SetInMap "data" "blocks" . }}
+{{ end }}
+
+{{ return $s.Get "data" }}

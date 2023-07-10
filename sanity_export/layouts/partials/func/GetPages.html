@@ -4,4 +4,7 @@
 {{ with site.GetPage "/loyalty" }}
   {{ $entries = $entries | append (partial "transformers/documents/loyalty" .) }}
 {{ end }}
+{{ with site.GetPage "/dine" }}
+  {{ $entries = $entries | append (partial "transformers/documents/dine" .) }}
+{{ end }}
 {{ return $entries }}

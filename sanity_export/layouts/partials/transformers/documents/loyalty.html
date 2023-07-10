@@ -6,7 +6,6 @@
   "current" "loyalty"
 ) }}
 {{ $blocks := slice }}
-
 {{ range seq 1 4 }}
   {{ $base := print "content_section_" . }}
   {{ $title := index $.Params (print $base "_title") }}
@@ -15,7 +14,8 @@
   {{ $blocks = $blocks | append (dict
     "_type" "blocks/section"
     "title" $title
-    "copy" $copy
+    "theme" (cond (modBool . 2) "purple" "green")
+    "copyHTML" ($.Page.RenderString $copy)
     "image" (partial "transformers/imageObject" $image)
   ) }}
   {{ $s.SetInMap "data" "blocks" $blocks }}

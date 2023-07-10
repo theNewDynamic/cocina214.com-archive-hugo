@@ -16,6 +16,8 @@
 
 {{ with .Params.description }}
   {{ $s.SetInMap "data" "descriptionHTML" ($.Page.RenderString .) }}
+{{ else }}
+  {{ $s.SetInMap "data" "descriptionHTML" ($.Summary) }}
 {{ end }}
 
 {{ with .Date }}

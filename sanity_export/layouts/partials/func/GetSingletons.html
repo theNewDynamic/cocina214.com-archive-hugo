@@ -2,71 +2,37 @@
   "home"
   "chairs"
 }}
-{{ $singletons = slice "chairs" }}
+{{ $singletons = slice "about" }}
 {{ $entries := slice }}
 {{ $s := newScratch }}
 {{ if in $singletons "home" }}
-  {{ $s.Set "data" dict }}
-  {{ $s.SetInMap "data" "_type" "home" }}
-  {{ $s.SetInMap "data" "_id" "home" }}
   {{ with site.GetPage "/_index.md" }}
-    {{ $s.SetInMap "data" "title" .Title }}
-    {{ with .Params.description }}
-      {{ $s.SetInMap "data" "descriptionHTML" . }}
-    {{ end }}
-    {{ with .Params.images }}
-      {{ with index . 0 }}
-        {{ with partial "transformers/imageObject" . }}
-          {{ $image := . }}
-          {{ $s.SetInMap "data" "image" $image }}
-          {{ $s.SetInMap "data" "hero" (dict
-            "image" $image
-          )  }}
-        {{ end }}
-      {{ end }}
-    {{ end }}
-    {{ $entries = $entries | append ($s.Get "data") }}
+    {{ $entries = $entries | append (partial "transformers/documents/home" .) }}
   {{ end }}
 {{ end }}
 
-{{ if in $singletons "chairs" }}
-  {{ $s.Set "data" dict }}
-  {{ $s.SetInMap "data" "_type" "pageChairs" }}
-  {{ $s.SetInMap "data" "_id" "pageChairs" }}
-  {{ $s.SetInMap "data" "slug" (dict
-    "_type" "slug"
-    "current" "chairs"
-  )  }}
-  {{ with site.GetPage "/chairs" }}
-    {{ $s.SetInMap "data" "title" .Title }}
-    {{ with .Params.description }}
-      {{ $s.SetInMap "data" "descriptionHTML" . }}
-    {{ end }}
+{{ if in $singletons "about" }}
+  {{ with site.GetPage "/about" }}
+    {{ $s := newScratch }}
+    {{ $s.Set "data" dict }}
+    {{ $s.SetInMap "data" "_type" "pageAbout" }}
+    {{ $s.SetInMap "data" "_id" "pageAbout" }}
+    {{ $s.SetInMap "data" "title" .Title  }}
     {{ with .Content }}
       {{ $s.SetInMap "data" "bodyHTML" . }}
     {{ end }}
-    {{ $entries = $entries | append ($s.Get "data") }}
+    {{ $persons := slice }}
+    {{ $staff := .Params.featured_staff | append .Params.staff }}
+    {{ range $staff }}
+      {{ $persons = $persons | append (dict
+        "_type" "reference"
+        "_ref" (print "staff_" .first_name | md5)  
+      ) }}
+    {{ end }}
+    {{ $s.SetInMap "data" "persons" $persons }}
+    {{ $entries = $entries | append ($s.Get "data")  }}
   {{ end }}
-{{ end }}
 
-{{ if in $singletons "NOPE" }}
-  {{ $s.Set "data" dict }}
-  {{ $s.SetInMap "data" "_type" "pageContact" }}
-  {{ $s.SetInMap "data" "_id" "pageContact" }}
-  {{ $s.SetInMap "data" "slug" (dict
-    "_type" "slug"
-    "current" "contact"
-  )  }}
-  {{ with site.GetPage "/about/contact" }}
-    {{ $s.SetInMap "data" "title" .Title }}
-    {{ with .Params.description }}
-      {{ $s.SetInMap "data" "descriptionHTML" . }}
-    {{ end }}
-    {{ with .Content }}
-      {{ $s.SetInMap "data" "bodyHTML" . }}
-    {{ end }}
-    {{ $entries = $entries | append ($s.Get "data") }}
-  {{ end }}
 {{ end }}
 
 {{ return $entries }}

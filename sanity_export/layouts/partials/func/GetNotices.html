@@ -1,0 +1,28 @@
+{{ $entries := slice }}
+{{ with site.Home }}
+  {{ with .Params.upcoming_events.events }}
+    {{ $notices := (slice
+      (index . 1 )
+      (index . 3)
+    ) }}
+    {{ range $index, $v:= $notices }}
+      {{ $links := slice }}
+      {{ with .photo_link }}
+          {{ $partial := "transformers/file" }}
+          {{ $links = $links | append (dict
+            "_type" "linkFile"
+            "file" (partial $partial .photo_link_photo)
+            "copy" .photo_link_text
+          ) }}
+      {{ end }}
+      {{ $entries = $entries | append (dict
+        "_type" "notice"
+        "_id" (print "notice" $index "id" | md5)
+        "title" .event_name
+        "links" $links
+      ) }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+
+{{ return $entries }}

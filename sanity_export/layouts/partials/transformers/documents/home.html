@@ -1,0 +1,96 @@
+{{ $s := newScratch }}
+{{ $s.Set "data" dict }}
+
+
+{{ $s.SetInMap "data" "_type" "home" }}
+{{ $s.SetInMap "data" "_id" "home" }}
+{{ $s.SetInMap "data" "title" .Title }}
+{{ with .Params.description }}
+  {{ $s.SetInMap "data" "descriptionHTML" . }}
+{{ end }}
+
+{{ with .Content}}
+  {{ $s.SetInMap "data" "bodyHTML" . }}
+{{ end }}
+
+{{ $blocks := slice }}
+
+{{ $posts := slice }}
+{{ with site.GetPage "/news/2023-celebrate-father-s-day-at-cocina-214" }}
+  {{ $posts = $posts | append (dict
+    "_type" "reference"
+    "_ref" .File.UniqueID
+  ) }}
+{{ end }}
+{{ $posts = $posts | append (dict
+  "_type" "reference"
+  "_ref" (print "notice" 0 "id" | md5)
+) }}
+{{ with site.GetPage "/news/order-cocina-214-online-and-get-curbside-pick-up-or-delivery" }}
+  {{ $posts = $posts | append (dict
+    "_type" "reference"
+    "_ref" .File.UniqueID
+  ) }}
+{{ end }}
+{{ $posts = $posts | append (dict
+  "_type" "reference"
+  "_ref" (print "notice" 1 "id" | md5)
+) }}
+
+{{ $blocks = $blocks | append (dict
+  "_type" "blocks/entries"
+  "title" "Upcoming Events"
+  "theme" "green"
+  "entries" $posts
+) }}
+
+{{ with .Params.catering }}
+  {{ $copySlice := slice ($.Page.RenderString .text) }}
+  {{ $copySlice = $copySlice | append (partial "transformers/shortcode" (dict
+    "_type" "blockLinks"
+    "links" (slice
+      (dict
+        "copy" "Learn more"
+        "url" "/dine"
+      )
+    )
+  )) }}
+  {{ $blockLinks := dict 
+  "_type" "blockLinks" 
+  "links" (slice 
+    (dict
+      "copy" "Pickup"
+      "url" "https://cocina214.alohaorderonline.com/StartOrder.aspx?SelectMenu=2&SelectSite=1"
+    )
+    (dict
+      "copy" "Delivery"
+      "url" "https://cocina214.alohaorderonline.com/StartOrder.aspx?SelectMenu=3&SelectSite=1"
+    )
+  ) }}
+  {{ $copySlice = $copySlice | append `<h3>Order Catering Online</h3>` }}
+  {{ $copySlice = $copySlice | append ($.Page.RenderString site.Data.Catering.Description) }}
+  {{ $copySlice = $copySlice | append (partial "transformers/shortcode" $blockLinks) }}
+  {{ $blocks = $blocks | append (dict
+    "_type" "blocks/section"
+    "title" "Catering"
+    "theme" "purple"
+    "copyHTML" (delimit $copySlice "\n")
+    "image" (partial "transformers/imageObject" .photo)
+  ) }}
+{{ end }}
+
+{{ with .Params.private_dining }}
+  {{ $copySlice := slice ($.Page.RenderString .text) }}
+  {{ $blocks = $blocks | append (dict
+    "_type" "blocks/section"
+    "title" "Private Dining"
+    "theme" "teal"
+    "copyHTML" (delimit $copySlice "\n")
+    "image" (partial "transformers/imageObject" .photo)
+  ) }}
+{{ end }}
+
+
+{{ $s.SetInMap "data" "blocks" $blocks }}
+
+{{ return $s.Get "data" }}

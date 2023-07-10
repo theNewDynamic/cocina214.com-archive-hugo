@@ -27,3 +27,5 @@ public
 
 # Local Netlify folder
 .netlify
+sanit_export.ndjson
+sanit_export.ndjson
