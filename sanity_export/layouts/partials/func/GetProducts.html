@@ -1,0 +1,7 @@
+{{ $entries := slice }}
+
+{{ with where site.RegularPages "Type" "shop" }}
+  {{ $entries = $entries | append (apply . "partial" "transformers/documents/product" ".") }}
+{{ end }}
+
+{{ return $entries }}

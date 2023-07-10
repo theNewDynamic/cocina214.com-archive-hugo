@@ -1,0 +1,26 @@
+{{ $s := newScratch }}
+{{ $s.Set "data" dict }}
+
+{{ $s.SetInMap "data" "_type" "pageShop" }}
+{{ $s.SetInMap "data" "_id" "pageShop" }}
+{{ $s.SetInMap "data" "title" "Shop"  }}
+{{ $s.SetInMap "data" "slug" (dict
+  "_type" "slug"
+  "current" "shop"
+)  }}
+{{ with .Content }}
+  {{ $s.SetInMap "data" "bodyHTML" . }}
+{{ end }}
+
+{{ $products := slice }}
+{{ with where site.RegularPages "Type" "shop" }}
+  {{ with where . ".Params.category" "Gift Cards" }}
+    {{ range . }}
+    {{ $products = $products | append .File.Path }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+{{ $s.SetInMap "data" "products" (partial "transformers/refs" $products) }}
+
+
+{{ return $s.Get "data" }}

@@ -1,0 +1,40 @@
+{{ $s := newScratch }}
+{{ $s.Set "data" (partial "transformers/documents/base.html" .) }}
+{{ $s.SetInMap "data" "_type" "product"  }}
+
+{{ with .Params.details }}
+  {{ $details := slice }}
+  {{ range . }}
+    {{ $details = $details | append (print "- " .) }}
+  {{ end }}
+  {{ $s.SetInMap "data" "detailsHTML" ($.Page.RenderString (delimit $details "\n")) }}
+{{ end }}
+{{ $images := slice }}
+{{ with .Params.featured_image }}
+  {{ $images = $images | append . }}
+{{ end }}
+{{ with .Params.images }}
+  {{ $images = $images | append . }}
+{{ end }}
+{{ with $images }}
+  {{ $s.SetInMap "data" "images" (apply . "partial" "transformers/image" ".")  }}
+{{ end }}
+{{ $s.Set "sales_data" dict }}
+{{ with .Params.id }}
+  {{ $s.SetInMap "sales_data" "sku" . }}
+{{ end }}
+{{ if eq .Params.category "T-Shirts" }}
+  {{ with .Params.sizes }}
+    {{ $s.SetInMap "sales_data" "sizes" . }}
+  {{ end }}
+  {{ with .Params.size_guide }}
+    {{ $s.SetInMap "sales_data" "size_guide" . }}
+  {{ end }}
+{{ end }}
+{{ with .Params.price }}
+  {{ $s.SetInMap "sales_data" "price" . }}
+{{ end }}
+{{ with $s.Get "sales_data" }}
+  {{ $s.SetInMap "data" "sales_data" . }}
+{{ end }}
+{{ return $s.Get "data" }}

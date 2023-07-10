@@ -2,13 +2,17 @@
   "home"
   "chairs"
 }}
-{{ $singletons = slice "about" }}
+{{ $singletons = slice "shop" }}
 {{ $entries := slice }}
 {{ $s := newScratch }}
 {{ if in $singletons "home" }}
   {{ with site.GetPage "/_index.md" }}
     {{ $entries = $entries | append (partial "transformers/documents/home" .) }}
   {{ end }}
+{{ end }}
+
+{{ if in $singletons "shop" }}
+  {{ $entries = $entries | append (partial "transformers/documents/shop" site.Home) }}
 {{ end }}
 
 {{ if in $singletons "about" }}
@@ -32,7 +36,6 @@
     {{ $s.SetInMap "data" "persons" $persons }}
     {{ $entries = $entries | append ($s.Get "data")  }}
   {{ end }}
-
 {{ end }}
 
 {{ return $entries }}
