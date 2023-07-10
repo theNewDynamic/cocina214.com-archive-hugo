@@ -1,0 +1,56 @@
+{{ $s := newScratch }}
+{{ $s.Set "data" (partial "transformers/documents/base" .) }}
+{{ $s.SetInMap "data" "_type" "page" }}
+
+{{ with .Content }}
+  {{ $s.SetInMap "data" "bodyHTML" . }}
+{{ end }}
+
+{{ with .Params.seo }}
+  {{ with partial "transformers/seo" . }}
+    {{ $s.SetInMap "data" "seo" . }}
+  {{ end }}
+{{ end }}
+
+{{ with (and $.Type (ne .LinkTitle "Newsletter")) }}
+  {{ $type := $.Type }}
+  {{ if eq $.Type "map" }}
+    {{ $type = "about" }}
+  {{ end }}
+  {{ $s.SetInMap "data" "taxonomySection" (dict
+    "_type" "reference"
+    "_ref"  (partial "func/GetTermID" (dict
+      "taxonomy" "taxonomySection"
+      "term" $type
+    ))
+  ) }}
+{{ end }}
+
+{{ with .Params.galleries }}
+  {{ with partial "transformers/gallery" . }}
+    {{ $s.SetInMap "data" "gallery" . }}
+  {{ end }}
+{{ end }}
+
+{{ with .Params.images }}
+  {{ with index . 0 }}
+    {{ with partial "transformers/imageObject" . }}
+      {{ $image := . }}
+      {{ with $.Params.image_credit }}
+        {{ $image = merge $image (dict "caption" .) }}
+      {{ end }}
+      {{ $s.SetInMap "data" "image" $image }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+
+{{ with .Params.feature_image }}
+  {{ with ($s.Get "data").image }}
+
+    {{ $s.SetInMap "data" "hero" (dict
+      "image" .
+    ) }}
+  {{ end }}
+
+{{ end }}
+{{ return $s.Get "data" }}

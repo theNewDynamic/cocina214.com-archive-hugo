@@ -1,0 +1,25 @@
+{{ $entries := slice }}
+{{ $location := "Winter Park Florida" }}
+{{ $entries = $entries | append (dict
+  "_id" (md5 $location)
+  "_type" "location"
+  "title" $location
+  "address_1" "151 E. Welbourne Avenue"
+  "city" "Winter Park"
+  "state" "Florida"
+  "zip" "32789"
+  "phone" "407. 790. 7997"
+  "email" "info@cocina214.com"
+  "hours" (slice
+    (dict
+      "label" "Sunday - Thursday"
+      "time" "11:30 am - 9:00 pm"
+    )
+    (dict
+      "label" "Friday & Saturday"
+      "time" "11:30 am – 10:00 pm"
+  )
+  )
+) }}
+
+{{ return $entries }}

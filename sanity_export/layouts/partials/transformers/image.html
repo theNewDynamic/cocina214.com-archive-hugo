@@ -1,0 +1,20 @@
+{{ $image := dict }}
+{{ $skip_assets := site.Params.skip_assets }}
+{{ if and (not (in . "%")) (not $skip_assets) }}
+  {{ $src := . }}
+  {{ if in $src "http" }}
+    {{ $src = . }}
+  {{ else }}
+    {{ if ne (substr $src 0 1) "/" }}
+      {{ $src = print "/" $src }}
+    {{ end }}
+    {{ $src = print "https://www.cocina214.com" $src }}
+  {{ end }}
+  {{ $src = trim $src "/" }}
+  {{ $image = dict
+    "_type" "image"
+    "_sanityAsset" (print "image@" $src)
+  }}
+{{ end }}
+
+{{ return $image }}

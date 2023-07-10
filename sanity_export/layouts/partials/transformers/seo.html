@@ -1,0 +1,14 @@
+{{ $s := newScratch }}
+{{ $s.Set "data" dict }}
+
+{{ range $key := slice "description" "canonical" "private" }}
+  {{ with index $ $key }}
+    {{ $s.SetInMap "data" $key . }}
+  {{ end }}
+{{ end }}
+{{ with .image }}
+  {{ with partial "transformers/image" . }}
+    {{ $s.SetInMap "data" "image" . }}
+  {{ end }}
+{{ end }}
+{{ return $s.Get "data" }}

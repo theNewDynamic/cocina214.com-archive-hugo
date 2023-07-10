@@ -1,0 +1,39 @@
+{{ $s := newScratch }}
+{{ $id := partial "func/GetID" .  }}
+
+{{ $s.Set "data" (dict 
+  "_id" $id
+  "_type" "venue"
+) }}
+
+{{ with .Title }}
+  {{ $s.SetInMap "data" "title" . }}
+{{ end }}
+{{ with $params := .Params }}
+  {{ with .address_1 }}
+    {{ $s.SetInMap "data" "address_1" . }}
+  {{ end }}
+
+  {{ with .address_2 }}
+    {{ $s.SetInMap "data" "address_2" . }}
+  {{ end }}
+
+  {{ range $key := slice
+    "city"
+    "state"
+    "zip"
+    "phone"
+    "country"
+  }}
+    {{ with index $params $key }}
+      {{ $s.SetInMap "data" $key (string .) }}
+    {{ end }}
+  {{ end }}
+  
+  {{ with .link }}
+    {{ $s.SetInMap "data" "link" (partial "transformers/url" .)  }}
+  {{ end }}
+{{ end }}
+
+
+{{ return $s.Get "data" }}

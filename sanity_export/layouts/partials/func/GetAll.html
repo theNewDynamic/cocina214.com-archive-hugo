@@ -1,0 +1,24 @@
+{{ $sections := slice
+  "Taxonomies"
+  "Posts"
+  "Venues"
+  "Persons"
+  "Pages"
+}}
+
+{{ $entries := slice }}
+{{ if true }}
+  {{/* Use this to limit the gen/export scripts to limited sections */}}
+  {{ $sections = last 1 $sections}}
+{{ end }}
+
+{{ range $section := $sections }}
+  {{ $func := print "Get" $section }}
+  {{ with partial (printf "func/%s" $func) $func }}
+    {{ range . }}
+      {{ $entries = $entries | append . }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+
+{{ return $entries }}

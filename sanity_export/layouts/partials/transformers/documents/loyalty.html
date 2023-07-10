@@ -1,0 +1,24 @@
+{{ $s := newScratch }}
+{{ $s.Set "data" (partial "transformers/documents/base.html" .) }}
+{{ $s.SetInMap "data" "_type" "page" }}
+{{ $s.SetInMap "data" "slug" (dict
+  "_type" "slug"
+  "current" "loyalty"
+) }}
+{{ $blocks := slice }}
+
+{{ range seq 1 4 }}
+  {{ $base := print "content_section_" . }}
+  {{ $title := index $.Params (print $base "_title") }}
+  {{ $copy := index $.Params $base }}
+  {{ $image := index $.Params (print "section_" . "_image") }}
+  {{ $blocks = $blocks | append (dict
+    "_type" "blocks/section"
+    "title" $title
+    "copy" $copy
+    "image" (partial "transformers/imageObject" $image)
+  ) }}
+  {{ $s.SetInMap "data" "blocks" $blocks }}
+{{ end }}
+
+{{ return $s.Get "data" }}

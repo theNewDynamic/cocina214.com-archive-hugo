@@ -1,0 +1,4 @@
+{{ $term := .term }}
+{{ $key := urlize $term }}
+
+{{ return md5 (printf "%s-%s" .taxonomy $key) }}

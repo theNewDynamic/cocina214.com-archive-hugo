@@ -1,0 +1,27 @@
+{{ $entries := slice }}
+{{ with site.GetPage "/about" }}
+  {{ $staff := .Params.featured_staff }}
+  {{ with .Params.staff }}
+    {{ $staff = $staff | append . }}
+  {{ end }}
+  {{ with $staff }}
+    {{ range . }}
+      {{ $entries = $entries | append (dict
+        "_id" (print "staff_" .first_name | md5)
+        "_type" "person"
+        "associations" (slice "staff")
+        "title" .first_name
+        "first_name" .first_name
+        "image" (partial "transformers/imageObject" .photo)
+        "job_title" .title
+        "slug" (dict
+          "_type" "slug"
+          "current" (lower .first_name)
+        )
+      ) }}
+    {{ end }}
+
+  {{ end }}
+{{ end }}
+
+{{ return $entries }}

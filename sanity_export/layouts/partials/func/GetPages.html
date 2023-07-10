@@ -1,0 +1,7 @@
+{{ $entries := slice }}
+{{ $pages := slice }}
+
+{{ with site.GetPage "/loyalty" }}
+  {{ $entries = $entries | append (partial "transformers/documents/loyalty" .) }}
+{{ end }}
+{{ return $entries }}

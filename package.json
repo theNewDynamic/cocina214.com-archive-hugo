@@ -53,7 +53,13 @@
   "modpack": "bin/hugo* mod npm pack",
   "prod:hugo": "HUGO_ENV=production bin/hugo* --gc --minify --cleanDestinationDir",
   "start": "npm run dev:hugo",
-  "version": "auto-changelog -p --template keepachangelog --unreleased true"
+  "version": "auto-changelog -p --template keepachangelog --unreleased true",
+  "gen:build": "hugo -s sanity_export --cleanDestinationDir --quiet -F",
+  "gen": "hugo --quiet -F -D -s sanity_export --cleanDestinationDir && node sanity_export/cms/pt && cat sanity_export/public/index.json | json2nd > ./sanit_export.ndjson",
+  "export:test": "node sanity_export/cms/migration/test",
+  "export": "cd sanity_export/cms && sanity dataset import ../../sanit_export.ndjson production --allow-failing-assets --replace",
+  "export:missing": "cd sanity_export/cms && sanity dataset import ../../sanit_export.ndjson production --allow-failing-assets --missings",
+  "dataset:delete": "cd sanity_export/cms && sanity dataset delete production"
  },
  "version": "0.1.0",
  "dependencies": {}

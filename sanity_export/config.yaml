@@ -1,0 +1,47 @@
+baseUrl: https://cocina214.com
+removeAccents: true
+#taxonomies:
+#  series: series
+#  category: categories
+disableKinds:
+- sitemap
+- section
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+outputs:
+  home:
+  - json
+  - yaml
+cascade:
+- _target:
+    kind: page
+    path: /**
+  _build:
+    render: never
+caches:
+  getresource:
+    maxAge: 0
+outputFormats:
+  yaml:
+    mediaType: 'application/yaml'
+module:
+  mounts:
+  - source: content
+    target: content
+  - source: ../content
+    target: content
+  - source: layouts
+    target: layouts
+  - source: data
+    target: data
+  - source: ../data
+    target: data
+
+taxonomies:
+  category: category
+
+params:
+  #skip_assets: true
+  #skip_relationships: true

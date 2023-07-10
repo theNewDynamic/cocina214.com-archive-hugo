@@ -1,0 +1,17 @@
+{{ $file := dict }}
+{{ $skip_assets := site.Params.skip_assets }}
+{{ if and (not (in . "%")) (not $skip_assets) }}
+  {{ $src := . }}
+  {{ if in $src "http" }}
+    {{ $src = . }}
+  {{ else }}
+    {{ $src = print "https://www.cocina214.com" . }}
+  {{ end }}
+  {{ $src = trim $src "/" }}
+  {{ $file = dict
+    "_type" "file"
+    "_sanityAsset" (print "file@" $src)
+  }}
+{{ end }}
+
+{{ return $file }}

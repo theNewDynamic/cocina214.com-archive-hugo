@@ -1,0 +1,16 @@
+{{ $ref := dict }}
+{{ if not site.Params.skip_relationships }}
+  {{ with . }}
+    {{ with $page := site.GetPage . }}
+      {{ if and (not .Draft) (eq .Kind "page") }}
+        {{ with partial "func/GetID" . }}
+          {{ $ref = dict 
+            "_type" "reference"
+            "_ref" .
+          }}
+        {{ end }}
+      {{ end }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+{{ return $ref }}
