@@ -1,0 +1,32 @@
+{{ $s := newScratch }}
+{{ $s.Set "data" (partial "transformers/documents/base.html" .) }}
+
+{{ $s.SetInMap "data" "_type" "page" }}
+{{ $s.SetInMap "data" "slug" (dict
+  "_type" "slug"
+  "current" "contact"
+) }}
+
+{{ with partial "func/GetHero" .}}
+  {{ $s.SetInMap "data" "hero" . }}
+{{ end }}
+
+{{ $blocks := slice }}
+
+{{ $location := "Winter Park Florida" }}
+{{ $blocks = $blocks | append (dict
+  "_type" "blocks/location"
+  "location" (dict
+    "_type" "reference"
+    "_ref" (md5 $location)
+  )
+  "theme" "green"
+) }}
+
+{{ $blocks = $blocks | append (dict
+  "_type" "blocks/form"
+  "title" .Params.form_title
+  "copyHTML" ($.Page.RenderString .Params.form_text)
+) }}
+{{ $s.SetInMap "data" "blocks" $blocks }}
+{{ return $s.Get "data" }}

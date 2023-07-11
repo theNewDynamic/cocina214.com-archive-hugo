@@ -7,4 +7,8 @@
 {{ with site.GetPage "/dine" }}
   {{ $entries = $entries | append (partial "transformers/documents/dine" .) }}
 {{ end }}
+
+{{ with site.GetPage "/contact" }}
+  {{ $entries = $entries | append (partial "transformers/documents/contact" .) }}
+{{ end }}
 {{ return $entries }}

@@ -7,6 +7,9 @@
     {{ $hero_images = $hero_images | append (partial "transformers/imageObject" .) }}
   {{ end }}
 {{ end }}
+{{ with .Params.hero_photo }}
+  {{ $hero_images = $hero_images | append (partial "transformers/imageObject" .) }}
+{{ end }}
 {{ with $hero_images }}
   {{ $s.SetInMap "data" "images" . }}
 {{ end }}
