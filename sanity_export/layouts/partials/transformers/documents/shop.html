@@ -20,7 +20,10 @@
     {{ end }}
   {{ end }}
 {{ end }}
-{{ $s.SetInMap "data" "products" (partial "transformers/refs" $products) }}
 
+{{ $s.SetInMap "data" "products" (partial "transformers/refs" $products) }}
+{{ with partial "func/GetHero" . }}
+  {{ $s.SetInMap "data" "hero" . }}
+{{ end }}
 
 {{ return $s.Get "data" }}

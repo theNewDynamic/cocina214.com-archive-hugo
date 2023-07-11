@@ -6,4 +6,8 @@
 
 {{ $s.SetInMap "data" "slug" (partial "transformers/slug" .) }}
 
+{{ with partial "func/GetHero" . }}
+  {{ $s.SetInMap "data" "hero" . }}
+{{ end }}
+
 {{ return $s.Get "data" }}

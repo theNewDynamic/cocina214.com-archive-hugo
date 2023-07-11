@@ -26,8 +26,8 @@ check_duplicated_ids = (data) => {
 check_relationships = (data) => {
   data.map(document => {
     let fields = [
-      'taxonomyEventType',
-      'taxonomySection',
+      'taxonomyCategories',
+      'taxonomyProductCategory',
       'sponsors',
       'venue',
       'entries'

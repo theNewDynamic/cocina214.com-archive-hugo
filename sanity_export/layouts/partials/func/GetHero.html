@@ -1,0 +1,13 @@
+{{ $s := newScratch }}
+{{ $s.Set "data" dict }}
+
+{{ $hero_images := slice }}
+{{ with .Params.hero_photos }}
+  {{ range . }}
+    {{ $hero_images = $hero_images | append (partial "transformers/imageObject" .) }}
+  {{ end }}
+{{ end }}
+{{ with $hero_images }}
+  {{ $s.SetInMap "data" "images" . }}
+{{ end }}
+{{ return $s.Get "data" }}

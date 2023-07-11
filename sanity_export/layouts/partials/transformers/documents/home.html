@@ -93,4 +93,8 @@
 
 {{ $s.SetInMap "data" "blocks" $blocks }}
 
+{{ with partial "func/GetHero" . }}
+  {{ $s.SetInMap "data" "hero" . }}
+{{ end }}
+
 {{ return $s.Get "data" }}

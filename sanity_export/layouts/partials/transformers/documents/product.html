@@ -9,6 +9,9 @@
   {{ end }}
   {{ $s.SetInMap "data" "detailsHTML" ($.Page.RenderString (delimit $details "\n")) }}
 {{ end }}
+{{ with .Content }}
+  {{ $s.SetInMap "data" "bodyHTML" . }}
+{{ end }}
 {{ $images := slice }}
 {{ with .Params.featured_image }}
   {{ $images = $images | append . }}
@@ -23,16 +26,51 @@
 {{ with .Params.id }}
   {{ $s.SetInMap "sales_data" "sku" . }}
 {{ end }}
-{{ if eq .Params.category "T-Shirts" }}
-  {{ with .Params.sizes }}
-    {{ $s.SetInMap "sales_data" "sizes" . }}
-  {{ end }}
-  {{ with .Params.size_guide }}
-    {{ $s.SetInMap "sales_data" "size_guide" . }}
+
+{{ $variants := slice }}
+{{ with .Params.sizes }}
+  {{ if in . "Black" }}
+    {{ $variants = $variants | append (dict
+      "label" "Colors"
+      "options" .
+    ) }}
+  {{ else }}
+    {{ $variants = $variants | append (dict
+      "label" "Sizes"
+      "options" .
+    ) }}
   {{ end }}
 {{ end }}
-{{ with .Params.price }}
-  {{ $s.SetInMap "sales_data" "price" . }}
+
+{{ with .Params.category }}
+  {{ with singularize . }}
+    {{ with partial "func/Slugify" . }}
+      {{ with partial "func/GetTermID" (dict
+      "taxonomy" "taxonomyProductCategory"
+      "term" .
+      ) }}
+        {{ $s.SetInMap "data" "taxonomyProductCategory" (dict
+          "_type" "reference"
+          "_ref" .
+        ) }}
+      {{ end }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+
+{{ with $variants }}
+  {{ $s.SetInMap "sales_data" "variants" . }}
+{{ end }}
+{{ with .Params.size_guide }}
+  {{ $s.SetInMap "sales_data" "links" (slice (dict
+    "copy" "Size Guide"
+    "url" .
+  )) }}
+{{ end }}
+{{ range $key := slice "shipping_weight" "weight" "price" }}
+  {{ with index $.Params $key }}
+    {{ $s.SetInMap "sales_data" $key (float .) }}
+  {{ end }}
 {{ end }}
 {{ with $s.Get "sales_data" }}
   {{ $s.SetInMap "data" "sales_data" . }}

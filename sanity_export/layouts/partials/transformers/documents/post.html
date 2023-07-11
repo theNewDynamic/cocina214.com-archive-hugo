@@ -38,22 +38,6 @@
   {{ end }}
 {{ end }}
 
-{{ $single_taxonomies := slice
-  (dict 
-    "name" "category" 
-    "type" "taxonomyCategory"
-    "field" "taxonomyCategories"
-  )
-}}
-{{ range $taxo := $single_taxonomies }}
-  {{ with partial "transformers/terms" (dict
-    "Page" $
-    "taxonomy" $taxo.name
-  ) }}
-    {{ $s.SetInMap "data" $taxo.field .  }}
-  {{ end }}
-{{ end }}
-
 {{ with .Params.additional_info }}
   {{ $s.SetInMap "data" "additional_info" . }}
 {{ end }}
@@ -67,6 +51,20 @@
 {{ with .Params.seo }}
   {{ with partial "transformers/seo" . }}
     {{ $s.SetInMap "data" "seo" . }}
+  {{ end }}
+{{ end }}
+
+{{ with .Params.category }}
+  {{ with partial "func/Slugify" . }}
+    {{ with partial "func/GetTermID" (dict
+    "taxonomy" "taxonomyCategory"
+    "term" .
+    ) }}
+      {{ $s.SetInMap "data" "taxonomyCategories" (slice (dict
+        "_type" "reference"
+        "_ref" .
+      )) }}
+    {{ end }}
   {{ end }}
 {{ end }}
 

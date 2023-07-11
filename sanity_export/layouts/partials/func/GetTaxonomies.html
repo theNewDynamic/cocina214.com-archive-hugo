@@ -1,17 +1,48 @@
 {{ $entries := slice }}
-{{ $taxonomies := slice
-  (dict
-    "taxonomy" "category"
-    "type" "taxonomyCategory"
-  )
+{{ range slice 
+  "Gift Card"
+  "T-Shirt"
+  "Tumbler"
 }}
-{{ range $taxo :=  $taxonomies }}
-  {{ with partial "func/GetTerms" (dict
-    "taxonomy" $taxo.taxonomy
-    "type" $taxo.type
+  {{ $slug := partial "func/Slugify" . }}
+  {{ $id := partial "func/GetTermID" (dict
+    "taxonomy" "taxonomyProductCategory"
+    "term" $slug
   ) }}
-    {{ $entries = $entries | append . }}
-  {{ end }}
+  {{ $term := dict
+  "title" (singularize .)
+  "_id" $id
+  "_type" "taxonomyProductCategory"
+  "slug" (dict
+    "_type" "slug"
+    "current" $slug
+  ) 
+  }}
+  {{ $entries = $entries | append $term }}
+{{ end }}
+
+{{ range slice 
+  "Upcoming"
+  "Current"
+  "Past Events"
+  "Awards"
+  "Press"
+}}
+  {{ $slug := partial "func/Slugify" . }}
+  {{ $id := partial "func/GetTermID" (dict
+    "taxonomy" "taxonomyCategory"
+    "term" $slug
+  ) }}
+  {{ $term := dict
+  "title" .
+  "_id" $id
+  "_type" "taxonomyCategory"
+  "slug" (dict
+    "_type" "slug"
+    "current" $slug
+  ) 
+  }}
+  {{ $entries = $entries | append $term }}
 {{ end }}
 
 {{ return $entries }}

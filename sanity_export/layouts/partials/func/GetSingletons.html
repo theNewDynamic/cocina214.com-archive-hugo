@@ -1,8 +1,8 @@
 {{ $singletons := slice
   "home"
-  "chairs"
+  "about"
+  "shop"
 }}
-{{ $singletons = slice "shop" }}
 {{ $entries := slice }}
 {{ $s := newScratch }}
 {{ if in $singletons "home" }}
@@ -34,6 +34,9 @@
       ) }}
     {{ end }}
     {{ $s.SetInMap "data" "persons" $persons }}
+    {{ with partial "func/GetHero" . }}
+      {{ $s.SetInMap "data" "hero" . }}
+    {{ end }}
     {{ $entries = $entries | append ($s.Get "data")  }}
   {{ end }}
 {{ end }}
