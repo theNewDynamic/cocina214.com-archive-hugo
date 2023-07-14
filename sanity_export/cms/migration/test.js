@@ -30,7 +30,7 @@ check_relationships = (data) => {
       'taxonomyProductCategory',
       'sponsors',
       'venue',
-      'entries'
+      'entries',
     ]
     if(document._type != "book") {
       fields.forEach(field => {

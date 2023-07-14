@@ -59,7 +59,8 @@
   "export:test": "node sanity_export/cms/migration/test",
   "export": "cd sanity_export/cms && sanity dataset import ../../sanit_export.ndjson production --allow-failing-assets --replace",
   "export:missing": "cd sanity_export/cms && sanity dataset import ../../sanit_export.ndjson production --allow-failing-assets --missings",
-  "dataset:delete": "cd sanity_export/cms && sanity dataset delete production"
+  "dataset:delete": "cd sanity_export/cms && sanity dataset delete production",
+  "dataset:debug": "cd sanity_export/cms && sanity debug"
  },
  "version": "0.1.0",
  "dependencies": {}

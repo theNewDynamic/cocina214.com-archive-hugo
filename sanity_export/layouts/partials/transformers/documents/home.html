@@ -16,26 +16,26 @@
 {{ $blocks := slice }}
 
 {{ $posts := slice }}
-{{ with site.GetPage "/news/2023-celebrate-father-s-day-at-cocina-214" }}
+{{ range .Params.upcoming_events.events }}
+  {{ $id := print "notice" .event_name "id" | md5 }}
+  {{ $title := ""}}
+  {{ with .event_links }}
+    {{ with index . 0 }}
+      {{ with .event_link_url }}
+        {{ $path := replace . "https://cocina214.com" "" }}
+        {{ $path = trim $path "/" }}
+        {{ with site.GetPage $path }}
+          {{ $title = "found" }}
+          {{ $id = .File.UniqueID }}
+        {{ end }}
+      {{ end }}
+    {{ end }}
+  {{ end }}
   {{ $posts = $posts | append (dict
     "_type" "reference"
-    "_ref" .File.UniqueID
+    "_ref" $id
   ) }}
 {{ end }}
-{{ $posts = $posts | append (dict
-  "_type" "reference"
-  "_ref" (print "notice" 0 "id" | md5)
-) }}
-{{ with site.GetPage "/news/order-cocina-214-online-and-get-curbside-pick-up-or-delivery" }}
-  {{ $posts = $posts | append (dict
-    "_type" "reference"
-    "_ref" .File.UniqueID
-  ) }}
-{{ end }}
-{{ $posts = $posts | append (dict
-  "_type" "reference"
-  "_ref" (print "notice" 1 "id" | md5)
-) }}
 
 {{ $blocks = $blocks | append (dict
   "_type" "blocks/entries"

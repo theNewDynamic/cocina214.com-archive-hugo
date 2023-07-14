@@ -1,10 +1,13 @@
 {{ $entries := slice }}
 {{ with site.Home }}
   {{ with .Params.upcoming_events.events }}
-    {{ $notices := (slice
-      (index . 1 )
-      (index . 3)
-    ) }}
+    {{ $notices := slice }}
+    {{ range $up_ev := . }}
+      {{ with .event_links }}
+      {{ else }}
+      {{ $notices = $notices | append $up_ev }}
+      {{ end }}
+    {{ end }}
     {{ range $index, $v:= $notices }}
       {{ $links := slice }}
       {{ with .photo_link }}
@@ -15,11 +18,18 @@
             "copy" .photo_link_text
           ) }}
       {{ end }}
+      {{ $copy := slice }}
+      {{ range $key := slice "event_date" "event_time" "event_description" }}
+        {{ with index $v $key }}
+          {{ $copy = $copy | append . }}
+        {{ end }}
+      {{ end }}
       {{ $entries = $entries | append (dict
         "_type" "notice"
-        "_id" (print "notice" $index "id" | md5)
+        "_id" (print "notice" .event_name "id" | md5)
         "title" .event_name
         "links" $links
+        "bodyHTML" (delimit $copy "\n")
       ) }}
     {{ end }}
   {{ end }}

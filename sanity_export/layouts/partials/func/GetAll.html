@@ -1,18 +1,19 @@
 {{ $sections := slice
   "Persons"
-  "Notices"
   "Products"
   "Taxonomies"
-  "Posts"
-  "Singletons"
   "Venues"
+
   "Pages"
+  "Singletons"
+  "Posts"
+  "Notices"
 }}
 
 {{ $entries := slice }}
-{{ if true }}
+{{ if false }}
   {{/* Use this to limit the gen/export scripts to limited sections */}}
-  {{ $sections = last 1 $sections}}
+  {{ $sections = last 3 $sections}}
 {{ end }}
 
 {{ range $section := $sections }}
