@@ -21,16 +21,13 @@ catering:
 upcoming_events:
   photo: "/uploads/2019/09/05/Rocks_Margarita_w_limes.jpg"
   events:
-  - event_name: Happy Father's Day!
-    event_date: Sunday, June 18th
+  - event_name: "Join us in September for our Savor September Menu!"
+    event_date: 
     # event_time: 11:00 am - 10:00 pm
-    event_description: Dad's Enjoy 1 Free El Diablo Margarita with the purchase of an entree.
+    event_description: "Select 1 Appetizer, 1 Entrèe, & 1 Dessert for $35 per person"
     event_links:
     - event_link_text: Learn More
-      event_link_url: /news/2023-celebrate-father-s-day-at-cocina-214/
-    photo_link:
-      photo_link_text: View Event Poster
-      photo_link_photo: "/uploads/2023-Fathers-day.pdf"
+      event_link_url: /news/2023-savor-september/
   - event_name: Join us for Happy Hour
     event_date: Monday-Friday
     event_time: 4:00-6:30 PM

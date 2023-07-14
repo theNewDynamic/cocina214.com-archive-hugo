@@ -13,8 +13,10 @@ dine_with_us:
     Upscale Casual Restaurant”, “Best Happy Hour”, “Best Take-Out”, “Best Appetizer”,
     and “Best Family Place”.   So whatever the occasion you’re sure to enjoy.'
   menus:
-  - menu_name: Dine-In and Takeout
-    menu: "/uploads/2023-04-TakeOut_Menu_April-2023.pdf"
+  - menu_name: Dine-In 
+    menu: "/uploads/DineIn_Menu_July-14-2023.pdf"
+  - menu_name: Takeout
+    menu: "/uploads/TakeOut_Menu_July-14-2023.pdf"  
   - menu_name: Family Packages for Takeout, Curbside Pickup and/or Delivery
     menu: "/uploads/uploads/Family-Packages-Menu-June-2023.pdf"
   - menu_name: Kids’
