@@ -51,11 +51,19 @@
 {{ end }}
 
 {{ with .Params.happy_hour }}
+  {{ $copySlice := slice ($.Page.RenderString .text) }}
+  {{ $copySlice = $copySlice | append (partial "transformers/shortcode" (dict
+    "_type" "blockFiles"
+    "files" (slice (dict
+      "title" "View happy hour menu"
+      "file" (partial "transformers/file" .menu)
+    ))
+  )) }}
   {{ $blocks = $blocks | append (dict
     "_type" "blocks/section"
     "title" "Happy Hour"
     "theme" "teal"
-    "copyHTML" ($.Page.RenderString .text)
+    "copyHTML" (delimit $copySlice "\n")
     "image" (partial "transformers/imageObject" .photo)
   ) }}
 {{ end }}
